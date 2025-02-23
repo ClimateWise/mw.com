@@ -80,7 +80,7 @@
                                     <a href="blog.html" class="dropdown-item">Blog</a>
                                     <a href="gallery.html" class="dropdown-item">Gallery</a>
                                     <a href="volunteer.html" class="dropdown-item">Volunteers</a>
-                                    <a href="donation.html" class="dropdown-item active">Donation</a>
+                                    <a href="donation.html" class="dropdown-item acive">Donation</a>
                                     <a href="404.html" class="dropdown-item">404 Error</a>
                                 </div>
                             </div>
@@ -109,68 +109,44 @@
         </div>
         <!-- Header End -->
 
-        <!-- Donation Start -->
-        <div class="container-fluid donation py-5"> 
-    <div class="container py-5">
-        <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-            <h5 class="text-uppercase text-primary">Donation</h5>
-            <h1 class="mb-0">Your Support Can Change Lives</h1>
-            <p class="mt-3">If you’d like to support our work, please contact us directly to discuss how you can make an impact.</p>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="donation-item">
-                    <img src="img/donation-1.jpg" class="img-fluid w-100" alt="Image">
-                    <div class="donation-content d-flex flex-column">
-                        <h5 class="text-uppercase text-primary mb-4">Organic</h5>
-                        <h4 class="text-white mb-4">Protect the Environment</h4>
-                        <p class="text-white mb-4">Your contribution helps us protect natural habitats and promote sustainable practices.</p>
-                        <div class="donation-btn d-flex align-items-center justify-content-start">
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="contact.html">Contact Us</a>
-                        </div>
-                    </div>
+        <!-- Donation Form Section -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h1 class="mb-4">Donate to ClimateWise</h1>
+                    <p class="mb-4">Your contribution helps us protect the environment and empower communities. Please fill in your Visa card details below to make a donation.</p>
                 </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="donation-item">
-                    <img src="img/service-2.jpg" class="img-fluid w-100" alt="Image">
-                    <div class="donation-content d-flex flex-column">
-                        <h5 class="text-uppercase text-primary mb-4">Ecosystem</h5>
-                        <h4 class="text-white mb-4">Support Sustainability</h4>
-                        <p class="text-white mb-4">Help us create solutions for ecosystem restoration and biodiversity conservation.</p>
-                        <div class="donation-btn d-flex align-items-center justify-content-start">
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="contact.html">Contact Us</a>
+                <div class="col-lg-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="donation-item">
-                    <img src="img/donation-3.jpg" class="img-fluid w-100" alt="Image">
-                    <div class="donation-content d-flex flex-column">
-                        <h5 class="text-uppercase text-primary mb-4">Recycling</h5>
-                        <h4 class="text-white mb-4">Promote Recycling</h4>
-                        <p class="text-white mb-4">Your support enables us to implement effective recycling and waste management programs.</p>
-                        <div class="donation-btn d-flex align-items-center justify-content-start">
-                            <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="contact.html">Contact Us</a>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="expiryDate" class="form-label">Expiry Date</label>
+                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12">
-                <div class="d-flex align-items-center justify-content-center">
-                    <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="contact.html">Get in Touch</a>
+                        <div class="mb-3">
+                            <label for="nameOnCard" class="form-label">Name on Card</label>
+                            <input type="text" class="form-control" id="nameOnCard" placeholder="John Doe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Donation Amount (USD)</label>
+                            <input type="number" class="form-control" id="amount" placeholder="50" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Donate Now</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
-        <!-- Donation End -->
-
 
         <!-- Footer Start -->
                 <div class="container-fluid footer bg-dark text-body py-5">

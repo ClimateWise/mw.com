@@ -309,6 +309,41 @@
 .service .service-item .service-link:hover a:hover {
     color: var(--bs-primary);
 }
+
+/* Mental Health Section Styling */
+.mental-health-gallery img {
+    transition: transform 0.3s ease;
+}
+.mental-health-gallery img:hover {
+    transform: scale(1.03);
+}
+
+.highlight-text {
+    font-size: 1.1rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-left: 4px solid #0d6efd;
+}
+
+.accordion-btn {
+    width: 100%;
+    text-align: left;
+    background: #f8f9fa;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.accordion-content {
+    padding: 1rem;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 0 0 5px 5px;
+}
+
+.toggle-details:hover .fa-chevron-down {
+    transform: translateY(3px);
+}
 /*** Service End ***/
 
 

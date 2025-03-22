@@ -67,7 +67,27 @@
         }
     });
 
+   // Toggle detailed content
+document.querySelector('.toggle-details').addEventListener('click', function() {
+    const fullContent = document.querySelector('.full-content');
+    const buttonIcon = this.querySelector('i');
     
+    if (fullContent.style.display === 'none') {
+        fullContent.style.display = 'block';
+        this.innerHTML = 'Show Less <i class="fas fa-chevron-up ms-2"></i>';
+    } else {
+        fullContent.style.display = 'none';
+        this.innerHTML = 'Learn More <i class="fas fa-chevron-down ms-2"></i>';
+    }
+});
+
+// Accordion functionality
+document.querySelectorAll('.accordion-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+}); 
    // Back to top button
    $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {

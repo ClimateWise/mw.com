@@ -3,757 +3,279 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Opportunities - Current Funding Opportunities, 2025</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>ClimateWise | Transforming Malawi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      line-height: 1.6;
-    }
-    header {
-      background: #007bff;
-      color: 
-      padding: 3rem 0;
-    }
-    header h1 {
-      font-size: 2.75rem;
-    }
-    header p.lead {
-      font-size: 1.25rem;
-    }
-  header .fw-bold {
-      color: #fff;
-  }
-    .section-header {
-      border-bottom: 3px solid #007bff;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .list-group-item {
-      font-size: 1rem;
-      padding: 1rem;
-    }
-    .list-group-item a {
-      color: #28a745;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .list-group-item a:hover {
-      text-decoration: underline;
-    }
-    .apply-btn {
-      background: linear-gradient(135deg, #28a745, #218838);
-      color: #fff !important;
-      padding: 0.5rem 1.5rem;
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .apply-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(40,167,69,0.35);
-    }
-    .job-listing {
-      margin-bottom: 1rem;
-      padding: 0.75rem;
-      border: 1px solid #dee2e6;
-      border-radius: 5px;
-    }
-    .job-listing h5 {
-      margin-bottom: 0.5rem;
-    }
-    .job-listing p {
-      margin-bottom: 0.25rem;
-    }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f5f7fa; }
+    .navbar { background-color: #2b7a78; }
+    .navbar-brand, .nav-link, .navbar-toggler-icon { color: #fff !important; }
+    .hero { background: url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; height: 90vh; display: flex; align-items: center; position: relative; color: #fff; }
+    .hero::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(43, 122, 120, 0.75); z-index: 1; }
+    .hero-content { position: relative; z-index: 2; text-align: center; }
+    .hero h1 { font-size: 4rem; font-weight: 700; }
+    .hero p { font-size: 1.3rem; }
+    .icon-box { padding: 30px; border-radius: 10px; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease; }
+    .icon-box:hover { transform: translateY(-5px); }
+    .icon-box i { font-size: 3rem; color: #2b7a78; margin-bottom: 15px; }
+    .footer { background: #17252a; color: #ddd; padding: 30px 0; }
+    .footer a { color: #fff; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-	<!-- Navbar Start -->
-<div class="container-fluid fixed-top px-0">
-    <div class="container px-0">
-        <nav class="navbar navbar-light navbar-expand-xl">
-            <button class="navbar-toggler py-2 px-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars text-primary"></span>
-            </button>
-            <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
-                <div class="navbar-nav ms-auto">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link active">Services</a>
-                    <a href="projects.html" class="nav-item nav-link">Projects</a>
-                    <a href="events.html" class="nav-item nav-link">Events</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                            <a href="Opportunities.html" class="dropdown-item">Opportunities</a>
-                            <a href="gallery.html" class="dropdown-item">Gallery</a>
-                            <a href="volunteer.html" class="dropdown-item">Volunteers</a>
-                            <a href="donation.html" class="dropdown-item">Donation</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="d-flex align-items-center flex-nowrap pt-xl-0" style="margin-left: 15px;">
-                  
-                </div>
-            </div>
-        </nav>
-    </div>
-</div>
-<!-- Navbar End -->
 
-  <!-- Header Section -->
-  <header class="bg-dark text-white py-5">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">ClimateWise</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Renewable Energy</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Agroforestry</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">WASH & Health</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Agriculture</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Youth Empowerment</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Empowering Communities, Restoring Ecosystems</h1>
+    <p class="lead">We deliver practical, people-centered solutions in renewable energy, WASH, youth empowerment, and sustainable agriculture in Malawi.</p>
+  </div>
+</section>
+
+<!-- Impact Highlights -->
+<section class="py-5">
   <div class="container text-center">
-    <div class="container">
-      <h1 class="display-4 fw-bold">Current Funding Opportunities,2025</h1>
-      <p class="lead">Find a wide range of fellowships, grants, MSME startup funds, jobs and more – all opportunities that people from Malawi can apply for.</p>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="icon-box">
+          <i class="fas fa-solar-panel"></i>
+          <h5>Renewable Energy</h5>
+          <p>Installed 45+ solar mini-grids benefiting rural clinics and schools.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="icon-box">
+          <i class="fas fa-tree"></i>
+          <h5>Agroforestry</h5>
+          <p>Over 350,000 trees planted annually restoring degraded land.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="icon-box">
+          <i class="fas fa-hand-holding-water"></i>
+          <h5>WASH Projects</h5>
+          <p>20+ boreholes and solar-powered water systems serving 55,000+ people.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="icon-box">
+          <i class="fas fa-user-friends"></i>
+          <h5>Youth Empowerment</h5>
+          <p>Trained 3,200+ youth in climate innovation, leadership & entrepreneurship.</p>
+        </div>
+      </div>
     </div>
-  </header>
+  </div>
+</section>
 
-              <!-- Main Content -->
-  <main class="container py-5">
-    <!-- Fellowships Section -->
-    <section id="fellowships" class="mb-5">
-      <div class="section-header">
-        <h2 class="h3 fw-bold"><i class="fas fa-graduation-cap me-2"></i>Fellowships</h2>
-      </div>
-      <div class="row g-4">
-        <!-- 776 Foundation Fellowship -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <div class="d-flex align-items-center gap-2">
-                <img src="path/to/776-logo.png" alt="776 Foundation" style="height: 30px;">
-                <span class="fw-bold">776 Foundation Fellowship</span>
-              </div>
-              <span class="badge bg-success bg-opacity-10 text-success">$100k Grant</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>Apr 14
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Global
-              </span>
-            </div>
-            <a href="https://776.org" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- The Green Fellows Program 2025 (Round 2) -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">The Green Fellows Program 2025</span>
-              <span class="badge bg-info bg-opacity-10 text-info">$5k Funding</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>Jun 12 – Sep 8
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Global
-              </span>
-            </div>
-            <a href="https://greeninstitute.ng/grant" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- Climate Career Bridge Fellowship -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">Climate Career Bridge Fellowship</span>
-              <span class="badge bg-info bg-opacity-10 text-info">£5k Funding</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>Rolling
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Global
-              </span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpUXKYiE1myE-bJQppXmkmpCntwjdQa-J-3j0XEyxsG_qRGg/viewform" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- WTO Young Trade Leaders Program -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">WTO Young Trade Leaders Program</span>
-              <span class="badge bg-success bg-opacity-10 text-success">Fully Funded</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>Apr 30
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Global
-              </span>
-            </div>
-            <a href="https://www.wto.org/english/forums_e/young_trade_leader_e/concept_note_e.htm" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- AfCFTA National Youth Champions Fellowship -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">AfCFTA National Youth Champions Fellowship</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>May 15
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Pan-African
-              </span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1PwewcGBHmTBWw-Sp-jUD1sxbMfsBA28OWCBtCiNkD4g4YA/viewform" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- UNESCO-NESTLÉ Youth Impact Program -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">UNESCO-NESTLÉ Youth Impact – Because You Matter</span>
-              <span class="badge bg-success bg-opacity-10 text-success">$8.5k Grant</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>May 20
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Global
-              </span>
-            </div>
-            <a href="https://unesco.nestleyouthentrepreneurship.com/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- Impact Graph -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="text-center mb-4">2022-2025 Impact Growth</h3>
+    <canvas id="impactChart"></canvas>
+  </div>
+</section>
+<!-- Impact Distribution Pie Chart -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">Impact Distribution Overview</h3>
+    <canvas id="impactPieChart"></canvas>
+  </div>
+</section>
+<script>
+  const pieCtx = document.getElementById('impactPieChart').getContext('2d');
+  new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+      labels: ['People Reached', 'Trees Planted', 'WASH Beneficiaries', 'Youth Empowered'],
+      datasets: [{
+        label: 'Impact Figures',
+        data: [165526, 17000, 55000, 13209],
+        backgroundColor: [
+          '#ff7f0e',
+          '#2ca02c',
+          '#1f77b4',
+          '#def2f1'    
+        ],
+        borderColor: '#fff',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { color: '#333', font: { size: 14 } }
+        }
+      }
+    }
+  });
+</script>
 
-    <!-- Startup Funding Section -->
-    <section id="startups" class="mb-5">
-      <div class="section-header">
-        <h2 class="h3 fw-bold"><i class="fas fa-rocket me-2"></i>Startup Funding</h2>
-      </div>
-      <div class="row g-4">
-        <!-- Greentech Africa Accelerator -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">Greentech Africa Accelerator</span>
-              <span class="badge bg-warning bg-opacity-10 text-warning">€50k Funding</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>Apr 30
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-industry"></i>AgTech
-              </span>
-            </div>
-            <p class="text-muted small mb-3">Accelerator program for sustainable agriculture startups</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="https://vilcap.com/programs/greentech-africa-2025" target="_blank" class="apply-btn">
-                <i class="fas fa-external-link-alt"></i>Apply Now
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- DIGITAL AFRICA AgTech Startup Challenge -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">DIGITAL AFRICA AgTech Challenge</span>
-              <span class="badge bg-warning bg-opacity-10 text-warning">Up to €100k</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>May 10
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>African
-              </span>
-            </div>
-            <p class="text-muted small mb-3">Challenge for African agtech startups</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="https://application.fuze.digital-africa.co/" target="_blank" class="apply-btn">
-                <i class="fas fa-external-link-alt"></i>Apply Now
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Llama Impact Grant -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">Llama Impact Grant</span>
-              <span class="badge bg-info bg-opacity-10 text-info">Up to $20k</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>Open
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>African
-              </span>
-            </div>
-            <p class="text-muted small mb-3">Funding for startups and researchers</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="https://www.surveymonkey.com/r/ZR2TWDH" target="_blank" class="apply-btn">
-                <i class="fas fa-external-link-alt"></i>Apply Now
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Orange Social Venture Prize -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">Orange Social Venture Prize 2025</span>
-              <span class="badge bg-warning bg-opacity-10 text-warning">€70k Funding</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Pan-African
-              </span>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="https://www.orange.com/en/osvp" target="_blank" class="apply-btn">
-                <i class="fas fa-external-link-alt"></i>Apply Now
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- UNICEF Equity-Free Funding Opportunity -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">UNICEF Equity-Free Funding</span>
-              <span class="badge bg-success bg-opacity-10 text-success">$100k Grant</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>Jun 1
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Global
-              </span>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="https://www.unicef.org/innovation/FemTechCall" target="_blank" class="apply-btn">
-                <i class="fas fa-external-link-alt"></i>Apply Now
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Grants Section -->
-    <section id="grants" class="mb-5">
-      <div class="section-header">
-        <h2 class="h3 fw-bold"><i class="fas fa-hand-holding-usd me-2"></i>Grants</h2>
-      </div>
-      <div class="row g-4">
-        <!-- AstraZeneca Young Health Program Impact Fellowship -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">AstraZeneca YHP 2025</span>
-              <span class="badge bg-success bg-opacity-10 text-success">$50k Grant</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>May 15
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Global
-              </span>
-            </div>
-            <a href="https://www.oneyoungworld.com/scholarships/astrazeneca-yhp/2025" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- WE Empower UN SDG Challenge -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">WE Empower UN SDG Challenge 2025</span>
-              <span class="badge bg-info bg-opacity-10 text-info">Global</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Women Entrepreneurs
-              </span>
-            </div>
-            <a href="https://globalfutures.asu.edu/we-empower/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- Creative Africa Nexus CANEX Book Factory Prize -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">CANEX Book Factory Prize</span>
-              <span class="badge bg-success bg-opacity-10 text-success">$28k Funding</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>African Publishers
-              </span>
-            </div>
-            <a href="https://www.canex.africa/canex-book-factory" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- RootsMicrogrants -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">RootsMicrogrants 2025</span>
-              <span class="badge bg-success bg-opacity-10 text-success">$10k Grant</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>Apr 14
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-globe"></i>Global
-              </span>
-            </div>
-            <a href="https://linktr.ee/RootsMicrogrants" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- Origination Facility -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">Origination Facility</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-info-circle"></i>Open 2025
-              </span>
-              <span class="meta-item">
-                <i class="fas fa-dollar-sign"></i>Min Assets: $5M
-              </span>
-            </div>
-            <a href="https://www.thedfcd.com/origination/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- J.M.K. Innovation Prize -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <span class="fw-bold">J.M.K. Innovation Prize 2025</span>
-              <span class="badge bg-success bg-opacity-10 text-success">$150k Prize</span>
-            </div>
-            <div class="opportunity-meta">
-              <span class="meta-item">
-                <i class="fas fa-clock"></i>Apr 14
-              </span>
-            </div>
-            <a href="https://jmkfund.org/innovation-prize-2025/?utm_content=bufferda199&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Job Opportunities Section -->
-    <section id="jobs" class="mb-5">
-      <div class="section-header">
-        <h2 class="h3 fw-bold"><i class="fas fa-briefcase me-2"></i>Job Opportunities</h2>
-      </div>
-      <div class="row g-4">
-        <!-- McKinsey Internship -->
-        <div class="col-12">
-          <div class="job-card">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <div>
-                <h3 class="h5 fw-bold mb-1">McKinsey Internship Program 2025</h3>
-                <p class="text-muted small mb-1">1-year Program for African Graduates</p>
-              </div>
-            </div>
-            <a href="https://www.mckinsey.com/careers/search-jobs?query=Young%20Leadership%20Program" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-        <!-- WTO Young Professionals -->
-        <div class="col-12">
-          <div class="job-card">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <div>
-                <h3 class="h5 fw-bold mb-1">WTO Young Professionals Program 2026</h3>
-                <p class="text-muted small mb-1">Global Opportunity</p>
-              </div>
-              <span class="badge bg-info bg-opacity-10 text-info">Deadline: Jun 1</span>
-            </div>
-            <a href="https://wto.wd3.myworkdayjobs.com/en-US/External/job/CWR/Young-Professionals_JR103622" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Apply Now
-            </a>
-          </div>
-        </div>
-    <!-- Partner Opportunities Section -->
-    <section id="partners" class="mb-5">
-      <div class="section-header">
-        <h2 class="h3 fw-bold"><i class="fas fa-handshake me-2"></i>Partner Opportunities</h2>
-      </div>
-      <div class="row g-4">
-        <!-- Applicant Resource Repository from Village Capital -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">Applicant Resource Repository</span>
-            <p class="text-muted small">A digital platform offering over 100 curated funding opportunities and startup guidance.</p>
-            <a href="http://www.eshub.org/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- Scaling Pathways -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">Scaling Pathways</span>
-            <p class="text-muted small">Insights from successful social enterprises on navigating growth challenges.</p>
-            <a href="https://medium.com/scaling-pathways" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- 4pt0 Fellowship Programs -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">4pt0 Fellowship Programs</span>
-            <p class="text-muted small">Fellowship programs in the education sector for early-stage founders.</p>
-            <a href="https://www.4pt0.org/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- Camelback Ventures -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">Camelback Ventures</span>
-            <p class="text-muted small">Accelerator for BIPOC, women, & non-binary entrepreneurs in the US.</p>
-            <a href="https://www.camelbackventures.org/fellowship" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- coLABS -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">coLABS Investment Portfolio</span>
-            <p class="text-muted small">Early-stage investment portfolio for innovative social enterprises.</p>
-            <a href="https://gmccolabs.com/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- D-Prize -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">D-Prize Global Competition</span>
-            <p class="text-muted small">Awards up to $20,000 to aspiring social entrepreneurs.</p>
-            <a href="https://d-prize.org/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- Draper Richards Kaplan Foundation -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">Draper Richards Kaplan Foundation</span>
-            <p class="text-muted small">Funds early-stage social impact organizations.</p>
-            <a href="https://www.drkfoundation.org/apply-for-funding/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- Fast Forward Accelerator -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">Fast Forward Accelerator</span>
-            <p class="text-muted small">$25K grant and training for tech nonprofit startups.</p>
-            <a href="https://www.ffwd.org/accelerator/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- Issroff Family Foundation (CLI) -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">Issroff Family Foundation CLI</span>
-            <p class="text-muted small">Supports community-based organizations in eastern and southern Africa.</p>
-            <a href="https://www.issroff.org/cli" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- Miller Center Accelerator Program -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">Miller Center Accelerator Program</span>
-            <p class="text-muted small">Accelerates social entrepreneurship focusing on climate resilience and women’s empowerment.</p>
-            <a href="https://www.millersocent.org/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- MIT Solve (Solv[ED]) -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">MIT Solve (Solv[ED])</span>
-            <p class="text-muted small">Supports innovators aged 24 and under.</p>
-            <a href="https://solve.mit.edu/solv-ed" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- Seed Spot -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">Seed Spot</span>
-            <p class="text-muted small">Programs and courses to help entrepreneurs launch ventures.</p>
-            <a href="https://seedspot.org/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-                <!-- TECA -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">TECA</span>
-            <p class="text-muted small">Venture launcher supporting climate action on Africa’s eastern seaboard.</p>
-            <a href="https://bfaglobal.com/teca/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- The Greater Sum Foundation -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">The Greater Sum Foundation</span>
-            <p class="text-muted small">Free six-week virtual incubator for early-stage nonprofit founders.</p>
-            <a href="https://thegreatersum.org/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- The Pollination Project -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">The Pollination Project</span>
-            <p class="text-muted small">Provides up to $1,000 in startup funding for social change projects.</p>
-            <a href="https://thepollinationproject.org/apply/" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-        <!-- MIT Solve Indigenous Communities Fellowship -->
-        <div class="col-md-6 col-lg-4">
-          <div class="opportunity-card p-4 h-100">
-            <span class="fw-bold">MIT Solve Indigenous Communities Fellowship</span>
-            <p class="text-muted small">Supports Indigenous innovators with funding and mentorship.</p>
-            <a href="https://solve.mit.edu/innovators/become-a-solver" target="_blank" class="apply-btn">
-              <i class="fas fa-external-link-alt"></i>Visit Site
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-      </main>
-  <!-- Footer Section -->
-  <footer class="bg-dark text-white py-5">
-    <div class="container">
-      <div class="row g-4">
+  <!-- Gallery Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Our Work in Pictures</h2>
+    <div class="row g-3">
         <div class="col-md-4">
-          <h5>Contact</h5>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-phone me-2"></i>+265 886 583 720</li>
-            <li><i class="fas fa-envelope me-2"></i>info@climatewiseorganization.com</li>
-          </ul>
+            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
+                <img src="img/service-2.jpg" class="img-fluid w-100" alt="Solar Installation" class="img-fluid">
+                <div class="gallery-caption">
+                    <h5>Solar Installation</h5>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
-          <h5>Follow Us</h5>
-          <div class="social-links">
-  <a href="https://www.facebook.com/profile.php?id=61564902127857&mibextid=ZbWKwL" class="text-white me-3" target="_blank">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://www.instagram.com/climatewise_organization/profilecard/?igsh=ajZwd3M2YXI1Njh2" class="text-white me-3" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="#" class="text-white" target="_blank">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
+            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
+                <img src="img/service-3.jpg" alt="Tree Planting" class="img-fluid">
+                <div class="gallery-caption">
+                    <h5>Tree Planting Drive</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
+                <img src="img/service-4.jpg" alt="Clean Water Access" class="img-fluid">
+                <div class="gallery-caption">
+                    <h5>Clean Water Access</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
+                <img src="img/service-5.jpg" alt="Community Engagement" class="img-fluid">
+                <div class="gallery-caption">
+                    <h5>Community Engagement</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
+                <img src="img/service-1.jpg" alt="Youth Empowerment" class="img-fluid">
+                <div class="gallery-caption">
+                    <h5>Youth Empowerment Program</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
+              <img src="img/service-2.jpg" alt="Agroforestry Initiative" class="img-fluid">
+                <div class="gallery-caption">
+                    <h5>Agroforestry Initiative</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-        </div>
-        <div class="col-md-4 text-md-end">
-          <img src="logo.jpg" alt="ClimateWise" style="max-width: 180px;">
-          <p class="mt-3 small">Empowering African Innovation</p>
-        </div>
-      </div>
-      <hr class="mt-5">
-      <div class="text-center small">
-        © 2025 ClimateWise Organization. All rights reserved.
-      </div>
+
+<!-- Custom CSS for Gallery -->
+<style>
+.gallery-item {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    transition: 0.4s ease-in-out;
+}
+.gallery-item:hover .gallery-caption {
+    background: rgba(0, 0, 0, 0.75);
+}
+</style>
+  
+<!-- Video Testimony Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Community Testimony</h2>
+    <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/0GRoqn8BqYc" title="ClimateWise Impact Testimony" allowfullscreen></iframe>
     </div>
-  </footer>
+</div>
 
-  <!-- Scripts -->
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Smooth scroll behavior for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-</body>
-	</html>
- <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+<!-- Footer -->
+<footer class="footer text-center">
+  <div class="container">
+    <p>© 2025 ClimateWise Organization. NGO Reg No: MW/CW/0225.</p>
+    <p>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms of Use</a> |
+      <a href="#"><i class="fab fa-facebook-f me-2"></i></a>
+      <a href="#"><i class="fab fa-twitter me-2"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </p>
+  </div>
+</footer>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const ctx = document.getElementById('impactChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2022', '2023', '2024', '2025'],
+      datasets: [
+        {
+          label: 'Beneficiaries (Thousands)',
+          data: [50, 85, 120, 165],
+          backgroundColor: '#3aafa9'
+        },
+        {
+          label: 'Trees Planted (Thousands)',
+          data: [120, 250, 400, 500],
+          backgroundColor: '#2b7a78'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+</script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 </html>

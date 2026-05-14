@@ -1,301 +1,1304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ClimateWise | Transforming Malawi</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; background-color: #f5f7fa; }
-    .navbar { background-color: #2b7a78; }
-    .navbar-brand, .nav-link, .navbar-toggler-icon { color: #fff !important; }
-    .hero { background: url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; height: 90vh; display: flex; align-items: center; position: relative; color: #fff; }
-    .hero::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(43, 122, 120, 0.75); z-index: 1; }
-    .hero-content { position: relative; z-index: 2; text-align: center; }
-    .hero h1 { font-size: 4rem; font-weight: 700; }
-    .hero p { font-size: 1.3rem; }
-    .icon-box { padding: 30px; border-radius: 10px; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease; }
-    .icon-box:hover { transform: translateY(-5px); }
-    .icon-box i { font-size: 3rem; color: #2b7a78; margin-bottom: 15px; }
-    .footer { background: #17252a; color: #ddd; padding: 30px 0; }
-    .footer a { color: #fff; text-decoration: none; }
-    .footer a:hover { text-decoration: underline; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Impact | ClimateWise Organization — Transforming Malawi</title>
+<meta name="description" content="Explore the measurable impact ClimateWise has created across Malawi: 23,651 people with clean water, 5,154 students reached, 532+ farmers trained, and 10,110 trees planted.">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<style>
+/* ═══ DESIGN TOKENS (matches index.html) ═══ */
+:root {
+  --green-deep: #0a3d2e;
+  --green-mid: #165740;
+  --green-fresh: #1e8a5a;
+  --green-bright: #2db87a;
+  --green-light: #e8f5ee;
+  --amber: #f5a623;
+  --amber-dark: #c47d0a;
+  --earth: #7c5c3e;
+  --purple: #8b45b5;
+  --blue: #185fa5;
+  --cream: #faf8f3;
+  --white: #ffffff;
+  --text-dark: #0f1e18;
+  --text-mid: #2e4a3a;
+  --text-muted: #5a7a68;
+  --border: rgba(26,87,64,0.12);
+  --shadow-sm: 0 2px 12px rgba(10,61,46,0.08);
+  --shadow-md: 0 8px 32px rgba(10,61,46,0.12);
+  --shadow-lg: 0 20px 60px rgba(10,61,46,0.18);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --nav-h: 72px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text-dark);background:var(--cream);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:var(--font-display);line-height:1.2;font-weight:600}
+h1{font-size:clamp(2.2rem,5vw,3.8rem)}
+h2{font-size:clamp(1.8rem,3.5vw,2.6rem)}
+h3{font-size:clamp(1.2rem,2vw,1.5rem)}
+p{color:var(--text-mid);line-height:1.75}
+a{text-decoration:none;color:inherit}
+
+.section-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green-fresh);background:var(--green-light);padding:6px 14px;border-radius:100px;margin-bottom:1rem}
+.section-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green-bright)}
+
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:0.95rem;font-weight:500;padding:13px 28px;border-radius:100px;cursor:pointer;transition:all 0.25s ease;border:2px solid transparent;white-space:nowrap}
+.btn-primary{background:var(--green-fresh);color:var(--white);border-color:var(--green-fresh)}
+.btn-primary:hover{background:var(--green-mid);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-amber{background:var(--amber);color:var(--white);border-color:var(--amber)}
+.btn-amber:hover{background:var(--amber-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,0.5)}
+.btn-outline:hover{background:rgba(255,255,255,0.12);border-color:var(--white)}
+.btn-ghost{background:transparent;color:var(--green-fresh);border-color:var(--green-fresh)}
+.btn-ghost:hover{background:var(--green-fresh);color:var(--white)}
+
+/* ═══ NAVBAR ═══ */
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);background:rgba(250,248,243,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
+#navbar.scrolled{box-shadow:var(--shadow-md)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;height:100%;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-logo-icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--green-deep),var(--green-fresh));display:flex;align-items:center;justify-content:center}
+.nav-logo-icon svg{width:22px;height:22px;fill:none;stroke:white;stroke-width:2}
+.nav-logo-name{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--green-deep)}
+.nav-logo-sub{font-size:0.68rem;color:var(--text-muted);font-weight:400;letter-spacing:0.05em}
+.nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-size:0.9rem;font-weight:500;color:var(--text-mid);padding:8px 14px;border-radius:8px;transition:all 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--green-fresh);background:var(--green-light)}
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-donate{font-size:0.88rem;padding:9px 20px}
+.nav-dropdown{position:relative}
+.nav-dropdown>a::after{content:' ▾';font-size:0.7em}
+.dropdown-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);min-width:180px;padding:8px;opacity:0;pointer-events:none;transition:all 0.2s}
+.nav-dropdown:hover .dropdown-menu{opacity:1;pointer-events:all}
+.dropdown-menu a{display:block;padding:9px 14px;font-size:0.88rem;border-radius:8px;color:var(--text-mid)!important}
+.dropdown-menu a:hover{background:var(--green-light);color:var(--green-fresh)!important}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--text-dark);border-radius:2px}
+
+/* Mobile menu */
+.mobile-menu{display:none;position:fixed;inset:0;z-index:999;background:var(--cream);padding-top:var(--nav-h);flex-direction:column;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-nav{padding:2rem;display:flex;flex-direction:column;gap:0.25rem}
+.mobile-nav a{font-size:1.05rem;font-weight:500;color:var(--text-dark);padding:14px 16px;border-radius:10px;transition:all 0.2s}
+.mobile-nav a:hover{background:var(--green-light);color:var(--green-fresh)}
+.mobile-nav .btn{margin-top:1rem;justify-content:center}
+
+/* ═══ PAGE HERO ═══ */
+.page-hero{min-height:70vh;position:relative;overflow:hidden;display:flex;align-items:center;background:var(--green-deep);padding-top:var(--nav-h)}
+.page-hero-bg{position:absolute;inset:0;background-image:url('img/impact-bg.jpg');background-size:cover;background-position:center;filter:brightness(0.3)}
+.page-hero-pattern{position:absolute;inset:0;background:radial-gradient(circle at 70% 40%,rgba(30,138,90,0.3) 0%,transparent 60%),radial-gradient(circle at 15% 70%,rgba(245,166,35,0.15) 0%,transparent 50%)}
+.page-hero-inner{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:5rem 2rem;text-align:center;color:var(--white)}
+.page-hero-inner .section-eyebrow{background:rgba(45,184,122,0.2);color:var(--green-bright)}
+.page-hero-inner h1{color:var(--white);margin-bottom:1.25rem}
+.page-hero-inner h1 em{color:var(--green-bright);font-style:italic}
+.page-hero-inner p{font-size:1.15rem;color:rgba(255,255,255,0.72);max-width:640px;margin:0 auto 2.5rem}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ═══ LAYOUT ═══ */
+.section{padding:6rem 0}
+.section-alt{background:var(--white)}
+.container{max-width:1280px;margin:0 auto;padding:0 2rem}
+.section-header{text-align:center;max-width:720px;margin:0 auto 3.5rem}
+.section-header h2{margin-bottom:1rem}
+.section-header p{font-size:1.05rem;color:var(--text-muted)}
+
+/* ═══ IMPACT TICKER ═══ */
+.impact-ticker{background:var(--green-deep);color:var(--white);padding:1rem 0;overflow:hidden}
+.ticker-track{display:flex;gap:3rem;white-space:nowrap;animation:ticker 35s linear infinite}
+.ticker-item{display:flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:500;color:rgba(255,255,255,0.8)}
+.ticker-item .num{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--amber)}
+.ticker-dot{width:4px;height:4px;border-radius:50%;background:var(--green-bright);flex-shrink:0}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══ KEY METRICS GRID ═══ */
+.metrics-section{background:var(--green-deep);position:relative;overflow:hidden}
+.metrics-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(30,138,90,0.25) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(245,166,35,0.1) 0%,transparent 50%)}
+.metrics-header{position:relative;z-index:1;text-align:center;max-width:680px;margin:0 auto 3.5rem;color:var(--white)}
+.metrics-header .section-eyebrow{background:rgba(45,184,122,0.2);color:var(--green-bright)}
+.metrics-header h2{color:var(--white)}
+.metrics-header p{color:rgba(255,255,255,0.6)}
+.metrics-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.metric-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:2rem 1.5rem;text-align:center;transition:all 0.3s ease}
+.metric-card:hover{background:rgba(255,255,255,0.1);transform:translateY(-4px)}
+.metric-icon{font-size:2rem;margin-bottom:1rem;display:block}
+.metric-num{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;color:var(--white);line-height:1;display:block;margin-bottom:0.4rem}
+.metric-num .plus{color:var(--green-bright)}
+.metric-num .pct{color:var(--amber)}
+.metric-label{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.4}
+.metric-sub{font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:6px;display:block}
+
+/* ═══ PILLAR DEEP-DIVES ═══ */
+.pillars-section{background:var(--cream)}
+.pillar-section{padding:4rem 0;border-bottom:1px solid var(--border)}
+.pillar-section:last-child{border-bottom:none}
+.pillar-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.pillar-grid.reverse{direction:rtl}
+.pillar-grid.reverse>*{direction:ltr}
+.pillar-header{display:flex;align-items:center;gap:14px;margin-bottom:1.5rem}
+.pillar-icon-lg{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.icon-water{background:#e8f5ee;color:var(--green-fresh)}
+.icon-agri{background:#fdf3e3;color:var(--earth)}
+.icon-gender{background:#f5e8fd;color:var(--purple)}
+.icon-env{background:#e8f5ee;color:var(--green-deep)}
+.pillar-title-wrap h3{font-size:1.4rem;margin-bottom:0.25rem}
+.pillar-title-wrap .subtitle{font-size:0.82rem;color:var(--text-muted);font-weight:500;text-transform:uppercase;letter-spacing:0.08em}
+.pillar-desc{font-size:1rem;color:var(--text-mid);margin-bottom:2rem;line-height:1.75}
+
+/* Stats inside pillar */
+.stat-cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
+.stat-mini{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1rem;text-align:center}
+.stat-mini-num{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--green-deep);display:block;line-height:1}
+.stat-mini-label{font-size:0.75rem;color:var(--text-muted);margin-top:4px;line-height:1.3}
+
+/* Gender breakdown bar */
+.gender-bar-wrap{margin-bottom:1rem}
+.gender-bar-label{display:flex;justify-content:space-between;font-size:0.82rem;font-weight:600;color:var(--text-mid);margin-bottom:8px}
+.gender-bar-track{height:12px;background:var(--cream);border-radius:6px;overflow:hidden;display:flex}
+.gender-bar-women{background:linear-gradient(90deg,#8b45b5,#b87add);border-radius:6px 0 0 6px;transition:width 1.5s ease}
+.gender-bar-men{background:linear-gradient(90deg,#185fa5,#378add);border-radius:0 6px 6px 0;transition:width 1.5s ease}
+.gender-legend{display:flex;gap:1.5rem;margin-top:0.6rem}
+.gender-legend-item{display:flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text-muted)}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.legend-women{background:#8b45b5}
+.legend-men{background:#185fa5}
+
+/* Progress bars */
+.progress-item{margin-bottom:1.1rem}
+.progress-row{display:flex;justify-content:space-between;font-size:0.82rem;margin-bottom:5px}
+.progress-row .label{font-weight:500;color:var(--text-dark)}
+.progress-row .val{font-weight:600;color:var(--green-fresh)}
+.progress-track{height:8px;background:var(--green-light);border-radius:4px;overflow:hidden}
+.progress-fill{height:100%;border-radius:4px;transition:width 1.5s ease}
+.fill-green{background:linear-gradient(90deg,var(--green-fresh),var(--green-bright))}
+.fill-amber{background:linear-gradient(90deg,var(--amber-dark),var(--amber))}
+.fill-purple{background:linear-gradient(90deg,#6a2fa0,#8b45b5)}
+.fill-blue{background:linear-gradient(90deg,var(--blue),#378add)}
+
+/* Story pull-quote */
+.story-quote{background:var(--green-deep);border-radius:var(--radius-lg);padding:2rem;color:var(--white);margin-top:1.5rem;position:relative;overflow:hidden}
+.story-quote::before{content:'\201C';font-family:var(--font-display);font-size:8rem;position:absolute;top:-1.5rem;left:1rem;color:rgba(255,255,255,0.06);line-height:1;pointer-events:none}
+.story-quote blockquote{font-size:1rem;font-style:italic;line-height:1.7;color:rgba(255,255,255,0.85);position:relative;z-index:1;margin-bottom:1rem}
+.story-quote-author{display:flex;align-items:center;gap:10px;position:relative;z-index:1}
+.quote-avatar{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;color:var(--white);font-size:0.85rem;flex-shrink:0}
+.quote-author-name{font-weight:600;font-size:0.88rem;color:var(--white)}
+.quote-author-role{font-size:0.75rem;color:rgba(255,255,255,0.5)}
+
+/* Before/after for agri */
+.before-after-strip{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;margin-bottom:1rem}
+.ba-col{text-align:center}
+.ba-col .label{font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px}
+.ba-col.before .label{color:var(--earth)}
+.ba-col.after .label{color:var(--green-fresh)}
+.ba-col .big{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--text-dark);line-height:1}
+.ba-col.after .big{color:var(--green-fresh)}
+.ba-arrow{font-size:1.5rem;color:var(--amber)}
+
+/* ═══ CHARTS ═══ */
+.charts-section{background:var(--white)}
+.charts-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:2.5rem;align-items:start}
+.chart-card{background:var(--cream);border-radius:var(--radius-lg);padding:2rem;border:1px solid var(--border)}
+.chart-card h3{font-size:1.1rem;margin-bottom:0.4rem}
+.chart-card .chart-sub{font-size:0.82rem;color:var(--text-muted);margin-bottom:1.5rem}
+.chart-container{position:relative}
+
+/* ═══ GALLERY ═══ */
+.gallery-section{background:var(--cream)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.gallery-item{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer}
+.gallery-item.tall{grid-row:span 2}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;display:block}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:1.25rem 1rem 1rem;background:linear-gradient(transparent,rgba(10,61,46,0.85));color:var(--white);transition:opacity 0.3s}
+.gallery-caption h4{font-family:var(--font-body);font-size:0.9rem;font-weight:600;color:var(--white)}
+.gallery-caption span{font-size:0.75rem;color:rgba(255,255,255,0.7)}
+.gallery-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--green-light),#c8eeda);display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+
+/* ═══ VIDEO ═══ */
+.video-section{background:var(--white)}
+.video-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+.video-wrap{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
+.ratio{position:relative;width:100%}
+.ratio-16x9::before{content:'';display:block;padding-top:56.25%}
+.ratio>*{position:absolute;inset:0;width:100%;height:100%}
+.video-text .section-eyebrow{margin-bottom:0.75rem}
+.video-text h2{margin-bottom:1rem}
+.video-text p{margin-bottom:1.5rem}
+.video-stats-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
+.video-stat{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center}
+.video-stat .num{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--green-deep);display:block;line-height:1}
+.video-stat .lbl{font-size:0.75rem;color:var(--text-muted);margin-top:4px}
+
+/* ═══ TESTIMONIALS ═══ */
+.testimonials-section{background:var(--cream)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.testimonial-card{background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;border:1px solid var(--border);display:flex;flex-direction:column}
+.quote-icon{font-size:2.5rem;color:var(--green-light);line-height:1;margin-bottom:1rem;font-family:Georgia,serif}
+.testimonial-card blockquote{font-size:0.95rem;color:var(--text-mid);font-style:italic;line-height:1.75;flex:1;margin-bottom:1.25rem}
+.testimonial-footer{display:flex;align-items:center;gap:12px;border-top:1px solid var(--border);padding-top:1rem}
+.avatar{width:44px;height:44px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--white)}
+.av-green{background:var(--green-fresh)}
+.av-amber{background:var(--amber)}
+.av-blue{background:var(--blue)}
+.testimonial-name{font-weight:600;font-size:0.9rem}
+.testimonial-role{font-size:0.78rem;color:var(--text-muted)}
+.t-highlight{margin-top:1rem;padding:7px 12px;border-radius:8px;background:var(--green-light);font-size:0.78rem;font-weight:600;color:var(--green-fresh);display:flex;align-items:center;gap:6px}
+.t-highlight::before{content:'✓';width:16px;height:16px;border-radius:50%;background:var(--green-fresh);color:white;display:flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0}
+
+/* ═══ DONATE CTA ═══ */
+.donate-section{background:linear-gradient(135deg,var(--green-fresh),var(--green-deep));position:relative;overflow:hidden}
+.donate-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 50%,rgba(245,166,35,0.2) 0%,transparent 50%)}
+.donate-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center}
+.donate-text h2{color:var(--white);margin-bottom:0.75rem}
+.donate-text p{color:rgba(255,255,255,0.8);font-size:1.05rem;max-width:540px}
+.donate-box{text-align:center}
+.donate-box .btn{font-size:1rem;padding:16px 36px;width:220px;justify-content:center;margin-bottom:10px}
+.donate-secure{font-size:0.78rem;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:6px;justify-content:center}
+
+/* ═══ FOOTER ═══ */
+footer{background:var(--green-deep);color:var(--white);padding:5rem 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem}
+.footer-brand-desc{font-size:0.9rem;color:rgba(255,255,255,0.6);margin:1rem 0 1.5rem;line-height:1.7}
+.footer-social{display:flex;gap:10px}
+.social-link{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);font-size:0.9rem;transition:all 0.2s}
+.social-link:hover{background:var(--green-fresh);border-color:var(--green-fresh);color:var(--white)}
+.footer-col h4{font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.25rem}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:0.9rem;color:rgba(255,255,255,0.65);transition:color 0.2s}
+.footer-links a:hover{color:var(--green-bright)}
+.newsletter-form{display:flex;gap:8px}
+.newsletter-form input{flex:1;padding:11px 16px;border-radius:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:var(--white);font-family:var(--font-body);font-size:0.88rem;outline:none;transition:border-color 0.2s}
+.newsletter-form input::placeholder{color:rgba(255,255,255,0.35)}
+.newsletter-form input:focus{border-color:var(--green-bright)}
+.newsletter-form button{padding:11px 18px;border-radius:10px;background:var(--green-fresh);color:var(--white);border:none;cursor:pointer;font-size:0.88rem;font-weight:500;font-family:var(--font-body);transition:background 0.2s;white-space:nowrap}
+.newsletter-form button:hover{background:var(--green-bright)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:0.82rem;color:rgba(255,255,255,0.45);margin:0}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a{font-size:0.8rem;color:rgba(255,255,255,0.4);transition:color 0.2s}
+.footer-legal a:hover{color:rgba(255,255,255,0.7)}
+
+/* Back to top */
+.back-to-top{position:fixed;bottom:2rem;right:2rem;z-index:999;width:44px;height:44px;border-radius:12px;background:var(--green-fresh);color:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);opacity:0;pointer-events:none;transition:all 0.3s;font-size:1rem}
+.back-to-top.visible{opacity:1;pointer-events:all}
+.back-to-top:hover{background:var(--green-mid);transform:translateY(-3px)}
+
+/* Animations */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up-delay-1{transition-delay:0.1s}
+.fade-up-delay-2{transition-delay:0.2s}
+.fade-up-delay-3{transition-delay:0.3s}
+.fade-up-delay-4{transition-delay:0.4s}
+
+/* Responsive */
+@media(max-width:1100px){
+  .metrics-grid{grid-template-columns:repeat(2,1fr)}
+  .charts-grid{grid-template-columns:1fr}
+  .video-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .pillar-grid{grid-template-columns:1fr}
+  .pillar-grid.reverse{direction:ltr}
+  .stat-cards-row{grid-template-columns:repeat(3,1fr)}
+  .testimonials-grid{grid-template-columns:1fr}
+  .donate-inner{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links,.nav-actions{display:none}
+  .nav-toggle{display:flex}
+}
+@media(max-width:640px){
+  .metrics-grid{grid-template-columns:1fr 1fr}
+  .stat-cards-row{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .hero-ctas{flex-direction:column;align-items:center}
+}
+</style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">ClimateWise</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="projects.html" class="nav-item nav-link">Projects</a>
-                <a href="events.html" class="nav-item nav-link">Events</a>
+<!-- ═══ NAVBAR ═══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6 8 4 12 4 15a8 8 0 0016 0c0-3-2-7-8-13z"/><path d="M12 22V12M8 16l4-4 4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <div class="nav-logo-name">ClimateWise</div>
+        <div class="nav-logo-sub">Organization · Malawi</div>
+      </div>
+    </a>
 
-              
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-secondary">
-                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                    <a href="impact.html" class="dropdown-item">Our Impact</a>
-                                    <a href="gallery.html" class="dropdown-item">Gallery</a>
-                                    <a href="volunteer.html" class="dropdown-item">Volunteers</a>
-                                    <a href="donation.html" class="dropdown-item">Donation</a>
-                                    <a href="partners.html" class="dropdown-item">Partners</a>
-                        </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <div class="d-flex ms-auto">
-                <a href="#" class="btn btn-primary">Donate Now</a>
-            </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Our Work</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="impact.html" class="active">Impact</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li class="nav-dropdown">
+        <a href="#">More</a>
+        <div class="dropdown-menu">
+          <a href="gallery.html">Gallery</a>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="partners.html">Partners</a>
+          <a href="contact.html">Contact</a>
         </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="volunteer.html" class="btn btn-ghost nav-donate">Volunteer</a>
+      <a href="donation.html" class="btn btn-amber nav-donate">Donate Now</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
-      </div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="service.html">Our Work</a>
+    <a href="projects.html">Projects</a>
+    <a href="impact.html">Impact</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+    <a href="donation.html" class="btn btn-amber">Donate Now →</a>
+  </nav>
 </div>
-<!-- Navbar End -->
-  
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Empowering Communities, Restoring Ecosystems</h1>
-    <p class="lead">We deliver practical, people-centered solutions in food security, WASH, youth empowerment, and sustainable agriculture in Malawi.</p>
+
+<!-- ═══ PAGE HERO ═══ -->
+<section class="page-hero" id="top">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-pattern"></div>
+  <div class="page-hero-inner">
+    <div class="section-eyebrow">Measurable Change Since 2021</div>
+    <h1>Empowering Communities,<br><em>Restoring Ecosystems</em></h1>
+    <p>Practical, people-centered solutions in food security, clean water, gender equality, and environmental resilience — creating documented impact across Malawi.</p>
+    <div class="hero-ctas">
+      <a href="donation.html" class="btn btn-amber"><i class="fas fa-heart"></i> Support Our Work</a>
+      <a href="#metrics" class="btn btn-outline"><i class="fas fa-chart-bar"></i> Explore the Numbers</a>
+    </div>
   </div>
 </section>
 
-<!-- Impact Highlights -->
-<section class="py-5">
-  <div class="container text-center">
-    <div class="row g-4">
-      <div class="col-md-3">
-        <div class="icon-box">
-          <i class="fas fa-seedling"></i>
-          <h5>Food Security & Livelihoods</h5>
-          <p>Supported 2,865+ smallholder farmers with improved seeds, training, and better markets.</p>
+<!-- ═══ IMPACT TICKER ═══ -->
+<div class="impact-ticker">
+  <div class="ticker-track">
+    <div class="ticker-item"><span class="num">23,651</span> People with clean water <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">11</span> Boreholes built <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">2,470</span> Smallholder farmers reached <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">65%</span> Women among farmer beneficiaries <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">5,154</span> Students in gender programs <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">100</span> Gender clubs established <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">10,110</span> Trees planted <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">89</span> Communities transformed <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">90%</span> Cholera reduction in Chikwawa <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">3</span> Entrepreneur centres launched <span class="ticker-dot"></span></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="ticker-item"><span class="num">23,651</span> People with clean water <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">11</span> Boreholes built <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">2,470</span> Smallholder farmers reached <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">65%</span> Women among farmer beneficiaries <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">5,154</span> Students in gender programs <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">100</span> Gender clubs established <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">10,110</span> Trees planted <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">89</span> Communities transformed <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">90%</span> Cholera reduction in Chikwawa <span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span class="num">3</span> Entrepreneur centres launched <span class="ticker-dot"></span></div>
+  </div>
+</div>
+
+<!-- ═══ KEY METRICS ═══ -->
+<section class="section metrics-section" id="metrics">
+  <div class="container">
+    <div class="metrics-header fade-up">
+      <div class="section-eyebrow">By the Numbers</div>
+      <h2>Creating Tangible Change Across Malawi</h2>
+      <p>Every figure below represents a real life improved — a family with clean water, a girl staying in school, a farmer feeding their community.</p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card fade-up">
+        <span class="metric-icon">💧</span>
+        <span class="metric-num"><span class="count-up" data-target="23651">23,651</span></span>
+        <div class="metric-label">People with sustainable clean water access</div>
+        <span class="metric-sub">11 boreholes · 89 communities</span>
+      </div>
+      <div class="metric-card fade-up fade-up-delay-1">
+        <span class="metric-icon">🌾</span>
+        <span class="metric-num"><span class="count-up" data-target="2470">2,470</span></span>
+        <div class="metric-label">Smallholder farmer beneficiaries</div>
+        <span class="metric-sub">65% women · 35% men · 3 entrepreneur centres</span>
+      </div>
+      <div class="metric-card fade-up fade-up-delay-2">
+        <span class="metric-icon">🎓</span>
+        <span class="metric-num"><span class="count-up" data-target="5154">5,154</span></span>
+        <div class="metric-label">Students in gender equality programs</div>
+        <span class="metric-sub">100 gender clubs · UNESCO-funded</span>
+      </div>
+      <div class="metric-card fade-up fade-up-delay-3">
+        <span class="metric-icon">🌳</span>
+        <span class="metric-num"><span class="count-up" data-target="10110">10,110</span></span>
+        <div class="metric-label">Trees planted across Malawi</div>
+        <span class="metric-sub">Climate education in schools</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PILLAR DEEP-DIVES ═══ -->
+<section class="section pillars-section" id="programs">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-eyebrow">Program Breakdown</div>
+      <h2>Deep Dive into Each Pillar</h2>
+      <p>Transparent, documented results from each of our four core programs.</p>
+    </div>
+
+    <!-- WASH -->
+    <div class="pillar-section">
+      <div class="pillar-grid fade-up">
+        <div>
+          <div class="pillar-header">
+            <div class="pillar-icon-lg icon-water"><i class="fas fa-tint"></i></div>
+            <div class="pillar-title-wrap">
+              <div class="subtitle">Pillar 01</div>
+              <h3>Water, Sanitation &amp; Hygiene</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">We construct solar-powered boreholes, establish Water Point Committees, and deliver hygiene education to eliminate waterborne disease and restore dignity — especially for women and girls who previously walked hours for contaminated water.</p>
+
+          <div class="stat-cards-row">
+            <div class="stat-mini">
+              <span class="stat-mini-num">23,651</span>
+              <div class="stat-mini-label">People with clean water access</div>
+            </div>
+            <div class="stat-mini">
+              <span class="stat-mini-num">11</span>
+              <div class="stat-mini-label">Boreholes & solar water systems built</div>
+            </div>
+            <div class="stat-mini">
+              <span class="stat-mini-num">90%</span>
+              <div class="stat-mini-label">Cholera reduction in served communities</div>
+            </div>
+          </div>
+
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Girls' school attendance (Chikwawa)</span><span class="val">85%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-green" data-width="85" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Waterborne disease reduction</span><span class="val">91%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-green" data-width="91" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Water point committees fully operational</span><span class="val">100%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-green" data-width="100" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Daily walking distance reduced (4km → 100m)</span><span class="val">97.5%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-green" data-width="97" style="width:0%"></div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="story-quote">
+            <blockquote>"My daughters no longer risk violence fetching water. They go to school while I farm. This water pump gave us safety and time we never had."</blockquote>
+            <div class="story-quote-author">
+              <div class="quote-avatar">A</div>
+              <div>
+                <div class="quote-author-name">Anita, Mother &amp; Farmer</div>
+                <div class="quote-author-role">Village of Kasisi, Chikwawa</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem">
+            <h4 style="font-size:1rem;margin-bottom:1rem;color:var(--text-dark)">Chikwawa Transformation Snapshot</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem">
+              <div style="text-align:center;padding:0.75rem;background:var(--cream);border-radius:8px">
+                <span style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--green-fresh);display:block">700+</span>
+                <span style="font-size:0.72rem;color:var(--text-muted)">Households served</span>
+              </div>
+              <div style="text-align:center;padding:0.75rem;background:var(--cream);border-radius:8px">
+                <span style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--green-fresh);display:block">4,657</span>
+                <span style="font-size:0.72rem;color:var(--text-muted)">People directly reached</span>
+              </div>
+              <div style="text-align:center;padding:0.75rem;background:var(--cream);border-radius:8px">
+                <span style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber);display:block">5 hrs</span>
+                <span style="font-size:0.72rem;color:var(--text-muted)">Daily time saved per family</span>
+              </div>
+              <div style="text-align:center;padding:0.75rem;background:var(--cream);border-radius:8px">
+                <span style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--green-fresh);display:block">0</span>
+                <span style="font-size:0.72rem;color:var(--text-muted)">Violence reports since installation</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="icon-box">
-          <i class="fas fa-tree"></i>
-          <h5>Agroforestry</h5>
-          <p>Over 35,065 trees planted annually restoring degraded land.</p>
+    </div>
+
+    <!-- AGRICULTURE -->
+    <div class="pillar-section">
+      <div class="pillar-grid reverse fade-up">
+        <div>
+          <div class="pillar-header">
+            <div class="pillar-icon-lg icon-agri"><i class="fas fa-seedling"></i></div>
+            <div class="pillar-title-wrap">
+              <div class="subtitle">Pillar 02</div>
+              <h3>Agriculture &amp; Food Security</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">We equip smallholder farmers with climate-smart techniques, improved seeds, irrigation access, and market linkages. Our gender-intentional approach ensures women — who make up most subsistence farmers — are centred in every program.</p>
+
+          <div class="stat-cards-row">
+            <div class="stat-mini">
+              <span class="stat-mini-num" style="color:var(--earth)">2,470</span>
+              <div class="stat-mini-label">Total farmer beneficiaries</div>
+            </div>
+            <div class="stat-mini">
+              <span class="stat-mini-num" style="color:var(--purple)">65%</span>
+              <div class="stat-mini-label">Women among beneficiaries</div>
+            </div>
+            <div class="stat-mini">
+              <span class="stat-mini-num" style="color:var(--blue)">35%</span>
+              <div class="stat-mini-label">Men among beneficiaries</div>
+            </div>
+          </div>
+
+          <!-- Gender breakdown bar -->
+          <div class="gender-bar-wrap">
+            <div class="gender-bar-label">
+              <span>Beneficiary Gender Breakdown</span>
+              <span>2,470 total farmers</span>
+            </div>
+            <div class="gender-bar-track">
+              <div class="gender-bar-women" data-width="65" style="width:0%"></div>
+              <div class="gender-bar-men" data-width="35" style="width:0%"></div>
+            </div>
+            <div class="gender-legend">
+              <div class="gender-legend-item"><div class="legend-dot legend-women"></div>Women — 65% (1,606 farmers)</div>
+              <div class="gender-legend-item"><div class="legend-dot legend-men"></div>Men — 35% (864 farmers)</div>
+            </div>
+          </div>
+
+          <!-- Before/After yield -->
+          <div class="before-after-strip">
+            <div class="ba-col before">
+              <div class="label">Before Training</div>
+              <div class="big">10</div>
+              <div style="font-size:0.78rem;color:var(--text-muted)">bags/acre (maize)</div>
+            </div>
+            <div class="ba-arrow">→</div>
+            <div class="ba-col after">
+              <div class="label">After Training</div>
+              <div class="big">30</div>
+              <div style="font-size:0.78rem;color:var(--green-fresh)">bags/acre (+200%)</div>
+            </div>
+          </div>
+
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Yield improvement (average)</span><span class="val">200%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-amber" data-width="67" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Farmers adopting climate-smart practices</span><span class="val">532+</span></div>
+            <div class="progress-track"><div class="progress-fill fill-amber" data-width="78" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Women-led entrepreneur centres</span><span class="val">3 of 3</span></div>
+            <div class="progress-track"><div class="progress-fill fill-amber" data-width="100" style="width:0%"></div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="story-quote" style="background:linear-gradient(135deg,#4a2a0a,#7c5c3e)">
+            <blockquote>"After completing the Green Youth Entrepreneurship Training, Tinashe and I launched a mushroom farming business using agricultural waste. We now employ 5 youth and supply 200+ households."</blockquote>
+            <div class="story-quote-author">
+              <div class="quote-avatar" style="background:rgba(245,166,35,0.3)">M</div>
+              <div>
+                <div class="quote-author-name">Maggie, Youth Entrepreneur</div>
+                <div class="quote-author-role">Age 24 · Mushroom Farming Business</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem">
+            <h4 style="font-size:1rem;margin-bottom:1rem;color:var(--text-dark)">Youth Entrepreneurship Results</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem">
+              <div style="text-align:center;padding:0.75rem;background:var(--cream);border-radius:8px">
+                <span style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--earth);display:block">5</span>
+                <span style="font-size:0.72rem;color:var(--text-muted)">Youth employed per business</span>
+              </div>
+              <div style="text-align:center;padding:0.75rem;background:var(--cream);border-radius:8px">
+                <span style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--earth);display:block">200+</span>
+                <span style="font-size:0.72rem;color:var(--text-muted)">Households supplied</span>
+              </div>
+              <div style="text-align:center;padding:0.75rem;background:var(--cream);border-radius:8px">
+                <span style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber);display:block">$2,500</span>
+                <span style="font-size:0.72rem;color:var(--text-muted)">Monthly income generated</span>
+              </div>
+              <div style="text-align:center;padding:0.75rem;background:var(--cream);border-radius:8px">
+                <span style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--earth);display:block">3</span>
+                <span style="font-size:0.72rem;color:var(--text-muted)">Entrepreneur centres active</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="col-md-3">
-        <div class="icon-box">
-          <i class="fas fa-hand-holding-water"></i>
-          <h5>WASH Projects</h5>
-          <p>20+ boreholes and solar-powered water systems serving 55,000+ people.</p>
+    </div>
+
+    <!-- GENDER -->
+    <div class="pillar-section">
+      <div class="pillar-grid fade-up">
+        <div>
+          <div class="pillar-header">
+            <div class="pillar-icon-lg icon-gender"><i class="fas fa-venus-mars"></i></div>
+            <div class="pillar-title-wrap">
+              <div class="subtitle">Pillar 03</div>
+              <h3>Gender Equality &amp; Inclusion</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">Funded by UNESCO, our gender program creates safe learning environments, establishes gender clubs, and trains teachers and community leaders to tackle the root causes of dropout and inequality in Malawi's central region.</p>
+
+          <div class="stat-cards-row">
+            <div class="stat-mini">
+              <span class="stat-mini-num" style="color:var(--purple)">5,154</span>
+              <div class="stat-mini-label">Students reached in gender programs</div>
+            </div>
+            <div class="stat-mini">
+              <span class="stat-mini-num" style="color:var(--purple)">100</span>
+              <div class="stat-mini-label">Gender clubs established</div>
+            </div>
+            <div class="stat-mini">
+              <span class="stat-mini-num" style="color:var(--purple)">112%</span>
+              <div class="stat-mini-label">Increase in girls' test scores</div>
+            </div>
+          </div>
+
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Girls' school attendance (before program)</span><span class="val">40%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-purple" data-width="40" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Girls' school attendance (after program)</span><span class="val">85%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-purple" data-width="85" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Schools with active gender clubs</span><span class="val">100%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-purple" data-width="100" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Girls' test score improvement</span><span class="val">+112%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-purple" data-width="82" style="width:0%"></div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="story-quote" style="background:linear-gradient(135deg,#3d1060,#6a2fa0)">
+            <blockquote>"Girls' school attendance jumped from 40% to 85%. They're no longer exhausted from walking 8km for water. They've become our top students — and they know they belong in that classroom."</blockquote>
+            <div class="story-quote-author">
+              <div class="quote-avatar" style="background:rgba(255,255,255,0.15)">G</div>
+              <div>
+                <div class="quote-author-name">Grace, Head Teacher</div>
+                <div class="quote-author-role">Kasisi Primary School, Chikwawa</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem">
+            <h4 style="font-size:1rem;margin-bottom:0.5rem;color:var(--text-dark)">UNESCO Partnership Impact</h4>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1rem">Funded initiative addressing gender inequality across the Central Region with safe, inspiring learning spaces.</p>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text-mid)">
+                <span style="color:var(--green-fresh);font-size:0.7rem">✓</span> Community dialogues on gender norms
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text-mid)">
+                <span style="color:var(--green-fresh);font-size:0.7rem">✓</span> Teacher training on inclusive pedagogy
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text-mid)">
+                <span style="color:var(--green-fresh);font-size:0.7rem">✓</span> Girls' leadership &amp; mentorship programs
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text-mid)">
+                <span style="color:var(--green-fresh);font-size:0.7rem">✓</span> Sports and arts for confidence building
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--text-mid)">
+                <span style="color:var(--green-fresh);font-size:0.7rem">✓</span> 100 gender clubs across the Central Region
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="icon-box">
-          <i class="fas fa-user-friends"></i>
-          <h5>Youth Empowerment</h5>
-          <p>Trained 13,206+ youth in climate innovation, leadership & entrepreneurship.</p>
+    </div>
+
+    <!-- ENVIRONMENT -->
+    <div class="pillar-section">
+      <div class="pillar-grid reverse fade-up">
+        <div>
+          <div class="pillar-header">
+            <div class="pillar-icon-lg icon-env"><i class="fas fa-tree"></i></div>
+            <div class="pillar-title-wrap">
+              <div class="subtitle">Pillar 04</div>
+              <h3>Environment &amp; Climate Resilience</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">Through reforestation, environmental education in schools, and community-level climate preparedness, we protect Malawi's natural heritage and help communities adapt to the increasingly unpredictable climate they face.</p>
+
+          <div class="stat-cards-row">
+            <div class="stat-mini">
+              <span class="stat-mini-num" style="color:var(--green-mid)">10,110</span>
+              <div class="stat-mini-label">Trees planted across Malawi</div>
+            </div>
+            <div class="stat-mini">
+              <span class="stat-mini-num" style="color:var(--green-mid)">89</span>
+              <div class="stat-mini-label">Communities with climate preparedness plans</div>
+            </div>
+            <div class="stat-mini">
+              <span class="stat-mini-num" style="color:var(--green-mid)">100%</span>
+              <div class="stat-mini-label">Schools with climate education curriculum</div>
+            </div>
+          </div>
+
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Annual tree survival rate</span><span class="val">87%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-green" data-width="87" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Communities with active youth climate champions</span><span class="val">76%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-green" data-width="76" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Schools integrating environmental education</span><span class="val">100%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-green" data-width="100" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-row"><span class="label">Degraded land under restoration</span><span class="val">62%</span></div>
+            <div class="progress-track"><div class="progress-fill fill-green" data-width="62" style="width:0%"></div></div>
+          </div>
+        </div>
+
+        <div>
+          <div style="background:linear-gradient(135deg,var(--green-deep),var(--green-mid));border-radius:var(--radius-lg);padding:2rem;color:var(--white)">
+            <h4 style="color:var(--white);margin-bottom:1rem;font-size:1.1rem">Youth Climate Champions</h4>
+            <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;margin-bottom:1.5rem">Young people are stepping forward across Malawi — leading tree planting drives, hygiene campaigns, and peer education in schools and villages.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+              <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:1rem;text-align:center">
+                <span style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--green-bright);display:block">10,110</span>
+                <span style="font-size:0.72rem;color:rgba(255,255,255,0.6)">Trees planted</span>
+              </div>
+              <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:1rem;text-align:center">
+                <span style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--amber);display:block">89</span>
+                <span style="font-size:0.72rem;color:rgba(255,255,255,0.6)">Communities prepared</span>
+              </div>
+              <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:1rem;text-align:center">
+                <span style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--green-bright);display:block">87%</span>
+                <span style="font-size:0.72rem;color:rgba(255,255,255,0.6)">Tree survival rate</span>
+              </div>
+              <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:1rem;text-align:center">
+                <span style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--amber);display:block">∞</span>
+                <span style="font-size:0.72rem;color:rgba(255,255,255,0.6)">Youth-led campaigns ongoing</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Impact Graph -->
-<section class="py-5">
+<!-- ═══ CHARTS ═══ -->
+<section class="section charts-section" id="charts">
   <div class="container">
-    <h3 class="text-center mb-4">2022-2025 Impact Growth</h3>
-    <canvas id="impactChart"></canvas>
+    <div class="section-header fade-up">
+      <div class="section-eyebrow">Data Visualization</div>
+      <h2>Impact Growth &amp; Distribution 2022–2025</h2>
+      <p>Evidence-based tracking of our cumulative impact across all four program pillars.</p>
+    </div>
+    <div class="charts-grid">
+      <div class="chart-card fade-up">
+        <h3>Cumulative Beneficiaries by Program (2022–2025)</h3>
+        <div class="chart-sub">Thousands of people reached across WASH, Agriculture, Gender &amp; Environment</div>
+        <div class="chart-container" style="height:320px">
+          <canvas id="impactChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card fade-up fade-up-delay-1">
+        <h3>Agricultural Beneficiaries by Gender</h3>
+        <div class="chart-sub">2,470 total smallholder farmers — gender-inclusive by design</div>
+        <div class="chart-container" style="height:200px">
+          <canvas id="genderChart"></canvas>
+        </div>
+        <div style="margin-top:1.5rem">
+          <h3 style="margin-bottom:0.3rem">Program Impact Share</h3>
+          <div class="chart-sub" style="margin-bottom:1rem">Distribution across our four core pillars</div>
+          <div class="chart-container" style="height:200px">
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<!-- Impact Distribution Pie Chart -->
-<section class="py-5 bg-light">
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="section testimonials-section">
   <div class="container">
-    <h3 class="text-center mb-4">Impact Distribution Overview</h3>
-    <canvas id="impactPieChart"></canvas>
+    <div class="section-header fade-up">
+      <div class="section-eyebrow">Voices from the Field</div>
+      <h2>Real People. Real Change.</h2>
+      <p>These are not statistics. These are neighbours, parents, teachers, and farmers whose lives are genuinely different because of your support.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="quote-icon">"</div>
+        <blockquote>My daughters no longer risk violence fetching water. They go to school while I farm. This water pump gave us safety and time we never had. I can now farm two extra hours every single day.</blockquote>
+        <div class="testimonial-footer">
+          <div class="avatar av-green">A</div>
+          <div>
+            <div class="testimonial-name">Anita, Mother &amp; Farmer</div>
+            <div class="testimonial-role">Village of Kasisi, Chikwawa</div>
+          </div>
+        </div>
+        <div class="t-highlight">Now farms 2 additional hours daily</div>
+      </div>
+
+      <div class="testimonial-card fade-up fade-up-delay-1">
+        <div class="quote-icon">"</div>
+        <blockquote>Cholera cases in these villages dropped from 47 to just 3 in six months. Clean water is preventing more disease than medicine can cure. I have never seen a transformation this fast in my career.</blockquote>
+        <div class="testimonial-footer">
+          <div class="avatar av-blue">DC</div>
+          <div>
+            <div class="testimonial-name">Dr. Chisale, Health Officer</div>
+            <div class="testimonial-role">Chikwawa District Hospital</div>
+          </div>
+        </div>
+        <div class="t-highlight">91% reduction in waterborne diseases</div>
+      </div>
+
+      <div class="testimonial-card fade-up fade-up-delay-2">
+        <div class="quote-icon">"</div>
+        <blockquote>James increased from 10 to 30 bags per acre after just one season using conservation agriculture. The training did not just teach him techniques — it gave him belief that farming can be a profession, not a trap.</blockquote>
+        <div class="testimonial-footer">
+          <div class="avatar av-amber">AO</div>
+          <div>
+            <div class="testimonial-name">Agriculture Officer</div>
+            <div class="testimonial-role">Dowa District, Malawi</div>
+          </div>
+        </div>
+        <div class="t-highlight">200% average yield increase in Dowa</div>
+      </div>
+    </div>
   </div>
 </section>
-<script>
-  const pieCtx = document.getElementById('impactPieChart').getContext('2d');
-  new Chart(pieCtx, {
-    type: 'pie',
-    data: {
-      labels: ['People Reached', 'Trees Planted', 'WASH Beneficiaries', 'Youth Empowered'],
-      datasets: [{
-        label: 'Impact Figures',
-        data: [165526, 35065, 55000, 13209],
-        backgroundColor: [
-          '#ff7f0e',
-          '#2ca02c',
-          '#1f77b4',
-          '#def2f1'    
-        ],
-        borderColor: '#fff',
-        borderWidth: 2
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'bottom',
-          labels: { color: '#333', font: { size: 14 } }
-        }
-      }
-    }
-  });
-</script>
 
-  <!-- Gallery Section -->
-<div class="container my-5">
-    <h2 class="text-center mb-4">Our Work in Pictures</h2>
-    <div class="row g-3">
-        <div class="col-md-4">
-            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
-                <img src="img/solar.jpg" class="img-fluid w-100" alt="Solar Installation" class="img-fluid">
-                <div class="gallery-caption">
-                    <h5>Solar powered irrigation</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
-                <img src="img/Agricultural.jpg" alt="Agriculture" class="img-fluid">
-                <div class="gallery-caption">
-                    <h5>Smart Farming</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
-                <img src="img/Clean Water.jpg" alt="Clean Water Access" class="img-fluid">
-                <div class="gallery-caption">
-                    <h5>Clean Water Access</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
-                <img src="img/Community Engagement.jpg" alt="Community Engagement" class="img-fluid">
-                <div class="gallery-caption">
-                    <h5>Community Engagement</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
-                <img src="img/Youth.jpg" alt="Youth Empowerment" class="img-fluid">
-                <div class="gallery-caption">
-                    <h5>Youth Empowerment Program</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="position-relative overflow-hidden rounded shadow-sm gallery-item">
-              <img src="img/Reforestation.jpg" alt="Agroforestry Initiative" class="img-fluid">
-                <div class="gallery-caption">
-                    <h5>Agroforestry Initiative</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Custom CSS for Gallery -->
-<style>
-.gallery-item {
-    height: 250px;
-    overflow: hidden;
-    border-radius: 12px;
-    position: relative;
-    transition: all 0.4s ease-in-out;
-}
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.4s ease-in-out;
-}
-.gallery-item:hover img {
-    transform: scale(1.08);
-}
-.gallery-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 8px 12px;
-    background: rgba(0, 0, 0, 0.55);
-    color: #fff;
-    text-align: center;
-    font-size: 1rem;
-    transition: 0.4s ease-in-out;
-}
-.gallery-item:hover .gallery-caption {
-    background: rgba(0, 0, 0, 0.75);
-}
-</style>
-  
-<!-- Video Testimony Section -->
-<div class="container my-5">
-    <h2 class="text-center mb-4">Community Testimony</h2>
-    <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/im_62utRmCY" title="ClimateWise Impact Testimony" allowfullscreen></iframe>
-    </div>
-</div>
-
-
-<!-- Footer -->
-<footer class="footer text-center">
+<!-- ═══ GALLERY ═══ -->
+<section class="section gallery-section" id="gallery">
   <div class="container">
-    <p>© 2025 ClimateWise Organization. NGO Reg No: MW/CW/0225.</p>
-    <p>
-      <a href="#">Privacy Policy</a> | 
-      <a href="#">Terms of Use</a> |
-      <a href="#"><i class="fab fa-facebook-f me-2"></i></a>
-      <a href="#"><i class="fab fa-twitter me-2"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </p>
+    <div class="section-header fade-up">
+      <div class="section-eyebrow">Our Work in Pictures</div>
+      <h2>Documented Change on the Ground</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall fade-up">
+        <img src="img/solar.jpg" alt="Solar powered irrigation" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>☀️</div><div class=gallery-caption><h4>Solar Irrigation</h4><span>WASH Program</span></div>'">
+        <div class="gallery-caption"><h4>Solar Powered Irrigation</h4><span>WASH Program</span></div>
+      </div>
+      <div class="gallery-item fade-up fade-up-delay-1">
+        <img src="img/Agricultural.jpg" alt="Climate-smart farming" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🌾</div><div class=gallery-caption><h4>Climate-Smart Farming</h4><span>Agriculture Program</span></div>'">
+        <div class="gallery-caption"><h4>Climate-Smart Farming</h4><span>Agriculture Program</span></div>
+      </div>
+      <div class="gallery-item fade-up fade-up-delay-2">
+        <img src="img/Clean Water.jpg" alt="Clean water access" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>💧</div><div class=gallery-caption><h4>Clean Water Access</h4><span>WASH Program</span></div>'">
+        <div class="gallery-caption"><h4>Clean Water Access</h4><span>WASH Program</span></div>
+      </div>
+      <div class="gallery-item fade-up fade-up-delay-1">
+        <img src="img/Community Engagement.jpg" alt="Community engagement" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🤝</div><div class=gallery-caption><h4>Community Engagement</h4><span>All Programs</span></div>'">
+        <div class="gallery-caption"><h4>Community Engagement</h4><span>All Programs</span></div>
+      </div>
+      <div class="gallery-item fade-up fade-up-delay-2">
+        <img src="img/Youth.jpg" alt="Youth empowerment" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🌟</div><div class=gallery-caption><h4>Youth Empowerment</h4><span>Agriculture &amp; Gender Program</span></div>'">
+        <div class="gallery-caption"><h4>Youth Empowerment</h4><span>Agriculture &amp; Gender Program</span></div>
+      </div>
+      <div class="gallery-item fade-up fade-up-delay-3">
+        <img src="img/Reforestation.jpg" alt="Agroforestry" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🌳</div><div class=gallery-caption><h4>Agroforestry Initiative</h4><span>Environment Program</span></div>'">
+        <div class="gallery-caption"><h4>Agroforestry Initiative</h4><span>Environment Program</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VIDEO TESTIMONY ═══ -->
+<section class="section video-section" id="video">
+  <div class="container">
+    <div class="video-grid">
+      <div class="fade-up">
+        <div class="video-wrap">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/im_62utRmCY"
+              title="ClimateWise Impact Testimony"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="video-text fade-up fade-up-delay-2">
+        <div class="section-eyebrow">Community Testimony</div>
+        <h2>Hear It Directly from Those We Serve</h2>
+        <p>No statistics capture what you'll hear in these testimonies — the relief in a mother's voice when her daughters are safe, the pride in a farmer's words when he describes his harvest.</p>
+        <p>This is why we do the work. This is what your support makes possible.</p>
+        <div class="video-stats-row">
+          <div class="video-stat"><span class="num">4,657</span><span class="lbl">People in Chikwawa alone</span></div>
+          <div class="video-stat"><span class="num">90%</span><span class="lbl">Cholera reduction</span></div>
+          <div class="video-stat"><span class="num">85%</span><span class="lbl">Girls' school attendance</span></div>
+          <div class="video-stat"><span class="num">5 hrs</span><span class="lbl">Daily time saved per family</span></div>
+        </div>
+        <div style="margin-top:1.5rem;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="donation.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate Now</a>
+          <a href="volunteer.html" class="btn btn-ghost"><i class="fas fa-hands-helping"></i> Volunteer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DONATE CTA ═══ -->
+<section class="section donate-section">
+  <div class="container">
+    <div class="donate-inner">
+      <div class="donate-text fade-up">
+        <div class="section-eyebrow" style="background:rgba(255,255,255,0.15);color:var(--white)">Make Your Impact</div>
+        <h2>Every Donation Transforms a Life<br>in Malawi</h2>
+        <p>$50 provides clean water for a family of 6 for a year. $100 trains a farmer who will feed 200 people. $250 keeps 5 girls in school for a term. What would you like to do today?</p>
+      </div>
+      <div class="donate-box fade-up fade-up-delay-2">
+        <a href="donation.html" class="btn btn-amber" style="display:flex;margin-bottom:10px">
+          <i class="fas fa-heart"></i> Donate Now
+        </a>
+        <div class="donate-secure"><i class="fas fa-lock"></i> Secure &amp; tax-deductible</div>
+        <div style="margin-top:1rem">
+          <a href="volunteer.html" class="btn btn-outline" style="display:flex;width:220px;justify-content:center">
+            <i class="fas fa-hands-helping"></i> Volunteer Instead
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" style="display:inline-flex;align-items:center;gap:12px;margin-bottom:1rem;text-decoration:none">
+          <div style="width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--green-deep),var(--green-fresh));display:flex;align-items:center;justify-content:center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2C6 8 4 12 4 15a8 8 0 0016 0c0-3-2-7-8-13z"/><path d="M12 22V12M8 16l4-4 4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:white">ClimateWise</div>
+            <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Organization · Malawi</div>
+          </div>
+        </a>
+        <p class="footer-brand-desc">A youth-led organization transforming Malawi through WASH, sustainable agriculture, gender equality, and environmental conservation. Registered non-profit since 2021. Reg No: MW/CW/0225.</p>
+        <div class="footer-social">
+          <a href="https://m.facebook.com/climatewise_organizations" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/climatewise_org" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/climatewise_organization" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/climatewise-organization/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Programs</h4>
+        <div class="footer-links">
+          <a href="service.html">WASH &amp; Clean Water</a>
+          <a href="service.html">Agriculture &amp; Food Security</a>
+          <a href="service.html">Gender Equality</a>
+          <a href="service.html">Environment &amp; Climate</a>
+          <a href="projects.html">All Projects</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Organization</h4>
+        <div class="footer-links">
+          <a href="about.html">About Us</a>
+          <a href="impact.html">Our Impact</a>
+          <a href="events.html">Events &amp; News</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="partners.html">Partners</a>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="donation.html" style="color:var(--amber);font-weight:600">Donate Now →</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);margin-bottom:1rem">Subscribe for impact stories and project updates.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address">
+          <button type="button">Subscribe</button>
+        </div>
+        <p style="font-size:0.76rem;color:rgba(255,255,255,0.35);margin-top:0.75rem"><i class="fas fa-shield-alt"></i> No spam, ever.</p>
+        <div style="margin-top:1.5rem;display:flex;gap:8px;flex-wrap:wrap">
+          <span style="font-size:0.72rem;padding:4px 10px;border:1px solid rgba(255,255,255,0.15);border-radius:6px;color:rgba(255,255,255,0.5)">UNESCO</span>
+          <span style="font-size:0.72rem;padding:4px 10px;border:1px solid rgba(255,255,255,0.15);border-radius:6px;color:rgba(255,255,255,0.5)">USAID</span>
+          <span style="font-size:0.72rem;padding:4px 10px;border:1px solid rgba(255,255,255,0.15);border-radius:6px;color:rgba(255,255,255,0.5)">Govt. Malawi</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 ClimateWise Organization. All Rights Reserved. · Reg No: MW/CW/0225</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Annual Report</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
 <script>
-  const ctx = document.getElementById('impactChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['2022', '2023', '2024', '2025'],
-      datasets: [
-        {
-          label: 'Beneficiaries (Thousands)',
-          data: [50, 85, 120, 165],
-          backgroundColor: '#3aafa9'
-        },
-        {
-          label: 'Trees Planted (Thousands)',
-          data: [120, 250, 400, 500],
-          backgroundColor: '#2b7a78'
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        y: { beginAtZero: true }
-      }
+/* ─── NAVBAR SCROLL ─── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+  document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
+});
+
+/* ─── MOBILE MENU ─── */
+document.getElementById('navToggle').addEventListener('click', () => {
+  const m = document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+});
+
+/* ─── SCROLL ANIMATIONS ─── */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+/* ─── PROGRESS BARS ─── */
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('[data-width]').forEach(bar => {
+        setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, 200);
+      });
+      // Gender bars
+      e.target.querySelectorAll('.gender-bar-women').forEach(b => {
+        setTimeout(() => { b.style.width = b.dataset.width + '%'; }, 200);
+      });
+      e.target.querySelectorAll('.gender-bar-men').forEach(b => {
+        setTimeout(() => { b.style.width = b.dataset.width + '%'; }, 200);
+      });
+      barObserver.unobserve(e.target);
     }
   });
-</script>
+}, { threshold: 0.3 });
+document.querySelectorAll('.pillar-section').forEach(s => barObserver.observe(s));
 
+/* ─── COUNTER ANIMATION ─── */
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { animateCounter(e.target); counterObserver.unobserve(e.target); }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.count-up').forEach(el => counterObserver.observe(el));
+
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const start = performance.now();
+  const duration = 2200;
+  const update = (time) => {
+    const p = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString();
+    if (p < 1) requestAnimationFrame(update);
+    else el.textContent = target.toLocaleString();
+  };
+  requestAnimationFrame(update);
+}
+
+/* ─── NEWSLETTER ─── */
+document.querySelector('.newsletter-form button').addEventListener('click', function () {
+  const inp = this.previousElementSibling;
+  if (inp.value && inp.value.includes('@')) {
+    this.textContent = '✓ Done!';
+    this.style.background = '#2db87a';
+    inp.value = '';
+    setTimeout(() => { this.textContent = 'Subscribe'; this.style.background = ''; }, 3000);
+  } else {
+    inp.style.borderColor = '#e74c3c';
+    setTimeout(() => inp.style.borderColor = '', 2000);
+  }
+});
+
+/* ─── CHARTS ─── */
+// Bar chart — cumulative beneficiaries
+const barCtx = document.getElementById('impactChart').getContext('2d');
+new Chart(barCtx, {
+  type: 'bar',
+  data: {
+    labels: ['2022', '2023', '2024', '2025'],
+    datasets: [
+      {
+        label: 'WASH Beneficiaries',
+        data: [4200, 9800, 18000, 23651],
+        backgroundColor: '#1e8a5a',
+        borderRadius: 6,
+        borderSkipped: false,
+      },
+      {
+        label: 'Agriculture Beneficiaries',
+        data: [380, 850, 1600, 2470],
+        backgroundColor: '#7c5c3e',
+        borderRadius: 6,
+        borderSkipped: false,
+      },
+      {
+        label: 'Gender Program Students',
+        data: [600, 1500, 3200, 5154],
+        backgroundColor: '#8b45b5',
+        borderRadius: 6,
+        borderSkipped: false,
+      },
+      {
+        label: 'Trees Planted (cumulative)',
+        data: [1200, 3800, 7000, 10110],
+        backgroundColor: '#2db87a',
+        borderRadius: 6,
+        borderSkipped: false,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: { font: { size: 12, family: 'DM Sans' }, padding: 16, color: '#2e4a3a' }
+      },
+      tooltip: {
+        callbacks: {
+          label: ctx => ' ' + ctx.dataset.label + ': ' + ctx.parsed.y.toLocaleString()
+        }
+      }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { family: 'DM Sans' }, color: '#5a7a68' } },
+      y: {
+        beginAtZero: true,
+        grid: { color: 'rgba(0,0,0,0.05)' },
+        ticks: {
+          font: { family: 'DM Sans' }, color: '#5a7a68',
+          callback: v => v >= 1000 ? (v / 1000).toFixed(0) + 'k' : v
+        }
+      }
+    }
+  }
+});
+
+// Doughnut — gender breakdown
+const genderCtx = document.getElementById('genderChart').getContext('2d');
+new Chart(genderCtx, {
+  type: 'doughnut',
+  data: {
+    labels: ['Women (65%)', 'Men (35%)'],
+    datasets: [{
+      data: [1606, 864],
+      backgroundColor: ['#8b45b5', '#185fa5'],
+      borderWidth: 3,
+      borderColor: '#faf8f3',
+      hoverOffset: 8
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    cutout: '68%',
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: { font: { size: 12, family: 'DM Sans' }, padding: 12, color: '#2e4a3a' }
+      },
+      tooltip: {
+        callbacks: {
+          label: ctx => ' ' + ctx.label + ': ' + ctx.parsed.toLocaleString() + ' farmers'
+        }
+      }
+    }
+  }
+});
+
+// Pie — program share
+const pieCtx = document.getElementById('pieChart').getContext('2d');
+new Chart(pieCtx, {
+  type: 'pie',
+  data: {
+    labels: ['WASH (23,651)', 'Agriculture (2,470)', 'Gender (5,154)', 'Environment (10,110)'],
+    datasets: [{
+      data: [23651, 2470, 5154, 10110],
+      backgroundColor: ['#1e8a5a', '#7c5c3e', '#8b45b5', '#2db87a'],
+      borderWidth: 3,
+      borderColor: '#faf8f3',
+      hoverOffset: 8
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: { font: { size: 11, family: 'DM Sans' }, padding: 10, color: '#2e4a3a' }
+      },
+      tooltip: {
+        callbacks: {
+          label: ctx => ' ' + ctx.label + ': ' + ctx.parsed.toLocaleString()
+        }
+      }
+    }
+  }
+});
+
+/* ─── SMOOTH SCROLL ─── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
 </body>
 </html>

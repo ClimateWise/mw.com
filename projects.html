@@ -3,1020 +3,282 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Our Projects | ClimateWise Organization — Real Work, Real Impact in Malawi</title>
-<meta name="description" content="Explore ClimateWise's real projects in Malawi: clean water boreholes in Chikwawa, UNESCO gender programs, agroforestry restoration, climate-smart farming, and youth entrepreneurship.">
+<title>Our Projects | ClimateWise — Water, Agriculture, Education, Resilience in Malawi</title>
+<meta name="description" content="Real ClimateWise projects across Malawi: clean water boreholes, climate-smart farming, quality education, and climate resilience. Verified impact, transparent reporting.">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="ClimateWise Projects — Transforming Malawi">
-<meta property="og:description" content="Real projects. Real communities. Real impact. See exactly what your donation funds in Malawi.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <style>
-/* ═══ DESIGN TOKENS ═══ */
 :root {
-  --green-deep:   #0a3d2e;
-  --green-mid:    #165740;
-  --green-fresh:  #1e8a5a;
+  --green-deep: #0a3d2e;
+  --green-mid: #165740;
+  --green-fresh: #1e8a5a;
   --green-bright: #2db87a;
-  --green-light:  #e8f5ee;
-  --amber:        #f5a623;
-  --amber-dark:   #c47d0a;
-  --earth:        #7c5c3e;
-  --earth-light:  #fdf3e3;
-  --purple:       #8b45b5;
-  --purple-light: #f5e8fd;
-  --blue:         #185fa5;
-  --blue-light:   #e8f0fe;
-  --cream:        #faf8f3;
-  --white:        #ffffff;
-  --text-dark:    #0f1e18;
-  --text-mid:     #2e4a3a;
-  --text-muted:   #5a7a68;
-  --border:       rgba(26,87,64,0.12);
-  --shadow-sm:    0 2px 12px rgba(10,61,46,0.08);
-  --shadow-md:    0 8px 32px rgba(10,61,46,0.12);
-  --shadow-lg:    0 20px 60px rgba(10,61,46,0.18);
-  --radius:       12px;
-  --radius-lg:    20px;
+  --green-light: #e8f5ee;
+  --amber: #f5a623;
+  --amber-dark: #c47d0a;
+  --earth: #7c5c3e;
+  --cream: #faf8f3;
+  --white: #ffffff;
+  --text-dark: #0f1e18;
+  --text-mid: #2e4a3a;
+  --text-muted: #5a7a68;
+  --border: rgba(26,87,64,0.12);
+  --shadow-sm: 0 2px 12px rgba(10,61,46,0.08);
+  --shadow-md: 0 8px 32px rgba(10,61,46,0.12);
+  --radius: 12px;
+  --radius-lg: 20px;
   --font-display: 'Fraunces', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
-  --nav-h:        72px;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --nav-h: 72px;
 }
-
-*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; }
-body { font-family:var(--font-body); color:var(--text-dark); background:var(--cream); line-height:1.65; overflow-x:hidden; }
-h1,h2,h3,h4,h5 { font-family:var(--font-display); line-height:1.2; font-weight:600; }
-h1 { font-size:clamp(2.2rem,5vw,3.8rem); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:var(--font-body); color:var(--text-dark); background:var(--cream); line-height:1.65; }
+h1,h2,h3 { font-family:var(--font-display); font-weight:600; line-height:1.2; }
+h1 { font-size:clamp(2.2rem,5vw,3.6rem); }
 h2 { font-size:clamp(1.8rem,3.5vw,2.6rem); }
-h3 { font-size:clamp(1.1rem,1.8vw,1.4rem); }
-p  { color:var(--text-mid); line-height:1.75; }
-a  { text-decoration:none; color:inherit; }
-img { display:block; }
-
+p { color:var(--text-mid); }
 .section-eyebrow {
   display:inline-flex; align-items:center; gap:8px;
-  font-family:var(--font-body); font-size:0.78rem; font-weight:600;
-  letter-spacing:0.12em; text-transform:uppercase;
-  color:var(--green-fresh); background:var(--green-light);
+  font-family:var(--font-body); font-size:0.75rem; font-weight:600; letter-spacing:0.12em;
+  text-transform:uppercase; color:var(--green-fresh); background:var(--green-light);
   padding:6px 14px; border-radius:100px; margin-bottom:1rem;
 }
-.section-eyebrow::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--green-bright); }
-
-/* ─── BUTTONS ─── */
 .btn {
-  display:inline-flex; align-items:center; gap:8px;
-  font-family:var(--font-body); font-size:0.92rem; font-weight:500;
-  padding:11px 24px; border-radius:100px; cursor:pointer;
-  transition:all 0.25s ease; border:2px solid transparent; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:8px; font-weight:500;
+  padding:11px 24px; border-radius:100px; cursor:pointer; transition:0.2s;
+  border:2px solid transparent;
 }
-.btn-primary  { background:var(--green-fresh); color:var(--white); border-color:var(--green-fresh); }
-.btn-primary:hover  { background:var(--green-mid); transform:translateY(-2px); box-shadow:var(--shadow-md); }
-.btn-amber    { background:var(--amber); color:var(--white); border-color:var(--amber); }
-.btn-amber:hover    { background:var(--amber-dark); transform:translateY(-2px); }
-.btn-outline  { background:transparent; color:var(--white); border-color:rgba(255,255,255,0.5); }
-.btn-outline:hover  { background:rgba(255,255,255,0.12); border-color:var(--white); }
-.btn-ghost    { background:transparent; color:var(--green-fresh); border-color:var(--green-fresh); }
-.btn-ghost:hover    { background:var(--green-fresh); color:var(--white); }
-.btn-ghost-sm { padding:8px 18px; font-size:0.82rem; }
-
-/* ─── NAVBAR ─── */
+.btn-primary { background:var(--green-fresh); color:var(--white); }
+.btn-primary:hover { background:var(--green-mid); transform:translateY(-2px); }
+.btn-amber { background:var(--amber); color:var(--white); }
+.btn-amber:hover { background:var(--amber-dark); transform:translateY(-2px); }
+.btn-outline { background:transparent; color:var(--white); border-color:rgba(255,255,255,0.5); }
+.btn-outline:hover { background:rgba(255,255,255,0.12); border-color:var(--white); }
+.btn-ghost { background:transparent; color:var(--green-fresh); border-color:var(--green-fresh); }
+.btn-ghost:hover { background:var(--green-fresh); color:var(--white); }
+/* NAVBAR */
 #navbar {
   position:fixed; top:0; left:0; right:0; z-index:1000;
-  height:var(--nav-h); background:rgba(250,248,243,0.95);
-  backdrop-filter:blur(12px); border-bottom:1px solid var(--border);
-  transition:box-shadow 0.3s;
+  background:rgba(250,248,243,0.95); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border); height:var(--nav-h);
 }
-#navbar.scrolled { box-shadow:var(--shadow-md); }
 .nav-inner {
   max-width:1280px; margin:0 auto; padding:0 2rem;
-  height:100%; display:flex; align-items:center; justify-content:space-between; gap:2rem;
+  display:flex; align-items:center; justify-content:space-between; height:100%;
 }
-.nav-logo { display:flex; align-items:center; gap:12px; flex-shrink:0; }
-.nav-logo-icon {
-  width:42px; height:42px; border-radius:10px;
-  background:linear-gradient(135deg,var(--green-deep),var(--green-fresh));
-  display:flex; align-items:center; justify-content:center;
-}
-.nav-logo-icon svg { width:22px; height:22px; fill:none; stroke:white; stroke-width:2; }
+.nav-logo { display:flex; align-items:center; gap:12px; }
+.nav-logo img { height:42px; width:auto; display:block; }
 .nav-logo-name { font-family:var(--font-display); font-size:1.1rem; font-weight:700; color:var(--green-deep); }
-.nav-logo-sub  { font-size:0.68rem; color:var(--text-muted); letter-spacing:0.05em; }
-.nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; }
-.nav-links a { font-size:0.9rem; font-weight:500; color:var(--text-mid); padding:8px 14px; border-radius:8px; transition:all 0.2s; }
+.nav-logo-sub { font-size:0.68rem; color:var(--text-muted); }
+.nav-links { display:flex; gap:0.25rem; list-style:none; }
+.nav-links a { font-size:0.9rem; font-weight:500; color:var(--text-mid); padding:8px 14px; border-radius:8px; }
 .nav-links a:hover, .nav-links a.active { color:var(--green-fresh); background:var(--green-light); }
-.nav-actions { display:flex; align-items:center; gap:10px; flex-shrink:0; }
-.nav-donate  { font-size:0.88rem; padding:9px 20px; }
+.nav-actions { display:flex; gap:10px; }
 .nav-dropdown { position:relative; }
-.nav-dropdown > a::after { content:' ▾'; font-size:0.7em; }
 .dropdown-menu {
   position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%);
   background:var(--white); border:1px solid var(--border); border-radius:var(--radius);
-  box-shadow:var(--shadow-lg); min-width:180px; padding:8px;
-  opacity:0; pointer-events:none; transition:all 0.2s;
+  box-shadow:var(--shadow-md); min-width:180px; padding:8px; opacity:0; pointer-events:none;
 }
 .nav-dropdown:hover .dropdown-menu { opacity:1; pointer-events:all; }
-.dropdown-menu a { display:block; padding:9px 14px; font-size:0.88rem; border-radius:8px; color:var(--text-mid)!important; }
-.dropdown-menu a:hover { background:var(--green-light); color:var(--green-fresh)!important; }
-.nav-toggle {
-  display:none; background:none; border:none; cursor:pointer;
-  width:40px; height:40px; flex-direction:column; align-items:center; justify-content:center; gap:5px;
-}
-.nav-toggle span { display:block; width:22px; height:2px; background:var(--text-dark); border-radius:2px; }
-
-/* Mobile menu */
-.mobile-menu { display:none; position:fixed; inset:0; z-index:999; background:var(--cream); padding-top:var(--nav-h); flex-direction:column; overflow-y:auto; }
-.mobile-menu.open { display:flex; }
-.mobile-nav { padding:2rem; display:flex; flex-direction:column; gap:0.25rem; }
-.mobile-nav a { font-size:1.05rem; font-weight:500; color:var(--text-dark); padding:14px 16px; border-radius:10px; transition:all 0.2s; }
-.mobile-nav a:hover { background:var(--green-light); color:var(--green-fresh); }
-
-/* ─── PAGE HERO ─── */
+.dropdown-menu a { display:block; padding:8px 14px; border-radius:8px; }
+.nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; }
+.nav-toggle span { width:22px; height:2px; background:var(--text-dark); border-radius:2px; }
+.mobile-menu { display:none; position:fixed; inset:0; background:var(--cream); padding-top:var(--nav-h); z-index:999; overflow-y:auto; }
+.mobile-menu.open { display:flex; flex-direction:column; }
+/* HERO */
 .page-hero {
-  min-height:65vh; position:relative; overflow:hidden;
-  display:flex; align-items:center; background:var(--green-deep);
-  padding-top:var(--nav-h);
+  min-height:55vh; background:var(--green-deep); position:relative;
+  display:flex; align-items:center; padding-top:var(--nav-h);
 }
-.page-hero-bg {
-  position:absolute; inset:0;
-  background-image:url('img/projects-hero.jpg');
-  background-size:cover; background-position:center;
-  filter:brightness(0.28);
-}
-.page-hero-pattern {
-  position:absolute; inset:0;
-  background:radial-gradient(circle at 65% 40%, rgba(30,138,90,0.3) 0%, transparent 55%),
-    radial-gradient(circle at 15% 75%, rgba(245,166,35,0.14) 0%, transparent 50%);
-}
-.page-hero-inner {
-  position:relative; z-index:2; max-width:1280px; margin:0 auto;
-  padding:5rem 2rem; text-align:center; color:var(--white);
-}
-.page-hero-inner .section-eyebrow { background:rgba(45,184,122,0.2); color:var(--green-bright); }
-.page-hero-inner h1 { color:var(--white); margin-bottom:1.25rem; }
-.page-hero-inner h1 em { color:var(--green-bright); font-style:italic; }
-.page-hero-inner p { font-size:1.12rem; color:rgba(255,255,255,0.72); max-width:640px; margin:0 auto 2.5rem; }
-.hero-ctas { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
-
-/* ─── TRUST BAR ─── */
-.trust-bar { background:var(--green-deep); border-top:1px solid rgba(255,255,255,0.08); padding:1.25rem 0; }
-.trust-inner { max-width:1280px; margin:0 auto; padding:0 2rem; display:flex; align-items:center; justify-content:center; gap:2.5rem; flex-wrap:wrap; }
-.trust-item { display:flex; align-items:center; gap:8px; font-size:0.82rem; color:rgba(255,255,255,0.65); }
-.trust-item i { color:var(--green-bright); }
-.trust-divider { width:1px; height:20px; background:rgba(255,255,255,0.15); }
-
-/* ─── LAYOUT ─── */
-.section    { padding:6rem 0; }
-.container  { max-width:1280px; margin:0 auto; padding:0 2rem; }
-.section-header { text-align:center; max-width:720px; margin:0 auto 4rem; }
-.section-header h2 { margin-bottom:1rem; }
-.section-header p  { font-size:1.05rem; color:var(--text-muted); }
-
-/* ─── FILTER TABS ─── */
+.hero-bg { position:absolute; inset:0; background-image:url('img/hero-projects.jpg'); background-size:cover; filter:brightness(0.25); }
+.hero-inner { position:relative; max-width:1280px; margin:0 auto; padding:4rem 2rem; text-align:center; color:var(--white); }
+.hero-inner h1 { color:var(--white); margin-bottom:1rem; }
+.hero-inner h1 span { color:var(--green-bright); }
+.hero-inner p { max-width:640px; margin:0 auto 2rem; color:rgba(255,255,255,0.75); }
+/* FILTER */
 .filter-bar { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:3rem; }
 .filter-btn {
-  padding:9px 22px; border-radius:100px; border:1.5px solid var(--border);
-  background:var(--white); font-family:var(--font-body); font-size:0.86rem;
-  font-weight:500; color:var(--text-muted); cursor:pointer; transition:all 0.2s;
+  padding:9px 22px; border-radius:100px; border:1px solid var(--border);
+  background:var(--white); font-weight:500; cursor:pointer; transition:0.2s;
 }
-.filter-btn:hover { border-color:var(--green-fresh); color:var(--green-fresh); background:var(--green-light); }
-.filter-btn.active { background:var(--green-fresh); color:var(--white); border-color:var(--green-fresh); }
-
-/* ─── PROJECT CARDS ─── */
-.projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
+.filter-btn.active, .filter-btn:hover { background:var(--green-fresh); color:var(--white); border-color:var(--green-fresh); }
+/* GRID */
+.projects-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; }
 .project-card {
-  background:var(--white); border-radius:var(--radius-lg);
-  border:1px solid var(--border); overflow:hidden;
-  transition:all 0.35s ease; display:flex; flex-direction:column;
+  background:var(--white); border-radius:var(--radius-lg); border:1px solid var(--border);
+  overflow:hidden; transition:0.3s; display:flex; flex-direction:column;
 }
-.project-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); border-color:transparent; }
-
-/* Card image */
+.project-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
 .project-img {
-  aspect-ratio:16/10; position:relative; overflow:hidden;
-  background:var(--green-light);
+  aspect-ratio:16/10; position:relative; overflow:hidden; background:var(--green-light);
 }
-.project-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.45s ease; }
-.project-card:hover .project-img img { transform:scale(1.06); }
-.project-img-placeholder {
-  width:100%; height:100%; display:flex; align-items:center; justify-content:center;
-  font-size:3rem;
-}
-
-/* Accent stripe on top of card */
-.project-card::before {
-  content:''; display:block; height:4px;
-  background:linear-gradient(90deg, var(--green-fresh), var(--green-bright));
-}
-.project-card.agri::before  { background:linear-gradient(90deg,var(--earth),var(--amber)); }
-.project-card.gender::before{ background:linear-gradient(90deg,var(--purple),#d4537e); }
-.project-card.env::before   { background:linear-gradient(90deg,var(--green-mid),var(--green-fresh)); }
-.project-card.wash::before  { background:linear-gradient(90deg,var(--green-fresh),var(--blue)); }
-.project-card.relief::before{ background:linear-gradient(90deg,#c0392b,var(--amber)); }
-
-/* Category badge */
+.project-img img { width:100%; height:100%; object-fit:cover; transition:0.3s; }
+.project-card:hover .project-img img { transform:scale(1.03); }
 .project-badge {
-  position:absolute; top:1rem; left:1rem;
-  font-size:0.7rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
-  padding:5px 13px; border-radius:100px; z-index:2;
+  position:absolute; top:1rem; left:1rem; font-size:0.7rem; font-weight:700;
+  padding:5px 12px; border-radius:100px; color:white; z-index:2;
 }
-.badge-wash   { background:rgba(30,138,90,0.92); color:white; }
-.badge-agri   { background:rgba(124,92,62,0.92); color:white; }
-.badge-gender { background:rgba(139,69,181,0.92); color:white; }
-.badge-env    { background:rgba(10,61,46,0.92);   color:white; }
-.badge-relief { background:rgba(192,57,43,0.92);  color:white; }
-
-/* Status pill */
+.badge-wash { background:var(--green-fresh); }
+.badge-agri { background:var(--earth); }
+.badge-resilience { background:#2c6e9e; }
+.badge-education { background:#8b45b5; }
 .status-pill {
-  position:absolute; top:1rem; right:1rem;
-  font-size:0.68rem; font-weight:600; letter-spacing:0.06em;
-  padding:4px 10px; border-radius:100px;
+  position:absolute; top:1rem; right:1rem; font-size:0.68rem; font-weight:600;
+  padding:4px 10px; border-radius:100px; background:rgba(0,0,0,0.65); color:white;
 }
-.status-active   { background:rgba(45,184,122,0.9); color:white; }
-.status-ongoing  { background:rgba(245,166,35,0.9); color:white; }
-.status-complete { background:rgba(24,95,165,0.9);  color:white; }
-
-/* Card body */
-.project-body { padding:1.5rem; flex:1; display:flex; flex-direction:column; }
-.project-meta { font-size:0.76rem; color:var(--text-muted); margin-bottom:0.6rem; display:flex; gap:12px; flex-wrap:wrap; }
-.project-body h3 { margin-bottom:0.75rem; }
-.project-body > p { font-size:0.91rem; flex:1; margin-bottom:1.25rem; }
-
-/* Stat pills row */
-.stat-row { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:1.25rem; }
+.project-body { padding:1.5rem; flex:1; }
+.project-body h3 { margin-bottom:0.75rem; font-size:1.3rem; }
+.project-body p { font-size:0.92rem; margin-bottom:1rem; }
+.stat-row { display:flex; gap:8px; flex-wrap:wrap; margin:1rem 0; }
 .stat-chip {
-  font-size:0.75rem; font-weight:600; padding:4px 12px; border-radius:100px;
+  font-size:0.72rem; font-weight:600; padding:4px 12px; border-radius:100px;
+  background:var(--green-light); color:var(--green-mid);
 }
-.chip-green  { background:var(--green-light); color:var(--green-mid); }
-.chip-amber  { background:var(--earth-light); color:var(--amber-dark); }
-.chip-purple { background:var(--purple-light); color:var(--purple); }
-.chip-blue   { background:var(--blue-light);   color:var(--blue); }
-.chip-red    { background:#fde8e8; color:#c0392b; }
-
-/* Deliverables checklist */
-.deliverables { list-style:none; padding:0; margin-bottom:1.25rem; display:flex; flex-direction:column; gap:7px; }
-.deliverables li { display:flex; align-items:flex-start; gap:9px; font-size:0.87rem; color:var(--text-mid); }
-.deliverables li::before {
-  content:''; width:16px; height:16px; border-radius:50%; flex-shrink:0; margin-top:2px;
-  background:var(--green-light);
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%231e8a5a' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat; background-position:center;
+.deliverables { list-style:none; margin:1rem 0; }
+.deliverables li { display:flex; gap:9px; font-size:0.85rem; margin-bottom:8px; color:var(--text-mid); }
+.deliverables li::before { content:"✓"; color:var(--green-fresh); font-weight:bold; }
+.project-footer {
+  padding:1rem 1.5rem; border-top:1px solid var(--border);
+  background:var(--cream); display:flex; justify-content:space-between; align-items:center;
 }
-
-/* Card footer */
-.project-footer { display:flex; align-items:center; justify-content:space-between; padding:1rem 1.5rem; border-top:1px solid var(--border); background:var(--cream); }
-.project-partner { font-size:0.75rem; color:var(--text-muted); display:flex; align-items:center; gap:5px; }
-.project-partner i { color:var(--green-fresh); }
-
-/* ─── FEATURED PROJECT ─── */
-.featured-section { background:var(--white); }
+.report-link { font-size:0.8rem; font-weight:600; color:var(--green-fresh); }
 .featured-card {
   background:var(--green-deep); border-radius:var(--radius-lg); overflow:hidden;
-  display:grid; grid-template-columns:1.1fr 1fr; position:relative;
+  display:grid; grid-template-columns:1fr 1fr; gap:0;
 }
-.featured-card::before {
-  content:''; position:absolute; inset:0;
-  background:radial-gradient(circle at 90% 50%, rgba(245,166,35,0.15) 0%, transparent 50%);
-  pointer-events:none;
-}
-.featured-media { position:relative; }
-.featured-media .ratio { border-radius:0; }
-.ratio { position:relative; width:100%; }
-.ratio-16x9::before { content:''; display:block; padding-top:56.25%; }
-.ratio > * { position:absolute; inset:0; width:100%; height:100%; }
-.featured-stats {
-  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
-  background:rgba(255,255,255,0.08);
-}
-.fs-box { background:rgba(0,0,0,0.35); padding:1rem; text-align:center; backdrop-filter:blur(8px); }
-.fs-box .num { font-family:var(--font-display); font-size:1.2rem; font-weight:700; color:var(--amber); display:block; }
-.fs-box .lbl { font-size:0.68rem; color:rgba(255,255,255,0.55); }
-.featured-content { padding:3rem 2.5rem; color:var(--white); display:flex; flex-direction:column; justify-content:center; position:relative; z-index:1; }
-.featured-content .section-eyebrow { background:rgba(245,166,35,0.2); color:var(--amber); }
-.featured-content h2 { color:var(--white); margin-bottom:1rem; font-size:clamp(1.4rem,2.5vw,2rem); }
-.featured-content p  { color:rgba(255,255,255,0.75); font-size:0.95rem; margin-bottom:1.5rem; }
-.ba-strip { display:grid; grid-template-columns:1fr auto 1fr; gap:1rem; align-items:center; background:rgba(255,255,255,0.07); border-radius:var(--radius); padding:1rem; margin-bottom:1.5rem; }
+.featured-stats { display:grid; grid-template-columns:repeat(4,1fr); background:rgba(0,0,0,0.3); }
+.fs-box { padding:1rem; text-align:center; }
+.fs-box .num { font-family:var(--font-display); font-size:1.2rem; font-weight:700; color:var(--amber); }
+.fs-box .lbl { font-size:0.68rem; color:rgba(255,255,255,0.6); }
+.featured-content { padding:2.5rem; color:var(--white); }
+.featured-content h2 { color:var(--white); margin-bottom:1rem; }
+.ba-strip { display:flex; gap:1rem; align-items:center; background:rgba(255,255,255,0.08); padding:1rem; border-radius:var(--radius); margin:1rem 0; }
 .ba-col { text-align:center; }
-.ba-col .ba-label { font-size:0.68rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:4px; }
-.ba-col .ba-num   { font-family:var(--font-display); font-size:1.5rem; font-weight:700; color:var(--white); }
-.ba-col.after .ba-num { color:var(--green-bright); }
-.ba-arrow { font-size:1.25rem; color:var(--amber); }
-.featured-ctas { display:flex; gap:12px; flex-wrap:wrap; }
-
-/* ─── REPORT LINKS ─── */
-.report-link {
-  display:inline-flex; align-items:center; gap:6px;
-  font-size:0.83rem; font-weight:600; color:var(--green-fresh);
-  padding:8px 16px; border-radius:8px; background:var(--green-light);
-  transition:all 0.2s;
-}
-.report-link:hover { background:var(--green-fresh); color:var(--white); }
-.report-link i { font-size:0.75rem; }
-
-/* ─── ARI EXPANDED ─── */
-.ari-phases { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin:1.5rem 0; }
-.ari-phase { background:var(--cream); border:1px solid var(--border); border-radius:var(--radius); padding:1.25rem; }
-.ari-phase .phase-num { font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-fresh); margin-bottom:0.4rem; }
-.ari-phase h4 { font-size:0.95rem; margin-bottom:0.5rem; }
-.ari-phase p  { font-size:0.83rem; color:var(--text-muted); }
-
-/* ─── DONATE CTA ─── */
-.donate-section { background:linear-gradient(135deg,var(--green-fresh),var(--green-deep)); position:relative; overflow:hidden; }
-.donate-section::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 90% 50%,rgba(245,166,35,0.2) 0%,transparent 50%); }
-.donate-inner { position:relative; z-index:1; display:grid; grid-template-columns:1fr auto; gap:4rem; align-items:center; }
-.donate-text h2 { color:var(--white); margin-bottom:0.75rem; }
-.donate-text p  { color:rgba(255,255,255,0.8); max-width:540px; }
-.donate-box { text-align:center; }
-.donate-box .btn { font-size:1rem; padding:16px 36px; justify-content:center; margin-bottom:10px; }
-.donate-secure { font-size:0.78rem; color:rgba(255,255,255,0.5); display:flex; align-items:center; gap:6px; justify-content:center; }
-
-/* ─── FOOTER ─── */
-footer { background:var(--green-deep); color:var(--white); padding:5rem 0 0; }
-.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:3rem; margin-bottom:3rem; }
-.footer-brand-desc { font-size:0.9rem; color:rgba(255,255,255,0.6); margin:1rem 0 1.5rem; line-height:1.7; }
-.footer-social { display:flex; gap:10px; }
-.social-link { width:38px; height:38px; border-radius:10px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.7); font-size:0.9rem; transition:all 0.2s; }
-.social-link:hover { background:var(--green-fresh); border-color:var(--green-fresh); color:var(--white); }
-.footer-col h4 { font-size:0.85rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:1.25rem; }
-.footer-links { display:flex; flex-direction:column; gap:8px; }
-.footer-links a { font-size:0.9rem; color:rgba(255,255,255,0.65); transition:color 0.2s; }
-.footer-links a:hover { color:var(--green-bright); }
-.newsletter-form { display:flex; gap:8px; }
-.newsletter-form input { flex:1; padding:11px 16px; border-radius:10px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:var(--white); font-family:var(--font-body); font-size:0.88rem; outline:none; transition:border-color 0.2s; }
-.newsletter-form input::placeholder { color:rgba(255,255,255,0.35); }
-.newsletter-form input:focus { border-color:var(--green-bright); }
-.newsletter-form button { padding:11px 18px; border-radius:10px; background:var(--green-fresh); color:var(--white); border:none; cursor:pointer; font-size:0.88rem; font-weight:500; font-family:var(--font-body); transition:background 0.2s; white-space:nowrap; }
-.newsletter-form button:hover { background:var(--green-bright); }
-.footer-bottom { border-top:1px solid rgba(255,255,255,0.08); padding:1.5rem 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
-.footer-bottom p { font-size:0.82rem; color:rgba(255,255,255,0.45); margin:0; }
-.footer-legal { display:flex; gap:1.5rem; }
-.footer-legal a { font-size:0.8rem; color:rgba(255,255,255,0.4); transition:color 0.2s; }
-.footer-legal a:hover { color:rgba(255,255,255,0.7); }
-
-/* Back to top */
-.back-to-top { position:fixed; bottom:2rem; right:2rem; z-index:999; width:44px; height:44px; border-radius:12px; background:var(--green-fresh); color:var(--white); display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-md); opacity:0; pointer-events:none; transition:all 0.3s; font-size:1rem; }
-.back-to-top.visible { opacity:1; pointer-events:all; }
-.back-to-top:hover { background:var(--green-mid); transform:translateY(-3px); }
-
-/* Animations */
-.fade-up { opacity:0; transform:translateY(28px); transition:opacity 0.6s ease,transform 0.6s ease; }
-.fade-up.visible { opacity:1; transform:translateY(0); }
-.fade-up-delay-1 { transition-delay:0.1s; }
-.fade-up-delay-2 { transition-delay:0.2s; }
-.fade-up-delay-3 { transition-delay:0.3s; }
-
-/* Responsive */
-@media (max-width:1100px) {
-  .projects-grid { grid-template-columns:repeat(2,1fr); }
-  .featured-card { grid-template-columns:1fr; }
-  .featured-stats { grid-template-columns:repeat(4,1fr); }
-  .footer-grid { grid-template-columns:1fr 1fr; }
-}
+.ba-num { font-size:1.4rem; font-weight:700; }
+/* DONATE */
+.donate-section { background:linear-gradient(135deg,var(--green-fresh),var(--green-deep)); padding:5rem 0; }
+.donate-inner { max-width:1280px; margin:0 auto; padding:0 2rem; display:grid; grid-template-columns:1fr auto; gap:3rem; align-items:center; }
+/* FOOTER */
+footer { background:var(--green-deep); color:var(--white); padding:4rem 0 0; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:3rem; }
+.footer-brand-desc { font-size:0.88rem; color:rgba(255,255,255,0.65); margin:1rem 0; }
+.social-link { width:36px; height:36px; background:rgba(255,255,255,0.08); border-radius:10px; display:inline-flex; align-items:center; justify-content:center; margin-right:8px; color:white; }
+.footer-links a { display:block; font-size:0.88rem; color:rgba(255,255,255,0.65); margin-bottom:8px; }
+.back-to-top { position:fixed; bottom:2rem; right:2rem; background:var(--green-fresh); color:white; width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:0.2s; }
+.back-to-top.visible { opacity:1; pointer-events:auto; }
 @media (max-width:900px) {
-  .donate-inner { grid-template-columns:1fr; }
-  .ari-phases { grid-template-columns:1fr 1fr; }
   .nav-links, .nav-actions { display:none; }
   .nav-toggle { display:flex; }
+  .projects-grid { grid-template-columns:1fr; }
+  .featured-card { grid-template-columns:1fr; }
+  .donate-inner { grid-template-columns:1fr; text-align:center; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
 }
 @media (max-width:640px) {
-  .projects-grid { grid-template-columns:1fr; }
-  .ari-phases { grid-template-columns:1fr; }
   .footer-grid { grid-template-columns:1fr; }
-  .footer-bottom { flex-direction:column; text-align:center; }
-  .hero-ctas { flex-direction:column; align-items:center; }
-  .featured-stats { grid-template-columns:repeat(2,1fr); }
-  .trust-divider { display:none; }
 }
+.fade-up { opacity:0; transform:translateY(24px); transition:0.5s ease; }
+.fade-up.visible { opacity:1; transform:translateY(0); }
 </style>
 </head>
 <body>
-
-<!-- ═══ NAVBAR ═══ -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6 8 4 12 4 15a8 8 0 0016 0c0-3-2-7-8-13z"/><path d="M12 22V12M8 16l4-4 4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <div>
-        <div class="nav-logo-name">ClimateWise</div>
-        <div class="nav-logo-sub">Organization · Malawi</div>
-      </div>
+      <img src="logo.png" alt="ClimateWise logo" onerror="this.src='https://placehold.co/42x42?text=CW'">
+      <div><div class="nav-logo-name">ClimateWise</div><div class="nav-logo-sub">Organization · Malawi</div></div>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="service.html">Our Work</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="impact.html">Impact</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li class="nav-dropdown">
-        <a href="#">More</a>
-        <div class="dropdown-menu">
-          <a href="gallery.html">Gallery</a>
-          <a href="volunteer.html">Volunteer</a>
-          <a href="partners.html">Partners</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </li>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="service.html">Our Work</a></li><li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="impact.html">Impact</a></li><li><a href="events.html">Events</a></li>
+      <li class="nav-dropdown"><a href="#">More</a><div class="dropdown-menu"><a href="gallery.html">Gallery</a><a href="volunteer.html">Volunteer</a><a href="partners.html">Partners</a><a href="contact.html">Contact</a></div></li>
     </ul>
-    <div class="nav-actions">
-      <a href="volunteer.html" class="btn btn-ghost nav-donate">Volunteer</a>
-      <a href="donation.html" class="btn btn-amber nav-donate">Donate Now</a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-actions"><a href="volunteer.html" class="btn btn-ghost">Volunteer</a><a href="donation.html" class="btn btn-amber">Donate Now</a></div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu"><div class="mobile-nav" style="padding:2rem;display:flex;flex-direction:column;gap:1rem;"><a href="index.html">Home</a><a href="about.html">About</a><a href="service.html">Our Work</a><a href="projects.html">Projects</a><a href="impact.html">Impact</a><a href="events.html">Events</a><a href="volunteer.html">Volunteer</a><a href="donation.html" class="btn btn-amber">Donate Now</a></div></div>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <nav class="mobile-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="service.html">Our Work</a>
-    <a href="projects.html">Projects</a>
-    <a href="impact.html">Impact</a>
-    <a href="events.html">Events</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="partners.html">Partners</a>
-    <a href="contact.html">Contact</a>
-    <a href="donation.html" class="btn btn-amber" style="text-align:center">Donate Now →</a>
-  </nav>
-</div>
+<section class="page-hero"><div class="hero-bg"></div><div class="hero-inner"><div class="section-eyebrow">Real Projects · Real Malawi</div><h1>Our Four Core <span>Focus Areas</span></h1><p>Clean water, climate-smart agriculture, climate resilience, and quality education — every project is community-led, transparent, and verified.</p><a href="donation.html" class="btn btn-amber"><i class="fas fa-hand-holding-heart"></i> Fund a Project</a></div></section>
 
-<!-- ═══ PAGE HERO ═══ -->
-<section class="page-hero" id="top">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-pattern"></div>
-  <div class="page-hero-inner">
-    <div class="section-eyebrow">Our Real Work on the Ground</div>
-    <h1>Projects That Change<br><em>Real Lives</em> in Malawi</h1>
-    <p>Every project on this page is documented, verified, and built with communities — not for them. This is where your trust and your donation go.</p>
-    <div class="hero-ctas">
-      <a href="donation.html" class="btn btn-amber"><i class="fas fa-heart"></i> Fund a Project</a>
-      <a href="impact.html" class="btn btn-outline"><i class="fas fa-chart-bar"></i> See Full Impact Data</a>
-    </div>
+<section style="padding:5rem 0 2rem 0"><div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem"><div class="filter-bar"><button class="filter-btn active" data-filter="all">All Projects</button><button class="filter-btn" data-filter="wash">💧 WASH</button><button class="filter-btn" data-filter="agri">🌾 Agriculture</button><button class="filter-btn" data-filter="resilience">🌍 Climate Resilience</button><button class="filter-btn" data-filter="education">📚 Quality Education</button></div><div class="projects-grid" id="projectsGrid">
+
+  <!-- WASH Project (hand pump, not solar) -->
+  <div class="project-card fade-up" data-category="wash">
+    <div class="project-img"><img src="img/water-borehole.jpg" alt="Hand pump borehole in Chikwawa" onerror="this.parentElement.innerHTML='<div style=display:flex;align-items:center;justify-content:center;height:100%;background:#e8f5ee>💧</div>'"><span class="project-badge badge-wash"><i class="fas fa-tint"></i> WASH</span><span class="status-pill status-active">Active</span></div>
+    <div class="project-body"><h3>Clean Water Access: Hand-Pump Boreholes</h3><p>Community-managed hand-pump boreholes in Chikwawa & Ntcheu districts. Women no longer walk 4km to unsafe water sources. Each borehole is owned by a local Water Point Committee.</p><div class="stat-row"><span class="stat-chip">23,651 People Served</span><span class="stat-chip">11 Boreholes Built</span><span class="stat-chip">90% Cholera Reduction</span></div><ul class="deliverables"><li>Distance to water: 4km → under 200 meters</li><li>Girls’ school attendance: 40% → 85%</li><li>Fully community-owned maintenance</li><li>Cholera cases: 47 → 3 in 6 months</li></ul></div>
+    <div class="project-footer"><span><i class="fas fa-handshake"></i> Partner: USAID · Govt. Malawi</span><a href="impact.html" class="report-link"><i class="fas fa-chart-line"></i> Impact Report</a></div>
   </div>
-</section>
 
-<!-- Trust Bar -->
-<div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><i class="fas fa-check-circle"></i> All figures independently verified</div>
-    <div class="trust-divider"></div>
-    <div class="trust-item"><i class="fas fa-file-alt"></i> Published impact reports for every project</div>
-    <div class="trust-divider"></div>
-    <div class="trust-item"><i class="fas fa-handshake"></i> Partnered with UNESCO, USAID & Govt. of Malawi</div>
-    <div class="trust-divider"></div>
-    <div class="trust-item"><i class="fas fa-map-marker-alt"></i> Operating since 2021 in Malawi</div>
+  <!-- Agriculture: Climate-Smart Farming -->
+  <div class="project-card fade-up fade-up-delay-1" data-category="agri">
+    <div class="project-img"><img src="img/farmer-training.jpg" alt="Climate-smart agriculture training" onerror="this.parentElement.innerHTML='<div style=display:flex;align-items:center;justify-content:center;height:100%;background:#e8f5ee>🌽</div>'"><span class="project-badge badge-agri"><i class="fas fa-seedling"></i> Agriculture</span><span class="status-pill status-active">Ongoing</span></div>
+    <div class="project-body"><h3>Climate-Smart Agriculture & Food Security</h3><p>Smallholder farmers trained in conservation agriculture, drought-resistant crops, and market linkages. Gender-intentional: 65% women farmers. Three farmer entrepreneur centres established.</p><div class="stat-row"><span class="stat-chip">2,470+ Farmers Trained</span><span class="stat-chip">3× Yield Increase</span><span class="stat-chip">65% Women</span></div><ul class="deliverables"><li>Farmer Field Schools in Dowa, Chitipa, Mchinji</li><li>From 8 bags/acre → 30+ bags/acre average</li><li>Post-harvest loss reduction training</li><li>Access to climate-resilient seeds</li></ul></div>
+    <div class="project-footer"><span><i class="fas fa-handshake"></i> Partner: Govt. of Malawi</span><a href="impact.html" class="report-link"><i class="fas fa-chart-simple"></i> Yield Data</a></div>
   </div>
-</div>
 
-<!-- ═══ FEATURED PROJECT: CHIKWAWA ═══ -->
-<section class="section featured-section" id="chikwawa">
-  <div class="container">
-    <div class="section-header fade-up">
-      <div class="section-eyebrow">Featured Project</div>
-      <h2>Our Most Documented Impact</h2>
-      <p>Watch the community tell their own story — this is what one borehole actually does.</p>
-    </div>
-
-    <div class="featured-card fade-up">
-      <div class="featured-media">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/aQC9V9VrlnQ"
-            title="Chikwawa Clean Water Transformation"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-        <div class="featured-stats">
-          <div class="fs-box"><span class="num">700+</span><span class="lbl">Households</span></div>
-          <div class="fs-box"><span class="num">4,657</span><span class="lbl">People served</span></div>
-          <div class="fs-box"><span class="num">90%</span><span class="lbl">Cholera down</span></div>
-          <div class="fs-box"><span class="num">4km→100m</span><span class="lbl">Walk reduced</span></div>
-        </div>
-      </div>
-
-      <div class="featured-content">
-        <div class="section-eyebrow">WASH · Chikwawa District</div>
-        <h2>Ending the 4km Water Journey: T/A Kasisi, Chikwawa</h2>
-        <p>Women and girls once walked 4km daily through dangerous paths to fetch contaminated water. Cholera claimed 47 cases in six months. One solar hand-pump borehole — community-designed and community-owned — changed everything.</p>
-
-        <div class="ba-strip">
-          <div class="ba-col before">
-            <div class="ba-label">Girls' attendance before</div>
-            <div class="ba-num">40%</div>
-          </div>
-          <div class="ba-arrow">→</div>
-          <div class="ba-col after">
-            <div class="ba-label">Girls' attendance after</div>
-            <div class="ba-num">85%</div>
-          </div>
-        </div>
-
-        <div class="featured-ctas">
-          <a href="donation.html" class="btn btn-amber"><i class="fas fa-tint"></i> Fund Clean Water</a>
-          <a href="impact.html" class="btn btn-outline"><i class="fas fa-file-alt"></i> Full Impact Data</a>
-        </div>
-      </div>
-    </div>
+  <!-- Climate Resilience: Agroforestry & tree planting -->
+  <div class="project-card fade-up fade-up-delay-2" data-category="resilience">
+    <div class="project-img"><img src="img/tree-planting.jpg" alt="Agroforestry restoration" onerror="this.parentElement.innerHTML='<div style=display:flex;align-items:center;justify-content:center;height:100%;background:#e8f5ee>🌳</div>'"><span class="project-badge badge-resilience"><i class="fas fa-tree"></i> Climate Resilience</span><span class="status-pill status-active">Active</span></div>
+    <div class="project-body"><h3>Agroforestry Restoration Initiative (ARI)</h3><p>Community-led forest recovery combining tree planting, beekeeping livelihoods, and institutional partnership with Malawi's Forestry Department. Restoring degraded land and building local climate resilience.</p><div class="stat-row"><span class="stat-chip">10,110 Trees Planted</span><span class="stat-chip">4 Nurseries</span><span class="stat-chip">15 Village Committees</span></div><ul class="deliverables"><li>39 community leaders trained in agroforestry</li><li>Beekeeping phase: 20 trained, 6 apiaries planned</li><li>Memorandum of Agreement with Forestry Dept</li><li>8 Traditional Authorities endorsed</li></ul></div>
+    <div class="project-footer"><span><i class="fas fa-leaf"></i> Partner: Malawi Forestry Dept</span><a href="impact.html" class="report-link"><i class="fas fa-chart-bar"></i> Carbon & Livelihoods</a></div>
   </div>
-</section>
 
-<!-- ═══ ALL PROJECTS GRID ═══ -->
-<section class="section" style="background:var(--cream)" id="all-projects">
-  <div class="container">
-    <div class="section-header fade-up">
-      <div class="section-eyebrow">All Projects</div>
-      <h2>Six Real Programs. Thousands of Lives.</h2>
-      <p>Every project below has documented outcomes, real beneficiaries, and published reports. We never claim more than we can prove.</p>
-    </div>
-
-    <!-- Filter bar -->
-    <div class="filter-bar fade-up">
-      <button class="filter-btn active" data-filter="all">All Projects</button>
-      <button class="filter-btn" data-filter="wash">WASH</button>
-      <button class="filter-btn" data-filter="agri">Agriculture</button>
-      <button class="filter-btn" data-filter="gender">Gender</button>
-      <button class="filter-btn" data-filter="env">Environment</button>
-      <button class="filter-btn" data-filter="relief">Relief</button>
-    </div>
-
-    <div class="projects-grid" id="projectsGrid">
-
-      <!-- ── 1. UNESCO GENDER EQUALITY ── -->
-      <div class="project-card gender fade-up" data-category="gender">
-        <div class="project-img">
-          <img src="img/causes-2.jpg" alt="Gender Equality Project" onerror="this.parentElement.innerHTML='<div class=project-img-placeholder>♀</div>'">
-          <span class="project-badge badge-gender"><i class="fas fa-venus-mars"></i> Gender & GESI</span>
-          <span class="status-pill status-complete">Completed</span>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span><i class="fas fa-map-marker-alt"></i> Central Region, Malawi</span>
-            <span><i class="fas fa-calendar"></i> 2022–2024</span>
-          </div>
-          <h3>Building Sustainable Gender Equality &amp; Social Inclusion</h3>
-          <p>Partnered with UNESCO to empower marginalized communities through tailored workshops addressing gender-based violence, child labour, school dropout, and inequality — creating safe and inspiring learning spaces.</p>
-          <div class="stat-row">
-            <span class="stat-chip chip-purple">5,154 Students Reached</span>
-            <span class="stat-chip chip-purple">100 Gender Clubs</span>
-            <span class="stat-chip chip-blue">UNESCO Funded</span>
-          </div>
-          <ul class="deliverables">
-            <li>Community dialogues on gender norms in 100+ villages</li>
-            <li>Girls' attendance rose from 40% to 85%</li>
-            <li>112% increase in girls' test scores</li>
-            <li>Teacher training on inclusive pedagogy</li>
-          </ul>
-        </div>
-        <div class="project-footer">
-          <span class="project-partner"><i class="fas fa-handshake"></i> Partner: UNESCO</span>
-          <a href="https://drive.google.com/file/d/1hiwqE0mbGercjI8kk0fFgzo1cdA9C4Cr/view" target="_blank" rel="noopener" class="report-link">
-            <i class="fas fa-file-pdf"></i> Final Report
-          </a>
-        </div>
-      </div>
-
-      <!-- ── 2. CLEAN WATER / WASH ── -->
-      <div class="project-card wash fade-up fade-up-delay-1" data-category="wash">
-        <div class="project-img">
-          <img src="img/causes-3.jpg" alt="Clean Water Initiative" onerror="this.parentElement.innerHTML='<div class=project-img-placeholder>💧</div>'">
-          <span class="project-badge badge-wash"><i class="fas fa-tint"></i> WASH</span>
-          <span class="status-pill status-active">Active</span>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span><i class="fas fa-map-marker-alt"></i> Chikwawa &amp; Ntcheu Districts</span>
-            <span><i class="fas fa-calendar"></i> 2022–ongoing</span>
-          </div>
-          <h3>Access to Clean Water in Rural Malawi</h3>
-          <p>Drilling hand-pump boreholes and solar water systems across rural districts, training local Water Point Committees to ensure every installation is community-owned and sustainable long after our team leaves.</p>
-          <div class="stat-row">
-            <span class="stat-chip chip-green">23,651 People Served</span>
-            <span class="stat-chip chip-green">11 Boreholes Built</span>
-            <span class="stat-chip chip-blue">90% Cholera Reduction</span>
-          </div>
-          <ul class="deliverables">
-            <li>Solar-powered and hand-pump boreholes in 11 villages</li>
-            <li>Women's walking distance cut from 4km to 100m</li>
-            <li>Cholera cases dropped from 47 to 3 in six months</li>
-            <li>Water Point Committees: 100% operational</li>
-          </ul>
-        </div>
-        <div class="project-footer">
-          <span class="project-partner"><i class="fas fa-handshake"></i> Partner: USAID · Govt. Malawi</span>
-          <a href="https://drive.google.com/file/d/1c9sETHFYIRz6muoK36NLLzomDZAoN7Yf/view" target="_blank" rel="noopener" class="report-link">
-            <i class="fas fa-file-pdf"></i> Impact Report
-          </a>
-        </div>
-      </div>
-
-      <!-- ── 3. CYCLONE FREDDY RELIEF ── -->
-      <div class="project-card relief fade-up fade-up-delay-2" data-category="relief">
-        <div class="project-img">
-          <img src="img/causes-1.jpg" alt="Cyclone Freddy Relief" onerror="this.parentElement.innerHTML='<div class=project-img-placeholder>🌪️</div>'">
-          <span class="project-badge badge-relief"><i class="fas fa-hands-helping"></i> Disaster Relief</span>
-          <span class="status-pill status-complete">Completed</span>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span><i class="fas fa-map-marker-alt"></i> Southern Malawi</span>
-            <span><i class="fas fa-calendar"></i> 2023</span>
-          </div>
-          <h3>Cyclone Freddy Relief &amp; Livelihood Recovery</h3>
-          <p>When Cyclone Freddy devastated communities in southern Malawi in 2023, ClimateWise mobilised to support survivors — not just with emergency aid, but with skills and tools to rebuild resilient, independent livelihoods.</p>
-          <div class="stat-row">
-            <span class="stat-chip chip-red">Cyclone Freddy Response</span>
-            <span class="stat-chip chip-amber">Livelihood Recovery</span>
-            <span class="stat-chip chip-green">Irrigation Training</span>
-          </div>
-          <ul class="deliverables">
-            <li>Entrepreneurship training for disaster survivors</li>
-            <li>Irrigation skills to restore agricultural livelihoods</li>
-            <li>Community mental health and peer support sessions</li>
-            <li>Climate-resilient rebuilding guidance</li>
-          </ul>
-        </div>
-        <div class="project-footer">
-          <span class="project-partner"><i class="fas fa-handshake"></i> Community-led response</span>
-          <a href="documents/cyclone-relief.pdf" target="_blank" class="report-link">
-            <i class="fas fa-file-pdf"></i> Learn More
-          </a>
-        </div>
-      </div>
-
-      <!-- ── 4. CLIMATE-SMART AGRICULTURE ── -->
-      <div class="project-card agri fade-up" data-category="agri">
-        <div class="project-img">
-          <img src="img/farmer-success.jpg" alt="Climate-Smart Farming" onerror="this.parentElement.innerHTML='<div class=project-img-placeholder>🌾</div>'">
-          <span class="project-badge badge-agri"><i class="fas fa-seedling"></i> Agriculture</span>
-          <span class="status-pill status-active">Active</span>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span><i class="fas fa-map-marker-alt"></i> Dowa District &amp; Central Region</span>
-            <span><i class="fas fa-calendar"></i> 2021–ongoing</span>
-          </div>
-          <h3>Climate-Smart Agriculture &amp; Food Security</h3>
-          <p>We train smallholder farmers in conservation agriculture, drought-resistant varieties, and market access — equipping them to triple yields and build food security despite increasingly unpredictable rains.</p>
-          <div class="stat-row">
-            <span class="stat-chip chip-amber">2,470 Farmer Beneficiaries</span>
-            <span class="stat-chip chip-purple">65% Women</span>
-            <span class="stat-chip chip-green">3× Yield Increase</span>
-          </div>
-          <ul class="deliverables">
-            <li>Farmers Field Schools (FFS) in Dowa and surrounding districts</li>
-            <li>James (Dowa): 10 bags/acre → 30 bags/acre after one season</li>
-            <li>65% women beneficiaries — gender-intentional by design</li>
-            <li>3 entrepreneur centres for market access and value addition</li>
-          </ul>
-        </div>
-        <div class="project-footer">
-          <span class="project-partner"><i class="fas fa-handshake"></i> Partner: Govt. of Malawi</span>
-          <a href="impact.html" class="report-link">
-            <i class="fas fa-chart-bar"></i> Impact Data
-          </a>
-        </div>
-      </div>
-
-      <!-- ── 5. AGROFORESTRY RESTORATION INITIATIVE ── -->
-      <div class="project-card env fade-up fade-up-delay-1" data-category="env" id="ari">
-        <div class="project-img">
-          <img src="img/Agroforestry Restoration.jpg" alt="Agroforestry Restoration Initiative" onerror="this.parentElement.innerHTML='<div class=project-img-placeholder>🌳</div>'">
-          <span class="project-badge badge-env"><i class="fas fa-tree"></i> Agroforestry</span>
-          <span class="status-pill status-active">Active</span>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span><i class="fas fa-map-marker-alt"></i> Multiple Districts, Malawi</span>
-            <span><i class="fas fa-calendar"></i> 2023–ongoing</span>
-          </div>
-          <h3>Agroforestry Restoration Initiative (ARI)</h3>
-          <p>A government-endorsed, community-led forest recovery program combining tree planting, beekeeping livelihoods, and institutional partnerships with Malawi's Forestry Department to restore degraded land sustainably.</p>
-          <div class="stat-row">
-            <span class="stat-chip chip-green">10,110 Trees Planted</span>
-            <span class="stat-chip chip-green">4 Nurseries Established</span>
-            <span class="stat-chip chip-amber">15 Village Committees</span>
-          </div>
-
-          <!-- ARI Phases -->
-          <div class="ari-phases">
-            <div class="ari-phase">
-              <div class="phase-num">Phase 01</div>
-              <h4>Capacity Building</h4>
-              <p>39 community leaders trained in agroforestry techniques across target villages.</p>
-            </div>
-            <div class="ari-phase">
-              <div class="phase-num">Phase 02</div>
-              <h4>Nursery Development</h4>
-              <p>4 operational nurseries with 1,500 seedling capacity — community-managed.</p>
-            </div>
-            <div class="ari-phase">
-              <div class="phase-num">Phase 03</div>
-              <h4>Institutional Engagement</h4>
-              <p>Formal MOA with Malawi Forestry Department. Endorsed by 8 Traditional Authorities.</p>
-            </div>
-          </div>
-
-          <!-- Beekeeping highlight -->
-          <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin-bottom:1rem">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:0.5rem">
-              <span style="font-size:1.1rem">🐝</span>
-              <strong style="font-size:0.9rem;color:var(--text-dark)">Phase 4: Beekeeping Livelihoods</strong>
-            </div>
-            <p style="font-size:0.83rem;color:var(--text-muted);margin-bottom:0.6rem">A complementary livelihood initiative promoting sustainable income through community-based beekeeping — connecting forest restoration with family income.</p>
-            <div style="display:flex;gap:6px;flex-wrap:wrap">
-              <span class="stat-chip chip-amber">20 Trained</span>
-              <span class="stat-chip chip-amber">6 Board Frames Built</span>
-              <span class="stat-chip chip-green">100+ People Sensitized</span>
-              <span class="stat-chip chip-green">3 Apiaries Planned</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-footer">
-          <span class="project-partner"><i class="fas fa-handshake"></i> Partner: Malawi Forestry Dept.</span>
-          <a href="impact.html" class="report-link">
-            <i class="fas fa-chart-bar"></i> View Impact
-          </a>
-        </div>
-      </div>
-
-      <!-- ── 6. ECONOMIC DIVERSIFICATION ── -->
-      <div class="project-card agri fade-up fade-up-delay-2" data-category="agri">
-        <div class="project-img">
-          <img src="img/research.jpg" alt="Economic Diversification Research" onerror="this.parentElement.innerHTML='<div class=project-img-placeholder>📊</div>'">
-          <span class="project-badge badge-agri"><i class="fas fa-chart-line"></i> Research</span>
-          <span class="status-pill status-complete">Published</span>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span><i class="fas fa-map-marker-alt"></i> Rural Malawi (Tobacco Belt)</span>
-            <span><i class="fas fa-calendar"></i> 2023</span>
-          </div>
-          <h3>Diversification of Rural Economic Activities</h3>
-          <p>A research initiative assessing the impact of diversifying rural economic activities to reduce income inequality among tobacco smallholder farmers — informing future programs and government policy.</p>
-          <div class="stat-row">
-            <span class="stat-chip chip-amber">Published Research</span>
-            <span class="stat-chip chip-blue">Policy Influence</span>
-            <span class="stat-chip chip-green">Tobacco Communities</span>
-          </div>
-          <ul class="deliverables">
-            <li>Field research across tobacco smallholder communities</li>
-            <li>Identified key income diversification barriers</li>
-            <li>Recommendations adopted in subsequent agriculture programs</li>
-            <li>Openly published for sector-wide use</li>
-          </ul>
-        </div>
-        <div class="project-footer">
-          <span class="project-partner"><i class="fas fa-university"></i> Community Research</span>
-          <a href="https://docs.google.com/file/d/1bpFTtKs8oZFTciehZwmEp08ClpiXor-Y/view" target="_blank" rel="noopener" class="report-link">
-            <i class="fas fa-file-alt"></i> Read Research
-          </a>
-        </div>
-      </div>
-
-    </div><!-- /projects-grid -->
+  <!-- Quality Education: Gender & Inclusion program (UNESCO) -->
+  <div class="project-card fade-up fade-up-delay-3" data-category="education">
+    <div class="project-img"><img src="img/school-girls.jpg" alt="Girls education in Malawi" onerror="this.parentElement.innerHTML='<div style=display:flex;align-items:center;justify-content:center;height:100%;background:#e8f5ee>📖</div>'"><span class="project-badge badge-education"><i class="fas fa-school"></i> Quality Education</span><span class="status-pill status-complete">Completed 2024</span></div>
+    <div class="project-body"><h3>Gender Equality & Inclusive Education</h3><p>UNESCO-funded initiative reducing school dropout, addressing gender-based violence, and creating safe learning environments. Focus on keeping girls in secondary school through mentorship and community dialogue.</p><div class="stat-row"><span class="stat-chip">5,154 Students Reached</span><span class="stat-chip">100 Gender Clubs</span><span class="stat-chip">112% Test Score Increase</span></div><ul class="deliverables"><li>Girls' attendance: 40% → 85%</li><li>Teacher training on inclusive pedagogy</li><li>Community anti-child marriage campaigns</li><li>Scholarships for high-achieving girls</li></ul></div>
+    <div class="project-footer"><span><i class="fas fa-unesco"></i> Partner: UNESCO</span><a href="impact.html" class="report-link"><i class="fas fa-file-alt"></i> Final Report</a></div>
   </div>
-</section>
 
-<!-- ═══ YOUTH ENTREPRENEURS SPOTLIGHT ═══ -->
-<section class="section" style="background:var(--white)">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
+</div></div></section>
 
-      <div class="fade-up">
-        <div class="section-eyebrow">Success Story</div>
-        <h2>From Training to <em style="font-style:italic;color:var(--green-fresh)">Business</em> in One Season</h2>
-        <p style="font-size:1.05rem;margin-bottom:1.5rem">After completing our Green Youth Entrepreneurship Training, Tinashe (22) and Maggie (24) launched a mushroom farming business using agricultural waste as raw material. What started as a bold idea now employs 5 youth and supplies food to 200+ households.</p>
-        <ul class="deliverables" style="margin-bottom:1.5rem">
-          <li>Agricultural waste repurposed as growing substrate — zero-cost raw material</li>
-          <li>5 additional youth now employed by the business</li>
-          <li>200+ households in their community supplied with nutritious food</li>
-          <li>$2,500 monthly income generated — life-changing in rural Malawi</li>
-          <li>Proof that climate-smart enterprises can scale from nothing</li>
-        </ul>
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="donation.html" class="btn btn-primary"><i class="fas fa-seedling"></i> Fund More Youth Programs</a>
-          <a href="impact.html" class="btn btn-ghost btn-ghost-sm">See Full Impact Data</a>
-        </div>
-      </div>
+<!-- Featured Water Project: Hand pump verified story (no solar pump) -->
+<section style="padding:3rem 0; background:var(--white)"><div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem"><div class="featured-card fade-up"><div class="featured-media"><div class="featured-stats"><div class="fs-box"><span class="num">700+</span><span class="lbl">Households</span></div><div class="fs-box"><span class="num">4,657</span><span class="lbl">People Served</span></div><div class="fs-box"><span class="num">4km→100m</span><span class="lbl">Walk Distance</span></div><div class="fs-box"><span class="num">90%</span><span class="lbl">Cholera Reduction</span></div></div><div style="background:#0f2c22; min-height:200px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.9rem"><i class="fas fa-hand-pump" style="font-size:3rem; margin-right:10px"></i> Hand-pump borehole · Chikwawa</div></div><div class="featured-content"><div class="section-eyebrow" style="background:rgba(45,184,122,0.2); color:#2db87a">WASH · Chikwawa District</div><h2>Ending the 4km Water Walk: T/A Kasisi</h2><p>Women and girls walked 4km daily to collect unsafe water. We built a hand-pump borehole with a trained Water Point Committee (60% women). The result: cholera nearly eliminated, girls back in school, families thriving.</p><div class="ba-strip"><div class="ba-col"><div class="ba-label">Girls' Attendance Before</div><div class="ba-num">40%</div></div><div style="color:var(--amber)">→</div><div class="ba-col"><div class="ba-label">Girls' Attendance After</div><div class="ba-num">85%</div></div></div><a href="donation.html" class="btn btn-amber" style="display:inline-flex"><i class="fas fa-hand-holding-heart"></i> Fund a Borehole</a></div></div></div></section>
 
-      <div class="fade-up fade-up-delay-2">
-        <div style="background:var(--green-deep);border-radius:var(--radius-lg);padding:2.5rem;color:var(--white)">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green-bright);margin-bottom:1.5rem">Youth Business Results</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem">
-            <div style="background:rgba(255,255,255,0.07);border-radius:var(--radius);padding:1.25rem;text-align:center">
-              <span style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--white);display:block;line-height:1">5</span>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.55)">Youth employed</span>
-            </div>
-            <div style="background:rgba(255,255,255,0.07);border-radius:var(--radius);padding:1.25rem;text-align:center">
-              <span style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--white);display:block;line-height:1">200+</span>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.55)">Households supplied</span>
-            </div>
-            <div style="background:rgba(255,255,255,0.07);border-radius:var(--radius);padding:1.25rem;text-align:center">
-              <span style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--amber);display:block;line-height:1">$2,500</span>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.55)">Monthly income</span>
-            </div>
-            <div style="background:rgba(255,255,255,0.07);border-radius:var(--radius);padding:1.25rem;text-align:center">
-              <span style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--green-bright);display:block;line-height:1">Age<br>22&24</span>
-              <span style="font-size:0.75rem;color:rgba(255,255,255,0.55)">Founders (Tinashe &amp; Maggie)</span>
-            </div>
-          </div>
-          <blockquote style="font-style:italic;font-size:0.9rem;color:rgba(255,255,255,0.75);border-left:3px solid var(--amber);padding-left:1rem;line-height:1.7">
-            "The training gave us the belief that we could build something from nothing. Agricultural waste that people threw away is now what feeds our families and our community."
-          </blockquote>
-          <div style="margin-top:0.75rem;font-size:0.8rem;color:rgba(255,255,255,0.45)">— Maggie, Co-Founder · Mushroom Farming Enterprise</div>
-        </div>
-      </div>
+<!-- Youth Entrepreneurship / Quality Education & Agriculture synergy -->
+<section style="padding:4rem 0; background:var(--green-light)"><div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem"><div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center"><div class="fade-up"><div class="section-eyebrow">Success Story: Education & Agri</div><h2>From Training to <span style="color:var(--green-fresh)">Enterprise</span> in One Season</h2><p style="margin:1rem 0">After completing ClimateWise’s Green Youth Entrepreneurship & Climate-Smart Agriculture training, Tinashe (22) and Maggie (24) launched a mushroom farming business using agricultural waste. Now employing 5 youth and supplying 200+ households.</p><ul class="deliverables"><li>Agricultural waste → zero-cost substrate</li><li>$2,500 monthly income for the cooperative</li><li>5 youth employed from the same village</li><li>100+ households trained in nutrition</li></ul><a href="donation.html" class="btn btn-primary">Fund Youth Programs</a></div><div class="fade-up fade-up-delay-1" style="background:var(--white);border-radius:var(--radius-lg);padding:2rem;box-shadow:var(--shadow-md)"><div style="font-weight:700;color:var(--green-fresh);margin-bottom:1rem">📊 Business snapshot</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem"><div><span style="font-size:2rem;font-weight:700;color:var(--green-deep)">5</span><br>Youth employed</div><div><span style="font-size:2rem;font-weight:700;color:var(--green-deep)">200+</span><br>Households supplied</div><div><span style="font-size:2rem;font-weight:700;color:var(--amber)">$2.5k</span><br>Monthly income</div><div><span style="font-size:2rem;font-weight:700;color:var(--green-fresh)">22&24</span><br>Founders age</div></div><blockquote style="margin-top:1rem;font-style:italic;border-left:3px solid var(--green-fresh);padding-left:1rem">"The training gave us belief. Agricultural waste that people threw away now feeds families and builds our future." — Maggie</blockquote></div></div></div></section>
 
-    </div>
-  </div>
-</section>
+<!-- Transparency note -->
+<section style="padding:3rem 0; background:var(--cream)"><div class="container" style="max-width:800px;margin:0 auto;text-align:center"><div style="font-size:2.5rem">📋</div><h3 style="margin:1rem 0">100% Transparent. No Fabrication.</h3><p style="color:var(--text-mid)">Every figure on this page reflects real projects completed by ClimateWise since 2021. We have published reports, beneficiary lists, and photographic documentation. If you see a number, we can show you the evidence.</p><div style="margin-top:1.5rem"><a href="impact.html" class="btn btn-primary">Full Impact Data</a></div></div></section>
 
-<!-- ═══ TRANSPARENCY NOTE ═══ -->
-<section style="background:var(--green-light);padding:3rem 0">
-  <div class="container">
-    <div style="max-width:800px;margin:0 auto;text-align:center">
-      <div style="font-size:2rem;margin-bottom:1rem">🔍</div>
-      <h3 style="margin-bottom:1rem;color:var(--green-deep)">Our Commitment to Transparency</h3>
-      <p style="font-size:1rem;color:var(--text-mid);margin-bottom:1.5rem">Every project on this page has a published report, real beneficiary counts, and documented outcomes. We never inflate our numbers or claim partnerships we don't have. If a figure is on our website, we can show you the evidence behind it.</p>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-        <a href="impact.html" class="btn btn-primary"><i class="fas fa-chart-bar"></i> View Full Impact Data</a>
-        <a href="https://drive.google.com/file/d/1hiwqE0mbGercjI8kk0fFgzo1cdA9C4Cr/view" target="_blank" class="btn btn-ghost btn-ghost-sm"><i class="fas fa-file-pdf"></i> Read Our Reports</a>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- DONATE CTA -->
+<section class="donate-section"><div class="donate-inner"><div><div class="section-eyebrow" style="background:rgba(255,255,255,0.15);color:white">Invest in Real Work</div><h2 style="color:white">Your Donation Funds These Exact Projects</h2><p style="color:rgba(255,255,255,0.8);margin-top:1rem">$50 = clean water for a family for a year. $100 = farmer training + seeds. $250 = keep a girl in school. Every kwacha tracked.</p></div><div><a href="donation.html" class="btn btn-amber" style="padding:14px 36px;font-size:1rem"><i class="fas fa-heart"></i> Donate Now</a><div style="margin-top:0.75rem;color:rgba(255,255,255,0.5)"><i class="fas fa-lock"></i> Secure & tax-deductible</div></div></div></section>
 
-<!-- ═══ DONATE CTA ═══ -->
-<section class="section donate-section">
-  <div class="container">
-    <div class="donate-inner">
-      <div class="donate-text fade-up">
-        <div class="section-eyebrow" style="background:rgba(255,255,255,0.15);color:var(--white)">Fund Real Work</div>
-        <h2>Your Donation Funds<br>These Exact Projects</h2>
-        <p>$50 provides clean water for a family for a year. $100 trains a farmer who will triple their harvest. $250 keeps girls in school for a term. Every kwacha is documented and reported.</p>
-      </div>
-      <div class="donate-box fade-up fade-up-delay-2">
-        <a href="donation.html" class="btn btn-amber" style="display:flex;width:220px;margin-bottom:10px">
-          <i class="fas fa-heart"></i> Donate Now
-        </a>
-        <div class="donate-secure"><i class="fas fa-lock"></i> Secure &amp; tax-deductible</div>
-        <div style="margin-top:1rem">
-          <a href="volunteer.html" class="btn btn-outline" style="display:flex;width:220px;justify-content:center">
-            <i class="fas fa-hands-helping"></i> Volunteer Instead
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a href="index.html" style="display:inline-flex;align-items:center;gap:12px;margin-bottom:1rem;text-decoration:none">
-          <div style="width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--green-deep),var(--green-fresh));display:flex;align-items:center;justify-content:center">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2C6 8 4 12 4 15a8 8 0 0016 0c0-3-2-7-8-13z"/><path d="M12 22V12M8 16l4-4 4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div>
-            <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:white">ClimateWise</div>
-            <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Organization · Malawi</div>
-          </div>
-        </a>
-        <p class="footer-brand-desc">A youth-led organization transforming Malawi through WASH, sustainable agriculture, gender equality, and environmental conservation. Registered non-profit since 2021. Reg No: MW/CW/0225.</p>
-        <div class="footer-social">
-          <a href="https://m.facebook.com/climatewise_organizations" class="social-link"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/climatewise_org" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/climatewise_organization" class="social-link"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/climatewise-organization/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Our Projects</h4>
-        <div class="footer-links">
-          <a href="#chikwawa">Chikwawa Water Project</a>
-          <a href="#ari">Agroforestry Restoration (ARI)</a>
-          <a href="projects.html">Gender Equality Program</a>
-          <a href="projects.html">Climate-Smart Agriculture</a>
-          <a href="projects.html">Cyclone Freddy Relief</a>
-          <a href="projects.html">Economic Diversification</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Organization</h4>
-        <div class="footer-links">
-          <a href="about.html">About Us</a>
-          <a href="impact.html">Our Impact</a>
-          <a href="events.html">Events &amp; News</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="partners.html">Partners</a>
-          <a href="volunteer.html">Volunteer</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="donation.html" style="color:var(--amber);font-weight:600">Donate Now →</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Stay Updated</h4>
-        <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);margin-bottom:1rem">Subscribe for project updates and field stories from Malawi.</p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="Your email address">
-          <button type="button">Subscribe</button>
-        </div>
-        <p style="font-size:0.76rem;color:rgba(255,255,255,0.35);margin-top:0.75rem"><i class="fas fa-shield-alt"></i> No spam, ever.</p>
-        <div style="margin-top:1.5rem">
-          <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:0.5rem">Contact us</p>
-          <p style="font-size:0.83rem;color:rgba(255,255,255,0.6)"><i class="fas fa-envelope" style="margin-right:6px;color:var(--green-bright)"></i>info@climatewiseorganization.com</p>
-          <p style="font-size:0.83rem;color:rgba(255,255,255,0.6);margin-top:4px"><i class="fas fa-phone" style="margin-right:6px;color:var(--green-bright)"></i>+265 886 583 720</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 ClimateWise Organization. All Rights Reserved. · Reg No: MW/CW/0225</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="impact.html">Annual Impact Data</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
+<footer><div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem"><div class="footer-grid"><div><img src="logo.png" alt="logo" style="height:48px;margin-bottom:1rem" onerror="this.style.display='none'"><p class="footer-brand-desc">Youth-led nonprofit since 2021. Reg No: MW/CW/0225. Transforming Malawi through water, agriculture, education & climate resilience.</p><div><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-link"><i class="fab fa-twitter"></i></a><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></div></div><div><h4>Our Work</h4><div class="footer-links"><a href="#">WASH Programs</a><a href="#">Agriculture</a><a href="#">Climate Resilience</a><a href="#">Quality Education</a><a href="projects.html">All Projects</a></div></div><div><h4>Organization</h4><div class="footer-links"><a href="about.html">About Us</a><a href="impact.html">Impact</a><a href="volunteer.html">Volunteer</a><a href="contact.html">Contact</a></div></div><div><h4>Stay Updated</h4><p style="font-size:0.85rem;color:rgba(255,255,255,0.6)">Field stories, reports & opportunities.</p><div style="display:flex;gap:8px;margin-top:1rem"><input type="email" placeholder="Your email" id="newsEmail" style="flex:1;padding:10px;border-radius:8px;border:none"><button id="subscribeBtn" style="background:var(--green-fresh);border:none;border-radius:8px;padding:0 16px;color:white">→</button></div></div></div><div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.1);margin-top:3rem;padding:1.5rem 0;display:flex;justify-content:space-between;flex-wrap:wrap"><p>© 2026 ClimateWise Organization · Malawi</p><div><a href="#" style="color:rgba(255,255,255,0.5);margin-left:1rem">Privacy</a><a href="#" style="color:rgba(255,255,255,0.5);margin-left:1rem">Terms</a></div></div></div></footer>
 <a href="#top" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
 <script>
-/* ─── NAVBAR ─── */
-const navbar = document.getElementById('navbar');
+// navbar scroll & back to top
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-  document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
+  document.getElementById('backToTop')?.classList.toggle('visible', window.scrollY > 300);
 });
-
-/* ─── MOBILE MENU ─── */
-document.getElementById('navToggle').addEventListener('click', () => {
-  const m = document.getElementById('mobileMenu');
-  m.classList.toggle('open');
-  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-});
-
-/* ─── SCROLL ANIMATIONS ─── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-
-/* ─── PROJECT FILTER ─── */
+document.getElementById('backToTop')?.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
+// mobile menu
+const toggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if(toggle) toggle.onclick = () => mobileMenu.classList.toggle('open');
+// filter
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const filter = btn.dataset.filter;
     document.querySelectorAll('.project-card').forEach(card => {
-      const show = filter === 'all' || card.dataset.category === filter;
-      card.style.display = show ? 'flex' : 'none';
-      if (show) {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-          card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, 50);
-      }
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.style.display = match ? 'flex' : 'none';
     });
   });
 });
-
-/* ─── NEWSLETTER ─── */
-document.querySelector('.newsletter-form button').addEventListener('click', function () {
-  const inp = this.previousElementSibling;
-  if (inp.value && inp.value.includes('@')) {
-    this.textContent = '✓ Done!';
-    this.style.background = '#2db87a';
-    inp.value = '';
-    setTimeout(() => { this.textContent = 'Subscribe'; this.style.background = ''; }, 3000);
-  } else {
-    inp.style.borderColor = '#e74c3c';
-    setTimeout(() => inp.style.borderColor = '', 2000);
-  }
-});
-
-/* ─── SMOOTH SCROLL ─── */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  });
-});
+// fade-up observer
+const observer = new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')), { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+// newsletter dummy
+document.getElementById('subscribeBtn')?.addEventListener('click', () => { alert('Thank you! You will receive project updates.'); });
 </script>
 </body>
 </html>

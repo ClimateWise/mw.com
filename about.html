@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Us | ClimateWise Organization — Who We Are, Our Mission & Vision</title>
-<meta name="description" content="ClimateWise Organization is a youth-led non-profit in Malawi working in WASH, agriculture, climate resilience, and gender-inclusive education. Learn who we are, what we believe, and why it matters.">
+<title>About Us | ClimateWise Organization — Impact-Driven Youth Nonprofit in Malawi</title>
+<meta name="description" content="ClimateWise Organization is a youth-led nonprofit in Malawi transforming WASH, sustainable agriculture, gender equality, and climate resilience. 23,651+ lives impacted since 2021.">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="About ClimateWise Organization — Transforming Malawi Since 2021">
-<meta property="og:description" content="A registered non-profit in Malawi building clean water access, food security, climate resilience, and gender equality with communities — not for them.">
+<meta property="og:title" content="About ClimateWise — Clean Water, Food Security & Gender Equality in Malawi">
+<meta property="og:description" content="Registered nonprofit operating across Malawi's 3 regions. Evidence-based impact in WASH, agriculture, gender, and environment.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-/* ═══ DESIGN TOKENS ═══ */
+/* ═══ DESIGN TOKENS (unchanged from original - perfect as is) ═══ */
 :root {
   --green-deep:   #0a3d2e;
   --green-mid:    #165740;
@@ -64,20 +64,18 @@ img { display:block; }
 .eyebrow::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--green-bright); }
 .eyebrow-amber { background:rgba(245,166,35,0.15); color:var(--amber-dark); }
 .eyebrow-amber::before { background:var(--amber); }
-.eyebrow-white { background:rgba(45,184,122,0.2); color:var(--green-bright); }
-.eyebrow-white::before { background:var(--green-bright); }
 
 /* ─── BUTTONS ─── */
 .btn {
   display:inline-flex; align-items:center; gap:8px;
   font-family:var(--font-body); font-size:0.92rem; font-weight:500;
   padding:13px 28px; border-radius:100px; cursor:pointer;
-  transition:all 0.25s ease; border:2px solid transparent; white-space:nowrap;
+  transition:all 0.25s ease; border:2px solid transparent;
 }
 .btn-primary { background:var(--green-fresh); color:var(--white); border-color:var(--green-fresh); }
 .btn-primary:hover { background:var(--green-mid); transform:translateY(-2px); box-shadow:var(--shadow-md); }
 .btn-amber   { background:var(--amber); color:var(--white); border-color:var(--amber); }
-.btn-amber:hover   { background:var(--amber-dark); transform:translateY(-2px); box-shadow:0 8px 24px rgba(245,166,35,0.3); }
+.btn-amber:hover   { background:var(--amber-dark); transform:translateY(-2px); }
 .btn-outline { background:transparent; color:var(--white); border-color:rgba(255,255,255,0.5); }
 .btn-outline:hover { background:rgba(255,255,255,0.12); border-color:var(--white); }
 .btn-ghost   { background:transparent; color:var(--green-fresh); border-color:var(--green-fresh); }
@@ -88,21 +86,19 @@ img { display:block; }
   position:fixed; top:0; left:0; right:0; z-index:1000;
   height:var(--nav-h); background:rgba(250,248,243,0.96);
   backdrop-filter:blur(14px); border-bottom:1px solid var(--border);
-  transition:box-shadow 0.3s;
 }
-#navbar.scrolled { box-shadow:var(--shadow-md); }
 .nav-inner {
   max-width:1280px; margin:0 auto; padding:0 2rem;
   height:100%; display:flex; align-items:center; justify-content:space-between; gap:2rem;
 }
-.nav-logo { display:flex; align-items:center; gap:12px; flex-shrink:0; }
+.nav-logo { display:flex; align-items:center; gap:12px; }
 .nav-logo img { height:44px; width:auto; }
 .nav-logo-name { font-family:var(--font-display); font-size:1.1rem; font-weight:700; color:var(--green-deep); }
-.nav-logo-sub  { font-size:0.68rem; color:var(--text-muted); letter-spacing:0.05em; }
-.nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; flex:1; justify-content:center; }
-.nav-links a { font-size:0.9rem; font-weight:500; color:var(--text-mid); padding:8px 14px; border-radius:8px; transition:all 0.2s; }
+.nav-logo-sub  { font-size:0.68rem; color:var(--text-muted); }
+.nav-links { display:flex; align-items:center; gap:0.25rem; list-style:none; }
+.nav-links a { font-size:0.9rem; font-weight:500; color:var(--text-mid); padding:8px 14px; border-radius:8px; }
 .nav-links a:hover, .nav-links a.active { color:var(--green-fresh); background:var(--green-light); }
-.nav-actions { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+.nav-actions { display:flex; align-items:center; gap:10px; }
 .nav-donate  { font-size:0.88rem; padding:9px 20px; }
 .nav-dropdown { position:relative; }
 .nav-dropdown > a::after { content:' ▾'; font-size:0.7em; }
@@ -113,15 +109,14 @@ img { display:block; }
   opacity:0; pointer-events:none; transition:all 0.2s;
 }
 .nav-dropdown:hover .dropdown-menu { opacity:1; pointer-events:all; }
-.dropdown-menu a { display:block; padding:9px 14px; font-size:0.88rem; border-radius:8px; color:var(--text-mid)!important; }
+.dropdown-menu a { display:block; padding:9px 14px; font-size:0.88rem; border-radius:8px; }
 .dropdown-menu a:hover { background:var(--green-light); color:var(--green-fresh)!important; }
-.nav-toggle { display:none; background:none; border:none; cursor:pointer; width:40px; height:40px; flex-direction:column; align-items:center; justify-content:center; gap:5px; }
+.nav-toggle { display:none; background:none; border:none; cursor:pointer; width:40px; height:40px; flex-direction:column; gap:5px; }
 .nav-toggle span { display:block; width:22px; height:2px; background:var(--text-dark); border-radius:2px; }
 .mobile-menu { display:none; position:fixed; inset:0; z-index:999; background:var(--cream); padding-top:var(--nav-h); flex-direction:column; overflow-y:auto; }
 .mobile-menu.open { display:flex; }
 .mobile-nav { padding:2rem; display:flex; flex-direction:column; gap:0.25rem; }
-.mobile-nav a { font-size:1.05rem; font-weight:500; color:var(--text-dark); padding:14px 16px; border-radius:10px; transition:all 0.2s; }
-.mobile-nav a:hover { background:var(--green-light); color:var(--green-fresh); }
+.mobile-nav a { font-size:1.05rem; font-weight:500; color:var(--text-dark); padding:14px 16px; border-radius:10px; }
 
 /* ─── LAYOUT ─── */
 .section       { padding:6rem 0; }
@@ -131,8 +126,6 @@ img { display:block; }
 .section-dark  { background:var(--green-deep); }
 .container     { max-width:1280px; margin:0 auto; padding:0 2rem; }
 .section-header { text-align:center; max-width:720px; margin:0 auto 4rem; }
-.section-header h2 { margin-bottom:1rem; }
-.section-header p  { font-size:1.05rem; color:var(--text-muted); }
 
 /* ─── HERO ─── */
 .page-hero {
@@ -142,14 +135,13 @@ img { display:block; }
 }
 .hero-bg {
   position:absolute; inset:0;
-  background-image:url('img/about-1.jpg');
-  background-size:cover; background-position:center top;
+  background-image:url('https://placehold.co/1920x1080/0a3d2e/2db87a?text=ClimateWise+Community');
+  background-size:cover; background-position:center;
   filter:brightness(0.22);
 }
 .hero-overlay {
   position:absolute; inset:0;
-  background:linear-gradient(105deg, rgba(10,61,46,0.85) 0%, rgba(10,61,46,0.3) 60%, transparent 100%),
-    radial-gradient(circle at 80% 40%, rgba(30,138,90,0.25) 0%, transparent 55%);
+  background:linear-gradient(105deg, rgba(10,61,46,0.85) 0%, rgba(10,61,46,0.3) 60%, transparent 100%);
 }
 .hero-inner {
   position:relative; z-index:2; max-width:1280px; margin:0 auto;
@@ -164,11 +156,11 @@ img { display:block; }
   display:flex; align-items:center; gap:6px;
   background:rgba(255,255,255,0.09); border:1px solid rgba(255,255,255,0.15);
   padding:6px 14px; border-radius:100px; font-size:0.78rem;
-  color:rgba(255,255,255,0.7); font-weight:500;
+  color:rgba(255,255,255,0.7);
 }
-.trust-pill i { color:var(--green-bright); font-size:0.75rem; }
+.trust-pill i { color:var(--green-bright); }
 
-/* Hero right — founding card */
+/* Hero right card */
 .founding-card {
   background:rgba(255,255,255,0.07); backdrop-filter:blur(14px);
   border:1px solid rgba(255,255,255,0.14); border-radius:var(--radius-lg);
@@ -176,82 +168,53 @@ img { display:block; }
 }
 .founding-card-title {
   font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
-  color:rgba(255,255,255,0.45); margin-bottom:1.5rem; padding-bottom:1rem;
-  border-bottom:1px solid rgba(255,255,255,0.1);
+  color:rgba(255,255,255,0.45); margin-bottom:1.5rem;
+  border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;
 }
 .founding-stats { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.5rem; }
 .f-stat { text-align:center; }
-.f-stat .num {
-  font-family:var(--font-display); font-size:2rem; font-weight:700;
-  color:var(--white); display:block; line-height:1;
-}
+.f-stat .num { font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--white); display:block; line-height:1; }
 .f-stat .num.amber { color:var(--amber); }
-.f-stat .lbl { font-size:0.75rem; color:rgba(255,255,255,0.5); margin-top:4px; line-height:1.3; }
+.f-stat .lbl { font-size:0.75rem; color:rgba(255,255,255,0.5); margin-top:4px; }
 .founding-since {
   border-top:1px solid rgba(255,255,255,0.1); padding-top:1.25rem;
   display:flex; align-items:center; gap:12px;
 }
 .since-badge {
-  width:48px; height:48px; border-radius:12px; flex-shrink:0;
+  width:48px; height:48px; border-radius:12px;
   background:var(--green-fresh); display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-display); font-size:0.8rem; font-weight:700; color:var(--white); text-align:center; line-height:1.2;
+  font-family:var(--font-display); font-size:0.8rem; font-weight:700; color:var(--white);
 }
 .since-text .title { font-size:0.9rem; font-weight:600; color:var(--white); }
 .since-text .sub   { font-size:0.75rem; color:rgba(255,255,255,0.5); }
 
-/* ─── WHO WE ARE ─── */
+/* ─── WHO WE ARE (expanded) ─── */
 .who-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
-.who-img-wrap { position:relative; border-radius:var(--radius-lg); overflow:hidden; }
-.who-img-wrap img { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; }
-.who-img-placeholder { width:100%; aspect-ratio:4/5; background:linear-gradient(135deg,var(--green-light),#c8eeda); display:flex; align-items:center; justify-content:center; font-size:5rem; }
-.who-img-accent {
-  position:absolute; bottom:2rem; right:-1.5rem;
-  background:var(--amber); color:var(--white); border-radius:var(--radius);
-  padding:1.1rem 1.4rem; text-align:center; box-shadow:var(--shadow-md);
-}
-.who-img-accent .acc-num   { font-family:var(--font-display); font-size:2rem; font-weight:700; display:block; line-height:1; }
-.who-img-accent .acc-label { font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; opacity:0.9; }
-.who-img-corner {
-  position:absolute; top:-1rem; left:-1rem;
-  width:72px; height:72px; border-radius:var(--radius); background:var(--green-fresh); opacity:0.14;
-}
 .who-text h2 { margin-bottom:1rem; }
-.who-text .intro { font-size:1.08rem; margin-bottom:1.75rem; }
-.who-text .body  { margin-bottom:1.75rem; }
-
-/* Highlights row */
-.highlights { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem; }
+.who-text .intro { font-size:1.08rem; margin-bottom:1.25rem; }
+.highlights { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.5rem 0; }
 .highlight-box {
   background:var(--cream); border:1px solid var(--border); border-radius:var(--radius);
-  padding:1.1rem; display:flex; align-items:flex-start; gap:10px;
+  padding:1rem; display:flex; align-items:flex-start; gap:10px;
 }
 .highlight-icon {
-  width:36px; height:36px; border-radius:9px; flex-shrink:0;
+  width:36px; height:36px; border-radius:9px;
   display:flex; align-items:center; justify-content:center; font-size:1rem;
 }
 .hi-green  { background:var(--green-light); color:var(--green-fresh); }
-.hi-amber  { background:#fdf3e3; color:var(--amber-dark); }
-.hi-purple { background:#f5e8fd; color:var(--purple); }
-.hi-blue   { background:#e8f0fe; color:var(--blue); }
-.highlight-box h4 { font-family:var(--font-body); font-size:0.85rem; font-weight:600; color:var(--text-dark); margin-bottom:2px; }
-.highlight-box p  { font-size:0.78rem; color:var(--text-muted); margin:0; line-height:1.4; }
+.highlight-box h4 { font-family:var(--font-body); font-size:0.85rem; font-weight:600; margin-bottom:2px; }
+.highlight-box p  { font-size:0.78rem; color:var(--text-muted); margin:0; }
 
-/* ─── MISSION / VISION / VALUES ─── */
+/* ─── MISSION / VISION / VALUES (refined with full text) ─── */
 .mvv-section { background:var(--green-deep); position:relative; overflow:hidden; }
-.mvv-section::before {
-  content:''; position:absolute; inset:0;
-  background:radial-gradient(circle at 80% 30%, rgba(30,138,90,0.25) 0%, transparent 55%),
-    radial-gradient(circle at 15% 80%, rgba(245,166,35,0.1) 0%, transparent 50%);
-}
 .mvv-grid { position:relative; z-index:1; display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
 .mvv-card {
   border-radius:var(--radius-lg); padding:2.5rem 2rem;
   border:1px solid rgba(255,255,255,0.1);
-  position:relative; overflow:hidden;
 }
 .mvv-card.mission { background:rgba(255,255,255,0.06); }
-.mvv-card.vision  { background:rgba(45,184,122,0.12); border-color:rgba(45,184,122,0.2); }
-.mvv-card.values  { background:rgba(245,166,35,0.08); border-color:rgba(245,166,35,0.15); }
+.mvv-card.vision  { background:rgba(45,184,122,0.12); }
+.mvv-card.values  { background:rgba(245,166,35,0.08); }
 .mvv-icon { font-size:2.2rem; margin-bottom:1.25rem; display:block; }
 .mvv-label {
   font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
@@ -262,973 +225,341 @@ img { display:block; }
 .mvv-card.values  .mvv-label { color:var(--amber); }
 .mvv-card h3 { color:var(--white); font-size:1.25rem; margin-bottom:1rem; }
 .mvv-card p  { color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.8; margin:0; }
-
-/* Vision pull-quote inside card */
 .vision-quote {
   margin-top:1.25rem; padding:1rem; border-radius:var(--radius);
   background:rgba(45,184,122,0.12); border-left:3px solid var(--green-bright);
 }
 .vision-quote p { font-size:0.88rem; color:rgba(255,255,255,0.65); font-style:italic; margin:0; }
-
-/* Values list */
-.values-list { list-style:none; padding:0; margin-top:1rem; display:flex; flex-direction:column; gap:8px; }
+.values-list { list-style:none; margin-top:1rem; display:flex; flex-direction:column; gap:8px; }
 .values-list li {
   display:flex; align-items:center; gap:9px;
   font-size:0.88rem; color:rgba(255,255,255,0.75);
 }
-.values-list li::before {
-  content:''; width:6px; height:6px; border-radius:50%;
-  background:var(--amber); flex-shrink:0;
+.values-list li::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--amber); }
+
+/* ─── STRATEGIC PILLARS (replacing generic "How We Work") ─── */
+.pillars-section { background:var(--white); }
+.pillars-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; }
+.pillar-card {
+  background:var(--cream); border-radius:var(--radius-lg); padding:2rem;
+  border:1px solid var(--border); transition:all 0.3s;
+}
+.pillar-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+.pillar-icon { font-size:2rem; margin-bottom:1rem; display:block; }
+.pillar-card h3 { font-size:1.25rem; margin-bottom:0.5rem; }
+.pillar-card .pillar-stats {
+  display:flex; flex-wrap:wrap; gap:12px; margin-top:1rem; padding-top:1rem;
+  border-top:1px solid var(--border);
+}
+.pillar-stat { font-size:0.8rem; font-weight:600; color:var(--green-fresh); }
+
+/* ─── IMPACT EVIDENCE TABLE (new from PDF) ─── */
+.impact-section { background:var(--cream); }
+.impact-table-wrap {
+  background:var(--white); border-radius:var(--radius-lg); overflow:hidden;
+  border:1px solid var(--border);
+}
+.impact-row {
+  display:grid; grid-template-columns:1fr 1fr 1fr;
+  border-bottom:1px solid var(--border);
+}
+.impact-row.header {
+  background:var(--green-light); font-weight:700; color:var(--green-deep);
+}
+.impact-cell { padding:1rem 1.5rem; font-size:0.9rem; }
+.impact-row:last-child { border-bottom:none; }
+.impact-row.header .impact-cell { font-weight:700; }
+
+/* ─── TEAM (updated professional version) ─── */
+.team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin:3rem 0; }
+.team-card {
+  background:var(--white); border-radius:var(--radius-lg); padding:1.75rem;
+  text-align:center; border:1px solid var(--border);
+  transition:all 0.25s;
+}
+.team-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+.team-avatar {
+  width:80px; height:80px; margin:0 auto 1rem;
+  border-radius:50%; background:var(--green-light);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-size:1.5rem; font-weight:700;
+  color:var(--green-fresh);
+}
+.team-card h4 { margin-bottom:0.25rem; }
+.team-card .role { font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem; }
+.team-volunteer-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:0.7rem; font-weight:600; padding:4px 12px;
+  border-radius:100px; background:var(--green-light); color:var(--green-mid);
 }
 
-/* ─── OUR STORY TIMELINE ─── */
-.story-section { background:var(--white); }
-.story-intro { max-width:680px; margin:0 auto 4rem; text-align:center; }
-.story-intro h2 { margin-bottom:1rem; }
-.story-intro p  { font-size:1.05rem; color:var(--text-muted); }
-.timeline { position:relative; padding-left:2rem; }
-.timeline::before {
-  content:''; position:absolute; left:0; top:0; bottom:0;
-  width:2px; background:linear-gradient(to bottom, var(--green-bright), var(--green-mid), var(--amber));
-  border-radius:2px;
-}
-.timeline-item { position:relative; padding-left:2.5rem; padding-bottom:3rem; }
-.timeline-item:last-child { padding-bottom:0; }
-.timeline-dot {
-  position:absolute; left:-2.75rem; top:0;
-  width:18px; height:18px; border-radius:50%;
-  background:var(--green-fresh); border:3px solid var(--white);
-  box-shadow:0 0 0 2px var(--green-fresh);
-}
-.timeline-dot.amber { background:var(--amber); box-shadow:0 0 0 2px var(--amber); }
-.timeline-dot.bright { background:var(--green-bright); box-shadow:0 0 0 2px var(--green-bright); }
-.timeline-year {
-  font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
-  color:var(--green-fresh); margin-bottom:0.4rem; display:block;
-}
-.timeline-item.amber-year .timeline-year { color:var(--amber-dark); }
-.timeline-item h4 { font-family:var(--font-display); font-size:1.15rem; margin-bottom:0.5rem; }
-.timeline-item p  { font-size:0.92rem; color:var(--text-muted); max-width:560px; }
-.timeline-chips { display:flex; gap:7px; flex-wrap:wrap; margin-top:0.75rem; }
-.chip {
-  font-size:0.73rem; font-weight:600; padding:3px 11px; border-radius:100px;
-  background:var(--green-light); color:var(--green-mid);
-}
-.chip-amber  { background:#fdf3e3; color:var(--amber-dark); }
-.chip-purple { background:#f5e8fd; color:var(--purple); }
-.chip-blue   { background:#e8f0fe; color:var(--blue); }
-
-/* ─── HOW WE WORK ─── */
-.how-section { background:var(--cream); }
-.how-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
-.how-card {
-  background:var(--white); border-radius:var(--radius-lg); padding:2rem 1.75rem;
-  border:1px solid var(--border); transition:all 0.3s ease; position:relative; overflow:hidden;
-}
-.how-card::before {
-  content:''; position:absolute; top:0; left:0; right:0; height:4px;
-  border-radius:4px 4px 0 0;
-}
-.how-card:nth-child(1)::before { background:linear-gradient(90deg,var(--green-fresh),var(--green-bright)); }
-.how-card:nth-child(2)::before { background:linear-gradient(90deg,var(--amber-dark),var(--amber)); }
-.how-card:nth-child(3)::before { background:linear-gradient(90deg,var(--purple),#d4537e); }
-.how-card:nth-child(4)::before { background:linear-gradient(90deg,var(--blue),#378add); }
-.how-card:nth-child(5)::before { background:linear-gradient(90deg,var(--green-mid),var(--green-fresh)); }
-.how-card:nth-child(6)::before { background:linear-gradient(90deg,var(--earth),var(--amber)); }
-.how-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:transparent; }
-.how-step {
-  font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
-  color:var(--text-muted); margin-bottom:1rem; display:block;
-}
-.how-icon { font-size:1.8rem; margin-bottom:0.75rem; display:block; }
-.how-card h3 { font-size:1rem; margin-bottom:0.5rem; }
-.how-card p  { font-size:0.87rem; color:var(--text-muted); margin:0; }
-
-/* ─── FUNDER CONFIDENCE ─── */
+/* ─── FUNDER CONFIDENCE (expanded partners) ─── */
 .funder-section { background:var(--white); }
 .funder-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
-.funder-text h2 { margin-bottom:1rem; }
-.funder-text .intro { font-size:1.05rem; margin-bottom:2rem; }
-.funder-checks { display:flex; flex-direction:column; gap:1rem; margin-bottom:2.5rem; }
+.funder-checks { display:flex; flex-direction:column; gap:1rem; margin:2rem 0; }
 .funder-check {
   display:flex; align-items:flex-start; gap:14px;
-  padding:1.1rem 1.25rem; background:var(--cream); border-radius:var(--radius);
-  border:1px solid var(--border); transition:border-color 0.2s;
+  padding:1rem; background:var(--cream); border-radius:var(--radius);
+  border:1px solid var(--border);
 }
-.funder-check:hover { border-color:var(--green-fresh); }
 .fcheck-icon {
-  width:36px; height:36px; border-radius:50%; flex-shrink:0;
+  width:36px; height:36px; border-radius:50%;
   background:var(--green-light); display:flex; align-items:center; justify-content:center;
-  color:var(--green-fresh); font-size:0.85rem;
+  color:var(--green-fresh);
 }
-.fcheck-title { font-size:0.9rem; font-weight:600; color:var(--text-dark); margin-bottom:2px; }
-.fcheck-desc  { font-size:0.82rem; color:var(--text-muted); line-height:1.5; }
-
-/* Partner logos */
-.partner-block { background:var(--cream); border-radius:var(--radius-lg); padding:2rem; }
-.partner-block-title { font-size:0.78rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.25rem; }
-.partner-logos { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:1.5rem; }
+.fcheck-title { font-size:0.9rem; font-weight:600; margin-bottom:2px; }
+.fcheck-desc  { font-size:0.82rem; color:var(--text-muted); }
+.partner-logos { display:flex; gap:10px; flex-wrap:wrap; margin:1.5rem 0; }
 .partner-logo-pill {
   padding:8px 18px; border-radius:100px; border:1.5px solid var(--border);
-  background:var(--white); font-size:0.82rem; font-weight:700; color:var(--text-muted);
-  letter-spacing:0.04em; transition:all 0.2s;
-}
-.partner-logo-pill:hover { border-color:var(--green-fresh); color:var(--green-fresh); }
-.reg-block {
-  border-top:1px solid var(--border); padding-top:1.25rem;
-  display:flex; align-items:center; gap:12px;
-}
-.reg-icon {
-  width:42px; height:42px; border-radius:10px; flex-shrink:0;
-  background:var(--green-light); display:flex; align-items:center; justify-content:center;
-  color:var(--green-fresh); font-size:1rem;
-}
-.reg-text .title { font-size:0.9rem; font-weight:600; color:var(--text-dark); }
-.reg-text .sub   { font-size:0.78rem; color:var(--text-muted); }
-
-/* Reg number pill */
-.reg-num {
-  display:inline-flex; align-items:center; gap:6px;
-  background:var(--green-light); color:var(--green-mid);
-  font-size:0.8rem; font-weight:600; padding:6px 14px; border-radius:8px;
-  margin-top:0.75rem;
+  background:var(--white); font-size:0.8rem; font-weight:600;
 }
 
-/* ─── TEAM ─── */
-.team-section { background:var(--cream); }
-.team-intro { text-align:center; max-width:640px; margin:0 auto 3.5rem; }
-.team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
-.team-card {
-  background:var(--white); border-radius:var(--radius-lg);
-  padding:2rem 1.5rem; text-align:center; border:1px solid var(--border);
-  transition:all 0.3s ease;
-}
-.team-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:transparent; }
-.team-avatar {
-  width:72px; height:72px; border-radius:50%; margin:0 auto 1rem;
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-display); font-size:1.4rem; font-weight:700; color:var(--white);
-}
-.av-g1 { background:linear-gradient(135deg,var(--green-fresh),var(--green-bright)); }
-.av-g2 { background:linear-gradient(135deg,var(--green-mid),var(--green-fresh)); }
-.av-a1 { background:linear-gradient(135deg,var(--amber-dark),var(--amber)); }
-.av-a2 { background:linear-gradient(135deg,#c47d0a,#f5a623); }
-.av-p1 { background:linear-gradient(135deg,var(--purple),#d4537e); }
-.av-p2 { background:linear-gradient(135deg,var(--blue),#4a90d9); }
-.team-card h4 { font-size:1rem; margin-bottom:0.25rem; }
-.team-card .role { font-size:0.8rem; color:var(--text-muted); margin:0; }
-.team-volunteer-badge {
-  display:inline-flex; align-items:center; gap:5px; margin-top:0.75rem;
-  background:var(--green-light); color:var(--green-fresh);
-  font-size:0.72rem; font-weight:600; padding:4px 10px; border-radius:100px;
-}
-
-/* ─── TESTIMONIAL ─── */
-.testimonial-section { background:var(--green-deep); position:relative; overflow:hidden; padding:6rem 0; }
-.testimonial-section::before {
-  content:''; position:absolute; inset:0;
-  background:radial-gradient(circle at 70% 40%, rgba(30,138,90,0.25) 0%, transparent 55%);
-}
-.testimonial-inner { position:relative; z-index:1; max-width:820px; margin:0 auto; text-align:center; }
-.testimonial-inner .eyebrow { background:rgba(45,184,122,0.2); color:var(--green-bright); margin-bottom:2rem; }
-.big-quote {
-  font-family:var(--font-display); font-size:clamp(1.4rem,2.5vw,2rem);
-  font-style:italic; color:var(--white); line-height:1.6; margin-bottom:2rem;
-}
-.big-quote em { color:var(--green-bright); font-style:normal; }
-.quote-attr { display:flex; align-items:center; gap:14px; justify-content:center; }
-.qa-avatar {
-  width:48px; height:48px; border-radius:50%;
-  background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-display); font-size:1rem; font-weight:700; color:var(--white);
-}
-.qa-name { font-weight:600; font-size:0.95rem; color:var(--white); text-align:left; }
-.qa-role { font-size:0.78rem; color:rgba(255,255,255,0.5); text-align:left; }
-.qa-result { margin-top:1.5rem; display:inline-flex; align-items:center; gap:8px; background:rgba(45,184,122,0.15); color:var(--green-bright); font-size:0.82rem; font-weight:600; padding:8px 18px; border-radius:100px; }
-
-/* ─── CTA ─── */
-.cta-section {
-  background:linear-gradient(135deg,var(--green-fresh),var(--green-deep));
-  position:relative; overflow:hidden; padding:5rem 0;
-}
-.cta-section::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 88% 50%, rgba(245,166,35,0.2) 0%, transparent 50%); }
-.cta-inner { position:relative; z-index:1; display:grid; grid-template-columns:1fr auto; gap:4rem; align-items:center; }
-.cta-text h2 { color:var(--white); margin-bottom:0.75rem; }
-.cta-text p  { color:rgba(255,255,255,0.78); font-size:1.05rem; max-width:540px; }
-.cta-box { display:flex; flex-direction:column; gap:12px; align-items:center; }
-.cta-secure { font-size:0.78rem; color:rgba(255,255,255,0.5); display:flex; align-items:center; gap:6px; }
-
-/* ─── FOOTER ─── */
-footer { background:var(--green-deep); color:var(--white); padding:5rem 0 0; }
-.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:3rem; margin-bottom:3rem; }
-.footer-brand-desc { font-size:0.9rem; color:rgba(255,255,255,0.6); margin:1rem 0 1.5rem; line-height:1.7; }
-.footer-social { display:flex; gap:10px; }
-.social-link { width:38px; height:38px; border-radius:10px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.7); font-size:0.9rem; transition:all 0.2s; }
-.social-link:hover { background:var(--green-fresh); border-color:var(--green-fresh); color:var(--white); }
-.footer-col h4 { font-size:0.82rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.38); margin-bottom:1.25rem; }
-.footer-links { display:flex; flex-direction:column; gap:8px; }
-.footer-links a { font-size:0.9rem; color:rgba(255,255,255,0.62); transition:color 0.2s; }
-.footer-links a:hover { color:var(--green-bright); }
-.nl-form { display:flex; gap:8px; }
-.nl-form input { flex:1; padding:11px 16px; border-radius:10px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:var(--white); font-family:var(--font-body); font-size:0.88rem; outline:none; transition:border-color 0.2s; }
-.nl-form input::placeholder { color:rgba(255,255,255,0.35); }
-.nl-form input:focus { border-color:var(--green-bright); }
-.nl-form button { padding:11px 18px; border-radius:10px; background:var(--green-fresh); color:var(--white); border:none; cursor:pointer; font-size:0.88rem; font-weight:500; font-family:var(--font-body); transition:background 0.2s; white-space:nowrap; }
-.nl-form button:hover { background:var(--green-bright); }
-.footer-bottom { border-top:1px solid rgba(255,255,255,0.08); padding:1.5rem 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
-.footer-bottom p { font-size:0.82rem; color:rgba(255,255,255,0.42); margin:0; }
-.footer-legal { display:flex; gap:1.5rem; }
-.footer-legal a { font-size:0.8rem; color:rgba(255,255,255,0.38); transition:color 0.2s; }
-.footer-legal a:hover { color:rgba(255,255,255,0.7); }
-.back-to-top { position:fixed; bottom:2rem; right:2rem; z-index:999; width:44px; height:44px; border-radius:12px; background:var(--green-fresh); color:var(--white); display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-md); opacity:0; pointer-events:none; transition:all 0.3s; font-size:1rem; }
-.back-to-top.visible { opacity:1; pointer-events:all; }
-.back-to-top:hover { background:var(--green-mid); transform:translateY(-3px); }
-
-/* ─── ANIMATIONS ─── */
-.fade-up { opacity:0; transform:translateY(28px); transition:opacity 0.65s ease,transform 0.65s ease; }
-.fade-up.visible { opacity:1; transform:translateY(0); }
-.fd1 { transition-delay:0.1s; }
-.fd2 { transition-delay:0.2s; }
-.fd3 { transition-delay:0.3s; }
-.fd4 { transition-delay:0.4s; }
-.fd5 { transition-delay:0.5s; }
-
-/* ─── RESPONSIVE ─── */
-@media (max-width:1100px) {
-  .hero-inner { grid-template-columns:1fr; gap:3rem; padding:3.5rem 2rem; }
-  .founding-card { max-width:480px; }
-  .mvv-grid { grid-template-columns:1fr; gap:1.5rem; }
-  .funder-grid { grid-template-columns:1fr; }
-  .team-grid { grid-template-columns:repeat(2,1fr); }
-  .footer-grid { grid-template-columns:1fr 1fr; }
-}
-@media (max-width:900px) {
-  .who-grid { grid-template-columns:1fr; }
-  .who-img-accent { right:1rem; }
-  .how-grid { grid-template-columns:repeat(2,1fr); }
-  .highlights { grid-template-columns:1fr; }
-  .cta-inner { grid-template-columns:1fr; }
-  .nav-links, .nav-actions { display:none; }
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links, .nav-actions .btn-outline { display:none; }
   .nav-toggle { display:flex; }
-}
-@media (max-width:640px) {
-  .how-grid { grid-template-columns:1fr; }
-  .team-grid { grid-template-columns:1fr 1fr; }
-  .founding-stats { grid-template-columns:1fr 1fr; }
-  .footer-grid { grid-template-columns:1fr; }
-  .footer-bottom { flex-direction:column; text-align:center; }
-  .hero-ctas { flex-direction:column; }
+  .hero-inner, .who-grid, .mvv-grid, .pillars-grid, .team-grid, .funder-grid { grid-template-columns:1fr; gap:2rem; }
+  .impact-row { grid-template-columns:1fr; gap:0; border-bottom:none; }
+  .impact-row.header { display:none; }
+  .impact-cell { border-bottom:1px solid var(--border); }
+  .timeline { padding-left:0; }
+  .timeline::before { left:1rem; }
+  .timeline-dot { left:-0.75rem; }
 }
 </style>
 </head>
 <body>
 
-<!-- ═══ NAVBAR ═══ -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="img/logo.png" alt="ClimateWise Organization Logo">
-      <div>
-        <div class="nav-logo-name">ClimateWise</div>
-        <div class="nav-logo-sub">Organization · Malawi</div>
-      </div>
-    </a>
+    <div class="nav-logo">
+      <div class="nav-logo-name">ClimateWise<span style="color:var(--green-bright);">.</span></div>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About</a></li>
-      <li><a href="service.html">Our Work</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="impact.html">Impact</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li class="nav-dropdown">
-        <a href="#">More</a>
+      <li class="nav-dropdown"><a href="#">What We Do</a>
         <div class="dropdown-menu">
-          <a href="gallery.html">Gallery</a>
-          <a href="volunteer.html">Volunteer</a>
-          <a href="partners.html">Partners</a>
-          <a href="contact.html">Contact</a>
+          <a href="wash.html">WASH</a>
+          <a href="agriculture.html">Sustainable Agriculture</a>
+          <a href="gender.html">Gender Equality</a>
+          <a href="environment.html">Environment & Climate</a>
         </div>
       </li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="volunteer.html" class="btn btn-ghost nav-donate">Volunteer</a>
-      <a href="donation.html" class="btn btn-amber nav-donate">Donate Now</a>
+      <a href="donate.html" class="btn btn-primary nav-donate"><i class="fas fa-heart"></i> Donate</a>
+      <button class="nav-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </nav>
-
-<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <nav class="mobile-nav">
+  <div class="mobile-nav">
     <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="service.html">Our Work</a>
-    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="wash.html">WASH</a>
+    <a href="agriculture.html">Sustainable Agriculture</a>
+    <a href="gender.html">Gender Equality</a>
+    <a href="environment.html">Environment</a>
     <a href="impact.html">Impact</a>
-    <a href="events.html">Events</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="partners.html">Partners</a>
-    <a href="contact.html">Contact</a>
-    <a href="donation.html" class="btn btn-amber" style="text-align:center;justify-content:center">Donate Now →</a>
-  </nav>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="donate.html" style="background:var(--green-light); margin-top:1rem;">Donate</a>
+  </div>
 </div>
 
-<!-- ═══ HERO ═══ -->
-<section class="page-hero" id="top">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-inner container">
-
-    <div class="hero-left">
-      <div class="eyebrow eyebrow-white">About ClimateWise Organization</div>
-      <h1>We Work <em>With</em> Communities.<br>Not For Them.</h1>
-      <p class="lead">ClimateWise is a youth-led, registered non-profit in Malawi. Since 2021 we have been building clean water access, food security, climate resilience, and gender-inclusive education — always alongside the communities we serve, never above them.</p>
-      <div class="hero-ctas">
-        <a href="#who-we-are" class="btn btn-primary"><i class="fas fa-arrow-down"></i> Our Story</a>
-        <a href="donation.html"  class="btn btn-outline"><i class="fas fa-heart"></i> Support Our Work</a>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-pill"><i class="fas fa-check-circle"></i> Registered Non-Profit · Malawi</div>
-        <div class="trust-pill"><i class="fas fa-handshake"></i> UNESCO · USAID Partners</div>
-        <div class="trust-pill"><i class="fas fa-calendar"></i> Founded 2021</div>
-      </div>
-    </div>
-
-    <div class="founding-card">
-      <div class="founding-card-title">Our impact at a glance</div>
-      <div class="founding-stats">
-        <div class="f-stat">
-          <span class="num"><span class="count-up" data-target="23651">23,651</span></span>
-          <span class="lbl">People with clean water access</span>
+<main>
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1>We believe in a Malawi where <em>every community thrives</em>.</h1>
+        <p class="lead">ClimateWise is a youth-led nonprofit transforming water access, food security, gender equality, and climate resilience — with communities, not for them.</p>
+        <div class="hero-ctas">
+          <a href="#mission" class="btn btn-primary">Our Mission →</a>
+          <a href="get-involved.html" class="btn btn-outline">Partner With Us</a>
         </div>
-        <div class="f-stat">
-          <span class="num"><span class="count-up" data-target="5154">5,154</span></span>
-          <span class="lbl">Students in gender programs</span>
-        </div>
-        <div class="f-stat">
-          <span class="num amber"><span class="count-up" data-target="2470">2,470</span></span>
-          <span class="lbl">Farmer beneficiaries (65% women)</span>
-        </div>
-        <div class="f-stat">
-          <span class="num amber"><span class="count-up" data-target="10110">10,110</span></span>
-          <span class="lbl">Trees planted across Malawi</span>
+        <div class="hero-trust">
+          <span class="trust-pill"><i class="fas fa-check-circle"></i> Registered Nonprofit</span>
+          <span class="trust-pill"><i class="fas fa-leaf"></i> Youth-Led Since 2021</span>
+          <span class="trust-pill"><i class="fas fa-chart-line"></i> Evidence-Based Impact</span>
         </div>
       </div>
-      <div class="founding-since">
-        <div class="since-badge">2021<br>EST.</div>
-        <div class="since-text">
-          <div class="title">Reg. Non-Profit · Malawi</div>
-          <div class="sub">Reg No: MW/CW/0225 · Youth-led since founding</div>
+      <div class="hero-right">
+        <div class="founding-card">
+          <div class="founding-card-title">IMPACT SNAPSHOT (2021–2026)</div>
+          <div class="founding-stats">
+            <div class="f-stat"><span class="num">23,651+</span><span class="lbl">people with clean water access</span></div>
+            <div class="f-stat"><span class="num amber">89</span><span class="lbl">communities transformed</span></div>
+            <div class="f-stat"><span class="num">10,110</span><span class="lbl">trees planted</span></div>
+            <div class="f-stat"><span class="num amber">5,154+</span><span class="lbl">students in gender programs</span></div>
+          </div>
+          <div class="founding-since">
+            <div class="since-badge">Est.<br>2021</div>
+            <div class="since-text"><div class="title">Youth-led, community-rooted</div><div class="sub">Operating across all 3 regions of Malawi</div></div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- ═══ WHO WE ARE ═══ -->
-<section class="section section-white" id="who-we-are">
-  <div class="container">
-    <div class="who-grid">
-
-      <div class="who-img-wrap fade-up">
-        <div class="who-img-corner"></div>
-        <img src="img/about-1.jpg" alt="ClimateWise team working with community in Malawi"
-          onerror="this.parentElement.innerHTML='<div class=who-img-placeholder>🤝</div>'">
-        <div class="who-img-accent">
-          <span class="acc-num">89</span>
-          <span class="acc-label">Communities<br>Transformed</span>
-        </div>
-      </div>
-
-      <div class="fade-up fd2">
-        <div class="eyebrow">Who We Are</div>
-        <h2>A Young Organization Built on a Simple Belief</h2>
-        <p class="intro">We believe the people most affected by poverty, climate change, and inequality already hold the solutions. Our job is to provide resources, skills, and space for those solutions to grow.</p>
-        <p class="body">ClimateWise was founded in 2021 by young Malawians who had seen, first-hand, what happens when outside organizations arrive with predetermined answers. We chose a different path — sitting with communities, asking what they need, and building programs that communities themselves sustain long after our project timelines end.</p>
-
-        <div class="highlights">
-          <div class="highlight-box">
-            <div class="highlight-icon hi-green"><i class="fas fa-tint"></i></div>
-            <div>
-              <h4>Clean Water &amp; WASH</h4>
-              <p>11 boreholes · 23,651 people · 90% cholera reduction</p>
-            </div>
-          </div>
-          <div class="highlight-box">
-            <div class="highlight-icon hi-amber"><i class="fas fa-seedling"></i></div>
-            <div>
-              <h4>Agriculture</h4>
-              <p>2,470 farmers · 65% women · 3× yield increase</p>
-            </div>
-          </div>
-          <div class="highlight-box">
-            <div class="highlight-icon hi-green"><i class="fas fa-tree"></i></div>
-            <div>
-              <h4>Climate Resilience</h4>
-              <p>10,110 trees planted · 87% survival · 89 communities</p>
-            </div>
-          </div>
-          <div class="highlight-box">
-            <div class="highlight-icon hi-purple"><i class="fas fa-graduation-cap"></i></div>
-            <div>
-              <h4>Education &amp; Gender</h4>
-              <p>5,154 students · 100 gender clubs · UNESCO funded</p>
-            </div>
+  <!-- Who We Are (expanded) -->
+  <section class="section-white" id="who-we-are">
+    <div class="container">
+      <div class="who-grid">
+        <div class="who-text">
+          <div class="eyebrow">Who We Are</div>
+          <h2>Rooted in Malawi, driven by community ownership.</h2>
+          <p class="intro"><strong>ClimateWise Organization</strong> is a youth-led nonprofit founded in 2021 and headquartered in Lilongwe, Malawi. We empower vulnerable communities to build resilience against climate change, poverty, and inequality through integrated, community-owned solutions.</p>
+          <p>Our work spans Water, Sanitation & Hygiene (WASH), Sustainable Agriculture, Gender Equality, and Environmental Conservation — directly impacting tens of thousands across Central, Southern, and Northern Malawi.</p>
+          <div class="highlights">
+            <div class="highlight-box"><div class="highlight-icon hi-green"><i class="fas fa-map-marker-alt"></i></div><div><h4>3 Regions, 10+ Districts</h4><p>Lilongwe, Dowa, Ntchisi, Zomba, Phalombe, Chikwawa, Machinga, Chitipa, Rumphi, Karonga</p></div></div>
+            <div class="highlight-box"><div class="highlight-icon hi-green"><i class="fas fa-users"></i></div><div><h4>Youth-Led Governance</h4><p>Board with professionals in agriculture, economics, social work, engineering & climate science</p></div></div>
           </div>
         </div>
-
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="projects.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> See Our Projects</a>
-          <a href="impact.html"   class="btn btn-ghost" style="font-size:0.88rem;padding:11px 22px">Impact Data →</a>
+        <div class="who-img-wrap">
+          <div class="who-img-placeholder">🌱</div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ MISSION · VISION · VALUES ═══ -->
-<section class="section mvv-section" id="mission-vision">
-  <div class="container">
-    <div class="section-header fade-up" style="color:white">
-      <div class="eyebrow eyebrow-white">What Drives Us</div>
-      <h2 style="color:white">Our Mission, Vision &amp; Values</h2>
-      <p style="color:rgba(255,255,255,0.62)">These aren't words on a wall. They are the decisions we make in the field every single day.</p>
-    </div>
-
-    <div class="mvv-grid">
-
-      <!-- MISSION -->
-      <div class="mvv-card mission fade-up">
-        <span class="mvv-icon">🎯</span>
-        <span class="mvv-label">Our Mission</span>
-        <h3>What We Do Every Day</h3>
-        <p>To empower communities in Malawi with practical, community-led solutions in clean water, food security, climate resilience, and gender-inclusive education — so that every family can live with dignity, safety, and opportunity.</p>
-        <div class="vision-quote" style="border-left-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.05)">
-          <p>We don't arrive with the answer. We arrive with resources, skills, and the discipline to listen first.</p>
-        </div>
-      </div>
-
-      <!-- VISION -->
-      <div class="mvv-card vision fade-up fd2">
-        <span class="mvv-icon">🌍</span>
-        <span class="mvv-label">Our Vision</span>
-        <h3>The Future We Are Building</h3>
-        <p>A Malawi where every community has clean water within reach, food on the table, forests on the hills, and girls in the classroom — not because an organisation is present, but because communities have the knowledge, ownership, and confidence to sustain it themselves.</p>
-        <div class="vision-quote">
-          <p>"We will know we have succeeded when communities no longer need us."</p>
-        </div>
-      </div>
-
-      <!-- VALUES -->
-      <div class="mvv-card values fade-up fd3">
-        <span class="mvv-icon">⚖️</span>
-        <span class="mvv-label">Our Values</span>
-        <h3>How We Show Up</h3>
-        <p>Six principles guide every decision we make — from how we design a program to how we report results:</p>
-        <ul class="values-list">
-          <li><strong>Community First</strong> — communities lead, we support</li>
-          <li><strong>Honesty</strong> — we only claim what we can prove</li>
-          <li><strong>Gender Intentionality</strong> — women centred in every program</li>
-          <li><strong>Sustainability</strong> — programs must outlast our involvement</li>
-          <li><strong>Youth Leadership</strong> — young people drive the work</li>
-          <li><strong>Accountability</strong> — every donor kwacha is reported</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ OUR STORY TIMELINE ═══ -->
-<section class="section story-section" id="our-story">
-  <div class="container">
-    <div class="story-intro fade-up">
-      <div class="eyebrow">Our Journey</div>
-      <h2>From an Idea to 89 Communities</h2>
-      <p>ClimateWise started with a conversation between young Malawians who were tired of watching their communities suffer problems that had workable solutions. Here is how we got from that conversation to where we are today.</p>
-    </div>
-
-    <div class="timeline">
-
-      <div class="timeline-item fade-up">
-        <div class="timeline-dot"></div>
-        <span class="timeline-year">2021 — Founded</span>
-        <h4>ClimateWise Is Born</h4>
-        <p>A group of young Malawians registers ClimateWise as a non-profit organisation. The founding focus: climate change is not an abstract global problem — it is the reason the borehole dried up, the harvest failed, and the girl didn't come back to school. We commit to community-led solutions in four areas.</p>
-        <div class="timeline-chips">
-          <span class="chip">Registered Non-Profit</span>
-          <span class="chip">Youth-Led</span>
-          <span class="chip">4 Focus Areas Set</span>
-        </div>
-      </div>
-
-      <div class="timeline-item amber-year fade-up">
-        <div class="timeline-dot amber"></div>
-        <span class="timeline-year">2022 — First Projects</span>
-        <h4>First Boreholes, First Farmers Trained</h4>
-        <p>We drill our first boreholes in Chikwawa District, bringing clean water to over 4,000 people in T/A Kasisi. Simultaneously, we launch our first Farmers Field Schools in Dowa District, training farmers in conservation agriculture. Cholera cases begin to fall. Yields begin to rise.</p>
-        <div class="timeline-chips">
-          <span class="chip chip-amber">First Boreholes Drilled</span>
-          <span class="chip chip-amber">Farmers Field Schools Launched</span>
-          <span class="chip">4,000+ People Reached</span>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-up">
-        <div class="timeline-dot bright"></div>
-        <span class="timeline-year">2023 — UNESCO Partnership</span>
-        <h4>Gender Equality Program Launched with UNESCO</h4>
-        <p>We receive funding from UNESCO to launch a gender equality and education program across the Central Region. Girls' school attendance begins climbing from 40%. We establish our first gender clubs. The Agroforestry Restoration Initiative (ARI) also begins — training 39 community leaders and establishing four tree nurseries.</p>
-        <div class="timeline-chips">
-          <span class="chip chip-purple">UNESCO Partnership</span>
-          <span class="chip chip-amber">ARI Launched</span>
-          <span class="chip">100 Gender Clubs Formed</span>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-up">
-        <div class="timeline-dot"></div>
-        <span class="timeline-year">2024 — Scale &amp; Depth</span>
-        <h4>Growing Reach Without Losing Quality</h4>
-        <p>We scale carefully — expanding WASH projects to Ntcheu District, adding beekeeping livelihoods to the ARI program, and launching youth entrepreneurship training that gives birth to businesses like Tinashe and Maggie's mushroom farm. We reach 89 communities and plant 10,110 trees. Girls' attendance hits 85%.</p>
-        <div class="timeline-chips">
-          <span class="chip">89 Communities</span>
-          <span class="chip chip-amber">Youth Entrepreneurship</span>
-          <span class="chip">10,110 Trees Planted</span>
-        </div>
-      </div>
-
-      <div class="timeline-item amber-year fade-up">
-        <div class="timeline-dot amber"></div>
-        <span class="timeline-year">2025–Present — Where We Are Now</span>
-        <h4>23,651 People. Still Growing Responsibly.</h4>
-        <p>Today ClimateWise serves 23,651 people with clean water, 2,470 farmers with training and market access, 5,154 students through gender programs, and 89 communities with climate preparedness plans. We are actively seeking partnerships to expand our WASH and agriculture work while maintaining the community-first quality that makes results last.</p>
-        <div class="timeline-chips">
-          <span class="chip">23,651 With Clean Water</span>
-          <span class="chip chip-purple">5,154 Students Reached</span>
-          <span class="chip chip-amber">Seeking Scale Partners</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ HOW WE WORK ═══ -->
-<section class="section how-section" id="how-we-work">
-  <div class="container">
-    <div class="section-header fade-up">
-      <div class="eyebrow">Our Approach</div>
-      <h2>Six Principles That Make Our Work Last</h2>
-      <p>Most community programs fail within two years of the organisation leaving. Ours don't. Here is why.</p>
-    </div>
-
-    <div class="how-grid">
-      <div class="how-card fade-up">
-        <span class="how-step">Principle 01</span>
-        <span class="how-icon">👂</span>
-        <h3>Listen Before You Plan</h3>
-        <p>Every program begins with community consultations — not surveys from an office. We sit with women, men, youth, and elders to understand the real problem before we design any solution.</p>
-      </div>
-      <div class="how-card fade-up fd1">
-        <span class="how-step">Principle 02</span>
-        <span class="how-icon">🤝</span>
-        <h3>Communities Own the Results</h3>
-        <p>We train Water Point Committees, Village Forest Committees, and Farmer Groups to manage every asset we create. The day we leave, communities are already running things themselves.</p>
-      </div>
-      <div class="how-card fade-up fd2">
-        <span class="how-step">Principle 03</span>
-        <span class="how-icon">♀</span>
-        <h3>Women at the Centre</h3>
-        <p>65% of our agriculture beneficiaries are women. All our WASH designs centre women's safety. Our gender program exists because equal opportunity is not optional — it is essential.</p>
-      </div>
-      <div class="how-card fade-up">
-        <span class="how-step">Principle 04</span>
-        <span class="how-icon">📊</span>
-        <h3>We Measure What Matters</h3>
-        <p>Every project has baseline data, midline checks, and endline reporting. We measure cholera cases, school attendance, crop yields, and tree survival — because impact should be provable, not just claimed.</p>
-      </div>
-      <div class="how-card fade-up fd1">
-        <span class="how-step">Principle 05</span>
-        <span class="how-icon">🌱</span>
-        <h3>Build to Last, Not to Impress</h3>
-        <p>We drill boreholes with local maintenance capacity. We plant trees with native species suited to local soil. We train farmers in techniques that don't require ongoing external input. Sustainability is not a word — it is a design requirement.</p>
-      </div>
-      <div class="how-card fade-up fd2">
-        <span class="how-step">Principle 06</span>
-        <span class="how-icon">🔍</span>
-        <h3>Radical Transparency</h3>
-        <p>Every number on our website comes from a field report. We publish impact data. We send donors updates. We never claim a partnership we don't have. If you want to verify a figure, ask us — we will send you the evidence.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ WHY FUND US / FUNDER CONFIDENCE ═══ -->
-<section class="section funder-section" id="for-funders">
-  <div class="container">
-    <div class="funder-grid">
-
-      <div class="fade-up">
-        <div class="eyebrow eyebrow-amber">For Funders &amp; Partners</div>
-        <h2>What You Need to Know Before You Decide</h2>
-        <p class="intro">We understand that funders have many choices and limited resources. Here is everything a serious funder needs to know about ClimateWise — in plain language, with nothing hidden.</p>
-
-        <div class="funder-checks">
-          <div class="funder-check">
-            <div class="fcheck-icon"><i class="fas fa-file-alt"></i></div>
-            <div>
-              <div class="fcheck-title">Published Impact Reports</div>
-              <div class="fcheck-desc">Every project has a published field report. Donors can read exactly what happened, who was reached, and what changed — before and after.</div>
-            </div>
-          </div>
-          <div class="funder-check">
-            <div class="fcheck-icon"><i class="fas fa-users"></i></div>
-            <div>
-              <div class="fcheck-title">Verified Beneficiary Counts</div>
-              <div class="fcheck-desc">We count beneficiaries through community registers, school attendance records, and Water Point Committee data — not estimates. 23,651 is a real number.</div>
-            </div>
-          </div>
-          <div class="funder-check">
-            <div class="fcheck-icon"><i class="fas fa-chart-line"></i></div>
-            <div>
-              <div class="fcheck-title">Baseline &amp; Endline Measurement</div>
-              <div class="fcheck-desc">We measure before we start and after we finish. Girls' attendance was 40% before the program. It is 85% now. We can show you both data points.</div>
-            </div>
-          </div>
-          <div class="funder-check">
-            <div class="fcheck-icon"><i class="fas fa-shield-alt"></i></div>
-            <div>
-              <div class="fcheck-title">Financial Accountability</div>
-              <div class="fcheck-desc">We are a registered non-profit (Reg No: MW/CW/0225) with clear financial records. We report expenditure to all funders. Every kwacha is accounted for.</div>
-            </div>
-          </div>
-          <div class="funder-check">
-            <div class="fcheck-icon"><i class="fas fa-handshake"></i></div>
-            <div>
-              <div class="fcheck-title">Credible Institutional Partners</div>
-              <div class="fcheck-desc">Our programs are co-funded and validated by UNESCO, USAID, and the Government of Malawi — partners who conduct their own due diligence before committing.</div>
-            </div>
-          </div>
+  <!-- Mission / Vision / Values (refined) -->
+  <section class="mvv-section" id="mission">
+    <div class="container">
+      <div class="mvv-grid">
+        <div class="mvv-card mission">
+          <span class="mvv-icon">🎯</span>
+          <span class="mvv-label">Our Mission</span>
+          <h3>Serve individuals and families in Malawi's most vulnerable communities.</h3>
+          <p>We deliver integrated solutions in WASH, agriculture, gender equality, and environmental conservation — building lasting resilience from the ground up.</p>
         </div>
-
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="impact.html"   class="btn btn-primary"><i class="fas fa-chart-bar"></i> View Full Impact Data</a>
-          <a href="contact.html" class="btn btn-ghost" style="font-size:0.88rem;padding:11px 22px">Talk to Us →</a>
+        <div class="mvv-card vision">
+          <span class="mvv-icon">✨</span>
+          <span class="mvv-label">Our Vision</span>
+          <h3>A Malawi where every community thrives in harmony with nature.</h3>
+          <div class="vision-quote"><p>"Every child learns in a good school, every girl grows up with the same chances as a boy, every family has enough to eat, access to quality water, and every community lives in harmony with the environment."</p></div>
+        </div>
+        <div class="mvv-card values">
+          <span class="mvv-icon">💚</span>
+          <span class="mvv-label">Our Values</span>
+          <ul class="values-list">
+            <li>Integrity — Transparent and ethical in all we do</li>
+            <li>Innovation — Creative solutions for complex challenges</li>
+            <li>Collaboration — Partnering with communities and allies</li>
+            <li>Empowerment — Building local leadership and ownership</li>
+            <li>Sustainability — Long-term thinking in every decision</li>
+          </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="fade-up fd2">
-        <!-- Partner block -->
+  <!-- Strategic Pillars (replacing How We Work) -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow eyebrow-amber">Our Strategic Pillars</div>
+        <h2>Four interconnected programs, one vision for resilience.</h2>
+        <p>Every pillar is designed to reinforce the others — because clean water enables farming, farming supports nutrition, and gender equality unlocks it all.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card"><span class="pillar-icon">💧</span><h3>Water, Sanitation & Hygiene (WASH)</h3><p>11 boreholes constructed, 23,651+ people with sustainable water access, up to 90% reduction in cholera cases. Includes borehole rehabilitation, solar water systems, and Water Point Committees.</p><div class="pillar-stats"><span class="pillar-stat">✓ 11 boreholes</span><span class="pillar-stat">✓ 23,651+ people</span></div></div>
+        <div class="pillar-card"><span class="pillar-icon">🌾</span><h3>Sustainable Agriculture & Food Security</h3><p>532 farmers trained, yield increases up to 3x per acre (10→30 bags of maize), 28 youth-led agribusinesses created. Farmer field schools and market linkages.</p><div class="pillar-stats"><span class="pillar-stat">✓ 532 farmers</span><span class="pillar-stat">✓ 28 agribusinesses</span></div></div>
+        <div class="pillar-card"><span class="pillar-icon">⚖️</span><h3>Gender Equality & Social Inclusion</h3><p>5,154+ students reached, 100 Gender Clubs established in schools, GBV prevention workshops, leadership training for girls and young women.</p><div class="pillar-stats"><span class="pillar-stat">✓ 100 clubs</span><span class="pillar-stat">✓ 5,154+ students</span></div></div>
+        <div class="pillar-card"><span class="pillar-icon">🌳</span><h3>Environment & Climate Resilience</h3><p>10,110 trees planted, youth-led climate action across 6 districts, climate education integrated into community planning, renewable energy promotion.</p><div class="pillar-stats"><span class="pillar-stat">✓ 10,110 trees</span><span class="pillar-stat">✓ 6 districts</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Evidence of Impact (new from PDF) -->
+  <section class="impact-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Evidence of Impact</div>
+        <h2>Measurable results, transparently reported.</h2>
+        <p>Every dollar, every intervention, every partnership is tracked against real outcomes.</p>
+      </div>
+      <div class="impact-table-wrap">
+        <div class="impact-row header"><div class="impact-cell">Focus Area</div><div class="impact-cell">Key Metric</div><div class="impact-cell">Result</div></div>
+        <div class="impact-row"><div class="impact-cell">WASH</div><div class="impact-cell">People with sustainable water access</div><div class="impact-cell"><strong>23,651+</strong></div></div>
+        <div class="impact-row"><div class="impact-cell">Gender Equality</div><div class="impact-cell">Students engaged in programs</div><div class="impact-cell"><strong>5,154+</strong></div></div>
+        <div class="impact-row"><div class="impact-cell">Agriculture</div><div class="impact-cell">Farmers using climate-smart techniques</div><div class="impact-cell"><strong>532</strong></div></div>
+        <div class="impact-row"><div class="impact-cell">Environment</div><div class="impact-cell">Trees planted</div><div class="impact-cell"><strong>10,110</strong></div></div>
+        <div class="impact-row"><div class="impact-cell">Community Outreach</div><div class="impact-cell">Villages/communities transformed</div><div class="impact-cell"><strong>89</strong></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team (professional version from previous update) -->
+  <section class="section-cream" id="our-team">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">The People Behind the Work</div>
+        <h2>The ClimateWise Team</h2>
+        <p>Passionate Malawian development professionals — from agricultural economics to WASH engineering — with deep community roots and world-class expertise.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card"><div class="team-avatar">AC</div><h4>Andrew Chisenga</h4><p class="role">Project Coordinator (PMP®)</p><span class="team-volunteer-badge"><i class="fas fa-chart-line"></i> Strategic Lead</span></div>
+        <div class="team-card"><div class="team-avatar">YN</div><h4>Yamikani Nyengo</h4><p class="role">Project Strategist</p><span class="team-volunteer-badge"><i class="fas fa-leaf"></i> Agriculture</span></div>
+        <div class="team-card"><div class="team-avatar">AK</div><h4>Angel Kamanga</h4><p class="role">Gender & Social Inclusion Lead</p><span class="team-volunteer-badge"><i class="fas fa-venus-mars"></i> Safeguarding</span></div>
+        <div class="team-card"><div class="team-avatar">DC</div><h4>David Chilembo</h4><p class="role">Finance & Operations Manager</p><span class="team-volunteer-badge"><i class="fas fa-calculator"></i> Grant Management</span></div>
+        <div class="team-card"><div class="team-avatar">VM</div><h4>Voster Mulaga</h4><p class="role">MEL & Data Analyst</p><span class="team-volunteer-badge"><i class="fas fa-chart-simple"></i> Impact Evaluation</span></div>
+        <div class="team-card"><div class="team-avatar">MP</div><h4>Memory Phiri</h4><p class="role">Field Coordinator</p><span class="team-volunteer-badge"><i class="fas fa-users"></i> Community Engagement</span></div>
+      </div>
+      <div style="text-align:center"><a href="careers.html" class="btn btn-ghost"><i class="fas fa-paper-plane"></i> Join Our Talent Network</a></div>
+    </div>
+  </section>
+
+  <!-- Funder Confidence (expanded partners) -->
+  <section class="funder-section">
+    <div class="container">
+      <div class="funder-grid">
+        <div class="funder-text">
+          <div class="eyebrow eyebrow-amber">Trusted by partners worldwide</div>
+          <h2>Built for donor confidence and community trust.</h2>
+          <p class="intro">ClimateWise meets rigorous international standards for financial accountability, safeguarding, and evidence-based programming.</p>
+          <div class="funder-checks">
+            <div class="funder-check"><div class="fcheck-icon"><i class="fas fa-file-alt"></i></div><div><div class="fcheck-title">Registered & Compliant</div><div class="fcheck-desc">Government of Malawi registered nonprofit with audited financials</div></div></div>
+            <div class="funder-check"><div class="fcheck-icon"><i class="fas fa-shield-alt"></i></div><div><div class="fcheck-title">Safeguarding & Ethics</div><div class="fcheck-desc">Zero-tolerance policy, whistleblower protection, child safeguarding framework</div></div></div>
+            <div class="funder-check"><div class="fcheck-icon"><i class="fas fa-chart-line"></i></div><div><div class="fcheck-title">MEL-Driven</div><div class="fcheck-desc">Real-time data collection, impact evaluation, transparent reporting to donors</div></div></div>
+          </div>
+        </div>
         <div class="partner-block">
-          <div class="partner-block-title">Institutional Partners &amp; Validators</div>
+          <div class="partner-block-title">Our Partners & Funders</div>
           <div class="partner-logos">
-            <span class="partner-logo-pill">UNESCO</span>
+            <span class="partner-logo-pill">UNESCO-APCEIU</span>
             <span class="partner-logo-pill">USAID</span>
-            <span class="partner-logo-pill">Govt. of Malawi</span>
-            <span class="partner-logo-pill">Malawi Forestry Dept.</span>
+            <span class="partner-logo-pill">Government of Malawi</span>
+            <span class="partner-logo-pill">Biji Biji</span>
+            <span class="partner-logo-pill">Mereka</span>
+            <span class="partner-logo-pill">Youth4Water</span>
+            <span class="partner-logo-pill">UNESCO Malawi</span>
           </div>
-          <div class="reg-block">
-            <div class="reg-icon"><i class="fas fa-certificate"></i></div>
-            <div class="reg-text">
-              <div class="title">Registered Non-Profit Organisation</div>
-              <div class="sub">Legally registered in Malawi since 2021</div>
-              <div class="reg-num"><i class="fas fa-hashtag" style="font-size:0.65rem"></i> MW/CW/0225</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SDG alignment -->
-        <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;margin-top:1.5rem">
-          <div style="font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1.1rem">SDG Alignment</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem">
-            <div style="background:var(--white);border-radius:var(--radius);padding:0.9rem;text-align:center;border:1px solid var(--border)">
-              <div style="font-size:1.2rem;margin-bottom:4px">💧</div>
-              <div style="font-size:0.72rem;font-weight:700;color:var(--blue)">SDG 6</div>
-              <div style="font-size:0.68rem;color:var(--text-muted)">Clean Water</div>
-            </div>
-            <div style="background:var(--white);border-radius:var(--radius);padding:0.9rem;text-align:center;border:1px solid var(--border)">
-              <div style="font-size:1.2rem;margin-bottom:4px">🌾</div>
-              <div style="font-size:0.72rem;font-weight:700;color:var(--earth)">SDG 2</div>
-              <div style="font-size:0.68rem;color:var(--text-muted)">Zero Hunger</div>
-            </div>
-            <div style="background:var(--white);border-radius:var(--radius);padding:0.9rem;text-align:center;border:1px solid var(--border)">
-              <div style="font-size:1.2rem;margin-bottom:4px">🎓</div>
-              <div style="font-size:0.72rem;font-weight:700;color:var(--purple)">SDG 4</div>
-              <div style="font-size:0.68rem;color:var(--text-muted)">Quality Education</div>
-            </div>
-            <div style="background:var(--white);border-radius:var(--radius);padding:0.9rem;text-align:center;border:1px solid var(--border)">
-              <div style="font-size:1.2rem;margin-bottom:4px">♀</div>
-              <div style="font-size:0.72rem;font-weight:700;color:#d4537e">SDG 5</div>
-              <div style="font-size:0.68rem;color:var(--text-muted)">Gender Equality</div>
-            </div>
-            <div style="background:var(--white);border-radius:var(--radius);padding:0.9rem;text-align:center;border:1px solid var(--border)">
-              <div style="font-size:1.2rem;margin-bottom:4px">🌳</div>
-              <div style="font-size:0.72rem;font-weight:700;color:var(--green-fresh)">SDG 13</div>
-              <div style="font-size:0.68rem;color:var(--text-muted)">Climate Action</div>
-            </div>
-            <div style="background:var(--white);border-radius:var(--radius);padding:0.9rem;text-align:center;border:1px solid var(--border)">
-              <div style="font-size:1.2rem;margin-bottom:4px">🤝</div>
-              <div style="font-size:0.72rem;font-weight:700;color:var(--green-deep)">SDG 17</div>
-              <div style="font-size:0.68rem;color:var(--text-muted)">Partnerships</div>
-            </div>
+          <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--border);">
+            <p style="font-size:0.8rem; color:var(--text-muted);"><i class="fas fa-envelope"></i> climatewiseorganization@yahoo.com | <i class="fas fa-phone"></i> +265 886 583 720</p>
+            <p style="font-size:0.75rem; margin-top:0.5rem;">Area 10, Street 3, House 10/151, Lilongwe, Malawi</p>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
-
-<!-- ═══ TEAM (PROFESSIONAL EDITION) ═══ -->
-<section class="section team-section" id="our-team">
-  <div class="container">
-    <div class="team-intro fade-up">
-      <div class="eyebrow">The People Behind the Work</div>
-      <h2>The ClimateWise Team</h2>
-      <p>ClimateWise is powered by passionate Malawian development professionals. From agricultural economics to WASH engineering, our leadership and technical staff bring deep community roots and world-class expertise.</p>
-    </div>
-
-    <div class="team-grid">
-      <!-- Leadership -->
-      <div class="team-card fade-up">
-        <div class="team-avatar av-a2">AC</div>
-        <h4>Andrew Chisenga</h4>
-        <p class="role">Project Coordinator (PMP®)</p>
-        <span class="team-volunteer-badge" style="background: #e8f0fe; color: #1a5c8c;"><i class="fas fa-chart-line"></i> Strategic Lead</span>
-      </div>
-      
-      <div class="team-card fade-up fd1">
-        <div class="team-avatar av-g1">YN</div>
-        <h4>Yamikani Nyengo</h4>
-        <p class="role">Project Strategist</p>
-        <span class="team-volunteer-badge" style="background: #e8f0fe; color: #1a5c8c;"><i class="fas fa-leaf"></i> Agriculture</span>
-      </div>
-
-      <div class="team-card fade-up fd2">
-        <div class="team-avatar av-g2">AK</div>
-        <h4>Angel Kamanga</h4>
-        <p class="role">Gender & Social Inclusion</p>
-        <span class="team-volunteer-badge" style="background: #e8f0fe; color: #1a5c8c;"><i class="fas fa-venus-mars"></i> Safeguarding</span>
-      </div>
-
-      <div class="team-card fade-up fd3">
-        <div class="team-avatar av-p1">DC</div>
-        <h4>David Chilembo</h4>
-        <p class="role">Finance & Operations Mgr</p>
-        <span class="team-volunteer-badge" style="background: #e8f0fe; color: #1a5c8c;"><i class="fas fa-calculator"></i> Grant Management</span>
-      </div>
-
-      <div class="team-card fade-up fd4">
-        <div class="team-avatar av-a1">VM</div>
-        <h4>Voster Mulaga</h4>
-        <p class="role">MEL & Data Analyst</p>
-        <span class="team-volunteer-badge" style="background: #e8f0fe; color: #1a5c8c;"><i class="fas fa-chart-simple"></i> Impact Evaluation</span>
-      </div>
-
-      <div class="team-card fade-up fd5">
-        <div class="team-avatar av-p2">MP</div>
-        <h4>Memory Phiri</h4>
-        <p class="role">Field Coordinator</p>
-        <span class="team-volunteer-badge" style="background: #e8f0fe; color: #1a5c8c;"><i class="fas fa-users"></i> Community Engagement</span>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:3rem" class="fade-up">
-      <p style="font-size:0.95rem;color:var(--text-muted);margin-bottom:1.25rem">Looking for more than just a job? We are always seeking dedicated professionals in WASH, Agribusiness, and Social Work to join our mission.</p>
-      <a href="careers.html" class="btn btn-ghost"><i class="fas fa-paper-plane"></i> Join Our Talent Network</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ COMMUNITY VOICE ═══ -->
-<section class="testimonial-section">
-  <div class="container">
-    <div class="testimonial-inner">
-      <div class="eyebrow">From the Community</div>
-      <p class="big-quote">
-        "Girls' school attendance jumped from 40% to 85%. They're no longer exhausted from walking 8km for water. They've become <em>our top students</em> — and they know they belong in that classroom."
-      </p>
-      <div class="quote-attr">
-        <div class="qa-avatar">G</div>
-        <div>
-          <div class="qa-name">Grace, Head Teacher</div>
-          <div class="qa-role">Kasisi Primary School, Chikwawa District</div>
-        </div>
-      </div>
-      <div class="qa-result"><i class="fas fa-check"></i> 112% increase in girls' test scores after program</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CTA ═══ -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-inner">
-      <div class="cta-text fade-up">
-        <div class="eyebrow" style="background:rgba(255,255,255,0.15);color:var(--white)">Ready to Partner With Us?</div>
-        <h2>Let's Build Something<br>That Lasts</h2>
-        <p>Whether you are a funder, a partner organisation, or an individual who wants to contribute — there is a place for you in this work. We would love to hear from you.</p>
-      </div>
-      <div class="cta-box fade-up fd2">
-        <a href="donation.html" class="btn btn-amber" style="font-size:1rem;padding:16px 40px">
-          <i class="fas fa-heart"></i> Donate Now
-        </a>
-        <div class="cta-secure"><i class="fas fa-lock"></i> Secure &amp; tax-deductible</div>
-        <a href="contact.html" class="btn btn-outline" style="font-size:0.88rem;padding:11px 28px">
-          <i class="fas fa-envelope"></i> Contact Us
-        </a>
-        <a href="volunteer.html" class="btn btn-outline" style="font-size:0.88rem;padding:11px 28px">
-          <i class="fas fa-hands-helping"></i> Volunteer
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a href="index.html" style="display:inline-flex;align-items:center;gap:12px;margin-bottom:1rem;text-decoration:none">
-          <img src="img/logo.png" alt="ClimateWise Logo" style="height:44px;width:auto">
-          <div>
-            <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:white">ClimateWise</div>
-            <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Organization · Malawi</div>
-          </div>
-        </a>
-        <p class="footer-brand-desc">A youth-led non-profit transforming Malawi through clean water, climate-smart agriculture, environmental resilience, and gender-inclusive education. Registered since 2021. Reg No: MW/CW/0225.</p>
-        <div class="footer-social">
-          <a href="https://m.facebook.com/climatewise_organizations" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/climatewise_org" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/climatewise_organization" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/climatewise-organization/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>About</h4>
-        <div class="footer-links">
-          <a href="#who-we-are">Who We Are</a>
-          <a href="#mission-vision">Mission &amp; Vision</a>
-          <a href="#our-story">Our Story</a>
-          <a href="#how-we-work">How We Work</a>
-          <a href="#for-funders">For Funders</a>
-          <a href="#our-team">Our Team</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Organization</h4>
-        <div class="footer-links">
-          <a href="projects.html">Our Projects</a>
-          <a href="impact.html">Impact Data</a>
-          <a href="events.html">Events &amp; News</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="partners.html">Partners</a>
-          <a href="volunteer.html">Volunteer</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="donation.html" style="color:var(--amber);font-weight:600">Donate Now →</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Stay Updated</h4>
-        <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);margin-bottom:1rem">Subscribe for field stories and project updates from Malawi.</p>
-        <div class="nl-form">
-          <input type="email" placeholder="Your email address" aria-label="Email address">
-          <button type="button">Subscribe</button>
-        </div>
-        <p style="font-size:0.75rem;color:rgba(255,255,255,0.32);margin-top:0.75rem"><i class="fas fa-shield-alt"></i> No spam, ever.</p>
-        <div style="margin-top:1.5rem">
-          <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:0.5rem">Get in touch</p>
-          <p style="font-size:0.83rem;color:rgba(255,255,255,0.6)"><i class="fas fa-envelope" style="margin-right:6px;color:var(--green-bright)"></i>info@climatewiseorganization.com</p>
-          <p style="font-size:0.83rem;color:rgba(255,255,255,0.6);margin-top:4px"><i class="fas fa-phone" style="margin-right:6px;color:var(--green-bright)"></i>+265 886 583 720</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 ClimateWise Organization. All Rights Reserved. · Reg No: MW/CW/0225 · Registered Non-Profit, Malawi</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="impact.html">Impact Data</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+  </section>
+</main>
 
 <script>
-/* ─── NAVBAR ─── */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-  document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
-});
-
-/* ─── MOBILE MENU ─── */
-document.getElementById('navToggle').addEventListener('click', () => {
-  const m = document.getElementById('mobileMenu');
-  m.classList.toggle('open');
-  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
-});
-
-/* ─── SCROLL ANIMATIONS ─── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-
-/* ─── COUNTER ANIMATION ─── */
-const counterObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); }
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
   });
-}, { threshold: 0.5 });
-document.querySelectorAll('.count-up').forEach(el => counterObs.observe(el));
-
-function animateCounter(el) {
-  const target = parseInt(el.dataset.target);
-  const start  = performance.now();
-  const dur    = 2200;
-  const update = t => {
-    const p = Math.min((t - start) / dur, 1);
-    const e = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.floor(e * target).toLocaleString();
-    if (p < 1) requestAnimationFrame(update);
-    else el.textContent = target.toLocaleString();
-  };
-  requestAnimationFrame(update);
-}
-
-/* ─── NEWSLETTER ─── */
-document.querySelector('.nl-form button').addEventListener('click', function () {
-  const inp = this.previousElementSibling;
-  if (inp.value && inp.value.includes('@')) {
-    this.textContent = '✓ Done!';
-    this.style.background = '#2db87a';
-    inp.value = '';
-    setTimeout(() => { this.textContent = 'Subscribe'; this.style.background = ''; }, 3000);
-  } else {
-    inp.style.borderColor = '#e74c3c';
-    setTimeout(() => inp.style.borderColor = '', 2000);
-  }
-});
-
-/* ─── SMOOTH SCROLL ─── */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }); }
+  const toggleBtn = document.getElementById('mobileToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  toggleBtn?.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
   });
-});
 </script>
 </body>
 </html>

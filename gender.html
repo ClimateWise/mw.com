@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gender Equality & Social Inclusion | ClimateWise Organization — Malawi</title>
 <meta name="description" content="Ending early marriage and GBV in Malawi through Global Citizenship Education. 5,154+ students reached, 100 Gender Clubs established. Join us.">
-<meta name="robots" content="index, follow">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,9 +118,12 @@ p { color:var(--text-mid); line-height:1.7; }
   background:rgba(255,255,255,0.08); backdrop-filter:blur(12px);
   border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-lg);
   padding:2rem;
+  background-image: url('../img/gender/gender-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
-.hero-quote { font-size:1rem; color:rgba(255,255,255,0.85); font-style:italic; margin-bottom:1rem; }
-.hero-quote-author { font-size:0.8rem; color:rgba(255,255,255,0.5); }
+.hero-quote { font-size:1rem; color:rgba(255,255,255,0.9); font-style:italic; margin-bottom:1rem; background:rgba(0,0,0,0.3); padding:1rem; border-radius:var(--radius); }
+.hero-quote-author { font-size:0.8rem; color:rgba(255,255,255,0.6); }
 
 /* Problem Section */
 .problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
@@ -130,6 +132,7 @@ p { color:var(--text-mid); line-height:1.7; }
   border-left:4px solid var(--purple); margin-bottom:1.5rem;
 }
 .problem-stat .stat-num { font-family:var(--font-display); font-size:2.2rem; font-weight:700; color:var(--purple); }
+.problem-img { width:100%; border-radius:var(--radius-lg); object-fit:cover; aspect-ratio:4/3; }
 
 /* Story Cards */
 .stories-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2rem; }
@@ -138,23 +141,27 @@ p { color:var(--text-mid); line-height:1.7; }
   border:1px solid var(--border); transition:all 0.3s;
 }
 .story-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
-.story-img { height:200px; background:#e2e8f0; display:flex; align-items:center; justify-content:center; color:var(--text-muted); font-size:0.8rem; }
+.story-img {
+  height:220px; background:#e2e8f0; display:flex; align-items:center; justify-content:center;
+  background-size:cover; background-position:center;
+}
 .story-content { padding:1.75rem; }
 .story-quote { font-size:0.95rem; font-style:italic; color:var(--text-dark); margin-bottom:1rem; line-height:1.6; }
 .story-author { font-size:0.8rem; font-weight:600; color:var(--green-fresh); }
 .story-role { font-size:0.7rem; color:var(--text-muted); }
 
 /* Impact Numbers */
-.impact-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; text-align:center; }
+.impact-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; text-align:center; margin-bottom:1.5rem; }
 .impact-number { font-family:var(--font-display); font-size:2.5rem; font-weight:700; color:var(--purple); display:block; }
 .impact-label { font-size:0.8rem; color:var(--text-muted); }
 
 /* Voice Box */
 .voice-box {
   background:var(--purple-light); border-radius:var(--radius-lg); padding:2.5rem;
-  margin:2rem 0; position:relative;
+  margin:2rem 0; position:relative; overflow:hidden;
 }
-.voice-icon { font-size:3rem; color:var(--purple); opacity:0.3; position:absolute; bottom:1rem; right:1.5rem; }
+.voice-box:first-child { margin-top:0; }
+.voice-icon { font-size:3rem; color:var(--purple); opacity:0.2; position:absolute; bottom:1rem; right:1.5rem; }
 .voice-text { font-size:1.1rem; font-style:italic; color:var(--text-dark); max-width:80%; }
 .voice-author { margin-top:1rem; font-weight:700; color:var(--purple); }
 
@@ -255,7 +262,7 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           </div>
         </div>
         <div>
-          <img src="https://placehold.co/600x400/e8f5ee/1e8a5a?text=Gender+Club+Workshop" alt="Gender equality workshop" style="width:100%; border-radius:var(--radius-lg);">
+          <img src="../img/gender/gender-workshop.jpg" alt="Gender equality workshop at Mitembo Primary School" class="problem-img" onerror="this.src='https://placehold.co/600x400/e8f5ee/1e8a5a?text=Gender+Club+Workshop'">
         </div>
       </div>
     </div>
@@ -295,7 +302,7 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
     </div>
   </section>
 
-  <!-- Stories Section — The Heart -->
+  <!-- Stories Section -->
   <section class="section-white">
     <div class="container">
       <div class="section-header">
@@ -304,9 +311,8 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
         <p>These are not case studies. These are our neighbors, our partners, our teachers, our chiefs.</p>
       </div>
       <div class="stories-grid">
-        <!-- Story 1: The Complaint Box -->
         <div class="story-card">
-          <div class="story-img"><i class="fas fa-box" style="font-size:2rem; color:var(--purple);"></i><br>📦 Child Complaint Box</div>
+          <div class="story-img" style="background-image: url('../img/gender/gender-complaint-box.jpg'); background-size:cover; background-position:center;"></div>
           <div class="story-content">
             <div class="story-quote">"This is more than a box. It is hope. It is protection. It is a voice for the voiceless."</div>
             <div class="story-author">Chitukula Primary School</div>
@@ -314,9 +320,8 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
             <p style="margin-top:1rem; font-size:0.85rem;">The PTA, Chiefs, School Committee, and teachers agreed: open the box regularly, handle every report seriously, act immediately. A promise to every child: <strong>you will not suffer in silence.</strong></p>
           </div>
         </div>
-        <!-- Story 2: The Chief Who Expected Nothing -->
         <div class="story-card">
-          <div class="story-img"><i class="fas fa-crown" style="font-size:2rem; color:var(--amber);"></i><br>👑 Chief Mpumbulu</div>
+          <div class="story-img" style="background-image: url('../img/gender/gender-chief.jpg'); background-size:cover; background-position:center;"></div>
           <div class="story-content">
             <div class="story-quote">"We thought maybe it's just like other organizations that come and just play around."</div>
             <div class="story-author">Chief Mpumbulu</div>
@@ -324,9 +329,8 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
             <p style="margin-top:1rem; font-size:0.85rem;">That honesty broke our hearts. But it also fired us up. After our workshops, the chief said: <strong>"We have seen the difference. Please keep coming to visit us often."</strong> That's not just a request. That's trust. Hard-earned. Never taken for granted.</p>
           </div>
         </div>
-        <!-- Story 3: The Laughter -->
         <div class="story-card">
-          <div class="story-img"><i class="fas fa-laugh-squint" style="font-size:2rem; color:var(--green-bright);"></i><br>😂 A Moment of Joy</div>
+          <div class="story-img" style="background-image: url('../img/gender/gender-laughter.jpg'); background-size:cover; background-position:center;"></div>
           <div class="story-content">
             <div class="story-quote">"What do you think they're laughing about? Because this photo has a story."</div>
             <div class="story-author">Mitembo Primary School</div>
@@ -348,20 +352,20 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
       </div>
       <div class="impact-grid">
         <div><span class="impact-number">3,320</span><span class="impact-label">Learners directly reached</span></div>
-        <div><span class="impact-number">18</span><span class="impact-label">Teachers trained in Gender-Responsive Pedagogy</span></div>
-        <div><span class="impact-number">8</span><span class="impact-label">Traditional leaders engaged</span></div>
-        <div><span class="impact-number">100%</span><span class="impact-label">Teachers reported increased confidence</span></div>
+        <div><span class="impact-number">18</span><span class="impact-label">Teachers trained</span></div>
+        <div><span class="impact-number">8</span><span class="impact-label">Traditional leaders</span></div>
+        <div><span class="impact-number">100%</span><span class="impact-label">Teachers' confidence increased</span></div>
       </div>
-      <div class="impact-grid" style="margin-top:1.5rem;">
-        <div><span class="impact-number">85%</span><span class="impact-label">Improvement in gender equality awareness</span></div>
-        <div><span class="impact-number">72%</span><span class="impact-label">Increase in confidence to address discrimination</span></div>
-        <div><span class="impact-number">3</span><span class="impact-label">Primary schools with active Gender Clubs</span></div>
-        <div><span class="impact-number">1</span><span class="impact-label">Child Complaint Box installed & operational</span></div>
+      <div class="impact-grid">
+        <div><span class="impact-number">85%</span><span class="impact-label">Awareness improvement</span></div>
+        <div><span class="impact-number">72%</span><span class="impact-label">Confidence to address discrimination</span></div>
+        <div><span class="impact-number">3</span><span class="impact-label">Schools with active Gender Clubs</span></div>
+        <div><span class="impact-number">1</span><span class="impact-label">Complaint Box installed</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Voice from the Community — Esnat's story from your post -->
+  <!-- Voice from the Community -->
   <section class="section-white">
     <div class="container">
       <div class="voice-box">

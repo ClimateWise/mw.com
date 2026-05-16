@@ -56,7 +56,6 @@ p { color:var(--text-mid); line-height:1.7; }
 .section-cream { background:var(--cream); }
 .section-forest-bg { background:linear-gradient(135deg, var(--forest-light) 0%, var(--white) 100%); }
 .section-leaf-bg { background:linear-gradient(135deg, var(--leaf-light) 0%, var(--white) 100%); }
-.section-sun-bg { background:linear-gradient(135deg, var(--sun-light) 0%, var(--white) 100%); }
 .section-header { text-align:center; max-width:720px; margin:0 auto 3rem; }
 .eyebrow {
   display:inline-flex; align-items:center; gap:8px;
@@ -80,8 +79,6 @@ p { color:var(--text-mid); line-height:1.7; }
 .btn-primary:hover { background:var(--forest-dark); transform:translateY(-2px); box-shadow:var(--shadow-md); }
 .btn-outline-forest { background:transparent; color:var(--forest); border-color:var(--forest); }
 .btn-outline-forest:hover { background:var(--forest); color:var(--white); transform:translateY(-2px); }
-.btn-outline-sun { background:transparent; color:var(--sun-dark); border-color:var(--sun-dark); }
-.btn-outline-sun:hover { background:var(--sun-dark); color:var(--white); transform:translateY(-2px); }
 
 /* Navbar */
 #navbar {
@@ -107,33 +104,27 @@ p { color:var(--text-mid); line-height:1.7; }
 .mobile-nav { padding:2rem; display:flex; flex-direction:column; gap:0.5rem; }
 .mobile-nav a { font-size:1rem; padding:12px 16px; text-decoration:none; color:var(--text-dark); }
 
-/* Hero */
+/* Hero with Faded Background */
 .page-hero {
-  min-height:75vh; position:relative; display:flex; align-items:center;
-  background: linear-gradient(135deg, var(--forest-dark) 0%, #0a2a1a 100%);
+  min-height:70vh; position:relative; display:flex; align-items:center;
   padding-top:var(--nav-h);
+  background-image: linear-gradient(rgba(11, 44, 28, 0.75), rgba(11, 44, 28, 0.85)), url('img/env-hero-bg.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
 }
 .hero-inner {
   position:relative; z-index:2; max-width:1280px; margin:0 auto;
-  padding:4rem 2rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;
+  padding:4rem 2rem;
 }
+.hero-left { max-width:700px; }
 .hero-left h1 { color:var(--white); margin-bottom:1.25rem; }
 .hero-left h1 em { color:var(--sun); font-style:italic; }
-.hero-left .lead { font-size:1.1rem; color:rgba(255,255,255,0.75); margin-bottom:2rem; }
+.hero-left .lead { font-size:1.1rem; color:rgba(255,255,255,0.85); margin-bottom:2rem; }
 .hero-stats { display:flex; gap:2rem; flex-wrap:wrap; margin-top:2rem; }
-.hero-stat { text-align:center; }
-.hero-stat .num { font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--sun); display:block; }
-.hero-stat .lbl { font-size:0.75rem; color:rgba(255,255,255,0.6); }
-.hero-right-card {
-  background:rgba(255,255,255,0.08); backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-lg);
-  padding:2rem;
-  background-image: url('../img/environment/env-hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
-.hero-quote { font-size:1rem; color:rgba(255,255,255,0.9); font-style:italic; margin-bottom:1rem; background:rgba(0,0,0,0.35); padding:1rem; border-radius:var(--radius); }
-.hero-quote-author { font-size:0.8rem; color:rgba(255,255,255,0.6); }
+.hero-stat { text-align:center; background:rgba(255,255,255,0.1); padding:0.75rem 1.25rem; border-radius:var(--radius); backdrop-filter:blur(4px); }
+.hero-stat .num { font-family:var(--font-display); font-size:1.8rem; font-weight:700; color:var(--sun); display:block; }
+.hero-stat .lbl { font-size:0.7rem; color:rgba(255,255,255,0.8); }
 
 /* Problem Section */
 .problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
@@ -161,7 +152,7 @@ p { color:var(--text-mid); line-height:1.7; }
   margin:2rem 0; align-items:center;
 }
 .nkhotakota-content h2, .nkhotakota-content h3, .nkhotakota-content p { color:var(--white); }
-.nkhotakota-content p { color:rgba(255,255,255,0.8); }
+.nkhotakota-content p { color:rgba(255,255,255,0.85); }
 .nkhotakota-img { width:100%; border-radius:var(--radius); aspect-ratio:4/3; object-fit:cover; border:2px solid rgba(255,255,255,0.2); }
 .nkhotakota-badge {
   display:inline-block; background:var(--sun); color:var(--forest-dark);
@@ -171,7 +162,7 @@ p { color:var(--text-mid); line-height:1.7; }
 .nkhotakota-stats { display:flex; gap:1.5rem; margin-top:1.5rem; flex-wrap:wrap; }
 .nkhotakota-stat { text-align:center; }
 .nkhotakota-stat .num { font-family:var(--font-display); font-size:1.5rem; font-weight:700; color:var(--sun); display:block; }
-.nkhotakota-stat .lbl { font-size:0.7rem; opacity:0.7; }
+.nkhotakota-stat .lbl { font-size:0.7rem; opacity:0.8; }
 
 /* Story Cards */
 .stories-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2rem; }
@@ -180,10 +171,7 @@ p { color:var(--text-mid); line-height:1.7; }
   border:1px solid var(--border); transition:all 0.3s;
 }
 .story-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
-.story-img {
-  height:220px; background:#e2e8f0; display:flex; align-items:center; justify-content:center;
-  background-size:cover; background-position:center;
-}
+.story-img { width:100%; height:220px; object-fit:cover; }
 .story-content { padding:1.75rem; }
 .story-quote { font-size:0.95rem; font-style:italic; color:var(--text-dark); margin-bottom:1rem; line-height:1.6; }
 .story-author { font-size:0.8rem; font-weight:600; color:var(--forest); }
@@ -206,7 +194,6 @@ p { color:var(--text-mid); line-height:1.7; }
   background:var(--leaf-light); border-radius:var(--radius-lg); padding:2.5rem;
   margin:2rem 0; position:relative; overflow:hidden;
 }
-.voice-box:first-child { margin-top:0; }
 .voice-icon { font-size:3rem; color:var(--leaf); opacity:0.15; position:absolute; bottom:1rem; right:1.5rem; }
 .voice-text { font-size:1.1rem; font-style:italic; color:var(--text-dark); max-width:80%; }
 .voice-author { margin-top:1rem; font-weight:700; color:var(--forest); }
@@ -232,9 +219,13 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
 @media (max-width: 900px) {
   .nav-links, .nav-actions .btn-outline { display:none; }
   .nav-toggle { display:block; }
-  .hero-inner, .problem-grid, .solutions-grid, .stories-grid, .nkhotakota-box { grid-template-columns:1fr; gap:2rem; }
+  .hero-inner { padding:3rem 1.5rem; }
+  .problem-grid, .solutions-grid, .stories-grid, .nkhotakota-box { grid-template-columns:1fr; gap:2rem; }
   .impact-grid { grid-template-columns:repeat(2,1fr); }
   .voice-text { max-width:100%; }
+  .hero-stats { gap:1rem; }
+  .hero-stat { padding:0.5rem 1rem; }
+  .hero-stat .num { font-size:1.3rem; }
 }
 </style>
 </head>
@@ -267,7 +258,7 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
 </div>
 
 <main>
-  <!-- Hero Section -->
+  <!-- Hero Section with Faded Background Image -->
   <section class="page-hero">
     <div class="hero-inner">
       <div class="hero-left">
@@ -279,12 +270,6 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           <div class="hero-stat"><span class="num">6</span><span class="lbl">Districts reached</span></div>
           <div class="hero-stat"><span class="num">100%</span><span class="lbl">Community-led</span></div>
           <div class="hero-stat"><span class="num">89</span><span class="lbl">Communities transformed</span></div>
-        </div>
-      </div>
-      <div class="hero-right">
-        <div class="hero-right-card">
-          <div class="hero-quote">"The trees are not just trees. They are our children's future. When we plant, we are not just saving the environment — we are saving ourselves."</div>
-          <div class="hero-quote-author">— Village Head, Nkhotakota</div>
         </div>
       </div>
     </div>
@@ -308,13 +293,13 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           </div>
         </div>
         <div>
-          <img src="../img/environment/env-restoration.jpg" alt="Deforestation impact in Malawi" class="problem-img" onerror="this.src='https://placehold.co/600x400/E8F0E6/1B5E3F?text=Restoration+Needed'">
+          <img src="img/env-restoration.jpg" alt="Restoring degraded land in Malawi" class="problem-img" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Nkhotakota Reserve Feature — THE POWERFUL ONE -->
+  <!-- Nkhotakota Reserve Feature -->
   <section class="section-white">
     <div class="container">
       <div class="nkhotakota-box">
@@ -325,13 +310,13 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           <p>Nkhotakota Wildlife Reserve is Malawi's largest and oldest reserve — 1,800 square kilometers of ancient miombo woodland, rushing rivers, and hidden waterfalls. But decades of poaching and deforestation left it silent.</p>
           <p style="margin-top:0.75rem;">Today, that story is changing. ClimateWise is proud to support restoration efforts in Nkhotakota — planting native trees, training communities in sustainable land use, and protecting one of Malawi's most precious ecosystems. Elephants are returning. Forests are regrowing. Hope is being restored.</p>
           <div class="nkhotakota-stats">
-            <div class="nkhotakota-stat"><span class="num">1,800 km²</span><span class="lbl">of protected wilderness</span></div>
-            <div class="nkhotakota-stat"><span class="num">500+</span><span class="lbl">elephants now protected</span></div>
-            <div class="nkhotakota-stat"><span class="num">50,000+</span><span class="lbl">native trees being restored</span></div>
+            <div class="nkhotakota-stat"><span class="num">1,800 km²</span><span class="lbl">protected wilderness</span></div>
+            <div class="nkhotakota-stat"><span class="num">500+</span><span class="lbl">elephants protected</span></div>
+            <div class="nkhotakota-stat"><span class="num">50,000+</span><span class="lbl">native trees restored</span></div>
           </div>
         </div>
         <div>
-          <img src="../img/environment/env-nkhotakota.jpg" alt="Nkhotakota Wildlife Reserve restoration" class="nkhotakota-img" onerror="this.src='https://placehold.co/600x400/2E7D32/FFB74D?text=Nkhotakota+Reserve'">
+          <img src="img/env-nkhotakota.jpg" alt="Nkhotakota Wildlife Reserve restoration" class="nkhotakota-img" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
@@ -374,46 +359,43 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
         <p>These are not just tree planters. These are climate leaders, forest protectors, and future guardians.</p>
       </div>
       <div class="stories-grid">
-        <!-- Story 1: Youth Climate Action -->
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/environment/env-youth-climate.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/env-youth-climate.jpg" alt="Youth climate leader planting trees" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
             <div class="story-quote">"We are not too young to save our planet. Every tree we plant today is shade for our children tomorrow."</div>
             <div class="story-author">— Grace, 17</div>
             <div class="story-role">Youth Climate Leader, Dowa</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">Grace leads a youth climate action group that has planted over 2,000 trees in her community. She trains other young people in nursery management and tree care.</p>
+            <p style="margin-top:1rem; font-size:0.85rem;">Grace leads a youth climate action group that has planted over 2,000 trees in her community.</p>
           </div>
         </div>
-        <!-- Story 2: Community Restoration -->
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/environment/env-tree-planting.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/env-tree-planting.jpg" alt="Community tree planting activity" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
-            <div class="story-quote">"The river was drying. Now, after planting trees along the banks, water flows again. The trees brought the rain back."</div>
+            <div class="story-quote">"The river was drying. Now, after planting trees along the banks, water flows again."</div>
             <div class="story-author">— Chief Mwale</div>
             <div class="story-role">Traditional Leader, Chitipa</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">Community-led tree planting along riverbanks has restored water flow to three villages. Nature heals when we give it a chance.</p>
+            <p style="margin-top:1rem; font-size:0.85rem;">Community-led tree planting along riverbanks has restored water flow to three villages.</p>
           </div>
         </div>
-        <!-- Story 3: Seedlings to Forests -->
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/environment/env-seedlings.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/env-seedlings.jpg" alt="Tree nursery seedlings" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
-            <div class="story-quote">"We started with 500 seedlings. Now we have a nursery that produces 5,000 trees every season. This is our legacy."</div>
+            <div class="story-quote">"We started with 500 seedlings. Now we produce 5,000 trees every season. This is our legacy."</div>
             <div class="story-author">— Community Nursery Group</div>
             <div class="story-role">Machinga District</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">A community-run tree nursery now provides native seedlings to 12 villages. Women lead the nursery. The whole community protects the trees.</p>
+            <p style="margin-top:1rem; font-size:0.85rem;">Women lead the nursery. The whole community protects the trees.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Global Citizenship & Environment -->
+  <!-- Voice Box -->
   <section class="section-forest-bg">
     <div class="container">
       <div class="voice-box" style="background:var(--white);">
         <i class="fas fa-globe-africa voice-icon"></i>
-        <div class="voice-text">"Young people were drawing a Global Citizen. Fun activities, creativity, and hope. They are not just learning about climate change — they are imagining solutions. Through art, through discussion, through action. This is what Global Citizenship Education creates: young people who believe they can change the world."</div>
+        <div class="voice-text">"Young people were drawing a Global Citizen. Fun activities, creativity, and hope. They are not just learning about climate change — they are imagining solutions. Through art, through discussion, through action."</div>
         <div class="voice-author">— ClimateWise Facilitator, Dowa District</div>
       </div>
     </div>
@@ -429,7 +411,7 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
       </div>
       <div class="impact-grid">
         <div><span class="impact-number">10,110</span><span class="impact-label">Trees planted</span></div>
-        <div><span class="impact-number">6</span><span class="impact-label">Districts with active reforestation</span></div>
+        <div><span class="impact-number">6</span><span class="impact-label">Districts with reforestation</span></div>
         <div><span class="impact-number">89</span><span class="impact-label">Communities engaged</span></div>
         <div><span class="impact-number">80%+</span><span class="impact-label">Tree survival rate</span></div>
       </div>
@@ -453,7 +435,6 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
       <div class="section-header">
         <div class="eyebrow eyebrow-leaf">Our Partners</div>
         <h2>Restoration requires all of us.</h2>
-        <p>From government to grassroots, we're building a movement.</p>
       </div>
       <div class="partners-grid">
         <span class="partner-pill">Department of Forestry, Malawi</span>
@@ -474,9 +455,9 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
         <p>$5 plants and protects a native tree for 10 years. $500 establishes a community tree nursery that produces thousands of seedlings every season.</p>
         <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
           <a href="donate.html" class="btn btn-primary"><i class="fas fa-tree"></i> Plant a Tree</a>
-          <a href="get-involved.html" class="btn btn-outline-sun"><i class="fas fa-handshake"></i> Partner With Us</a>
+          <a href="get-involved.html" class="btn btn-outline-forest"><i class="fas fa-handshake"></i> Partner With Us</a>
         </div>
-        <p style="margin-top:2rem; font-size:0.8rem;">Or sponsor a Climate Action Club in a school — $250 supports a year of environmental education and tree planting activities.</p>
+        <p style="margin-top:2rem; font-size:0.8rem;">Sponsor a Climate Action Club in a school — $250 supports a year of environmental education.</p>
       </div>
     </div>
   </section>

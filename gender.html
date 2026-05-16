@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gender Equality & Social Inclusion | ClimateWise Organization — Malawi</title>
-<meta name="description" content="Ending early marriage and GBV in Malawi through Global Citizenship Education. 5,154+ students reached, 100 Gender Clubs established. Join us.">
+<meta name="description" content="Ending early marriage and GBV in Malawi through Global Citizenship Education. 5,154+ students reached, 100 Gender Clubs established.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,20 +18,19 @@
   --green-fresh:  #1e8a5a;
   --green-bright: #2db87a;
   --green-light:  #e8f5ee;
-  --amber:        #f5a623;
-  --amber-dark:   #c47d0a;
   --purple:       #8b45b5;
+  --purple-dark:  #6a2e8a;
   --purple-light: #f3eafb;
-  --blue:         #185fa5;
+  --amber:        #f5a623;
   --cream:        #faf8f3;
   --white:        #ffffff;
-  --text-dark:    #0f1e18;
-  --text-mid:     #2e4a3a;
-  --text-muted:   #5a7a68;
-  --border:       rgba(26,87,64,0.12);
-  --shadow-sm:    0 2px 12px rgba(10,61,46,0.08);
-  --shadow-md:    0 8px 32px rgba(10,61,46,0.12);
-  --shadow-lg:    0 20px 60px rgba(10,61,46,0.18);
+  --text-dark:    #1a0f1f;
+  --text-mid:     #4a2e5a;
+  --text-muted:   #7a5a8a;
+  --border:       rgba(107, 70, 130, 0.12);
+  --shadow-sm:    0 2px 12px rgba(107, 70, 130, 0.08);
+  --shadow-md:    0 8px 32px rgba(107, 70, 130, 0.12);
+  --shadow-lg:    0 20px 60px rgba(107, 70, 130, 0.18);
   --radius:       12px;
   --radius-lg:    20px;
   --font-display: 'Fraunces', Georgia, serif;
@@ -51,15 +50,18 @@ p { color:var(--text-mid); line-height:1.7; }
 .section { padding:5rem 0; }
 .section-white { background:var(--white); }
 .section-cream { background:var(--cream); }
-.section-purple-bg { background:linear-gradient(135deg, #faf5ff 0%, var(--white) 100%); }
+.section-purple-bg { background:linear-gradient(135deg, var(--purple-light) 0%, var(--white) 100%); }
 .section-header { text-align:center; max-width:720px; margin:0 auto 3rem; }
+
 .eyebrow {
   display:inline-flex; align-items:center; gap:8px;
   font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
   padding:6px 14px; border-radius:100px; margin-bottom:1rem;
 }
+.eyebrow-light { background:rgba(255,255,255,0.2); color:var(--white); }
+.eyebrow-light::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--purple-light); }
 .eyebrow-purple { background:var(--purple-light); color:var(--purple); }
-.eyebrow-purple::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--purple); }
+.eyebrow-purple::before { background:var(--purple); }
 
 .btn {
   display:inline-flex; align-items:center; gap:8px;
@@ -67,12 +69,10 @@ p { color:var(--text-mid); line-height:1.7; }
   border-radius:100px; cursor:pointer; transition:all 0.25s ease;
   border:2px solid transparent; text-decoration:none;
 }
-.btn-primary { background:var(--green-fresh); color:var(--white); }
-.btn-primary:hover { background:var(--green-mid); transform:translateY(-2px); box-shadow:var(--shadow-md); }
+.btn-primary { background:var(--purple); color:var(--white); }
+.btn-primary:hover { background:var(--purple-dark); transform:translateY(-2px); box-shadow:var(--shadow-md); }
 .btn-outline-purple { background:transparent; color:var(--purple); border-color:var(--purple); }
 .btn-outline-purple:hover { background:var(--purple); color:var(--white); transform:translateY(-2px); }
-.btn-ghost { background:transparent; color:var(--green-fresh); border-color:var(--green-fresh); }
-.btn-ghost:hover { background:var(--green-fresh); color:var(--white); }
 
 /* Navbar */
 #navbar {
@@ -89,7 +89,8 @@ p { color:var(--text-mid); line-height:1.7; }
 .nav-links a { font-size:0.9rem; font-weight:500; color:var(--text-mid); padding:8px 14px; border-radius:8px; text-decoration:none; }
 .nav-links a:hover, .nav-links a.active { color:var(--green-fresh); background:var(--green-light); }
 .nav-actions { display:flex; gap:10px; }
-.nav-donate { font-size:0.85rem; padding:8px 20px; }
+.nav-donate { font-size:0.85rem; padding:8px 20px; background:var(--purple); }
+.nav-donate:hover { background:var(--purple-dark); }
 .nav-toggle { display:none; background:none; border:none; cursor:pointer; }
 .nav-toggle span { display:block; width:24px; height:2px; background:var(--text-dark); margin:4px 0; }
 .mobile-menu { display:none; position:fixed; inset:0; z-index:999; background:var(--cream); padding-top:var(--nav-h); }
@@ -97,42 +98,45 @@ p { color:var(--text-mid); line-height:1.7; }
 .mobile-nav { padding:2rem; display:flex; flex-direction:column; gap:0.5rem; }
 .mobile-nav a { font-size:1rem; padding:12px 16px; text-decoration:none; color:var(--text-dark); }
 
-/* Hero */
+/* Hero with Faded Background */
 .page-hero {
-  min-height:75vh; position:relative; display:flex; align-items:center;
-  background: linear-gradient(135deg, var(--green-deep) 0%, #1a4a3a 100%);
+  min-height:70vh; position:relative; display:flex; align-items:center;
   padding-top:var(--nav-h);
+  background-image: linear-gradient(rgba(107, 70, 130, 0.8), rgba(107, 70, 130, 0.85)), url('img/gender/gender-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-inner {
   position:relative; z-index:2; max-width:1280px; margin:0 auto;
-  padding:4rem 2rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;
+  padding:4rem 2rem;
 }
+.hero-left { max-width:700px; }
 .hero-left h1 { color:var(--white); margin-bottom:1.25rem; }
-.hero-left h1 em { color:var(--green-bright); font-style:italic; }
-.hero-left .lead { font-size:1.1rem; color:rgba(255,255,255,0.75); margin-bottom:2rem; }
+.hero-left h1 em { color:var(--amber); font-style:italic; }
+.hero-left .lead { font-size:1.1rem; color:rgba(255,255,255,0.85); margin-bottom:2rem; }
 .hero-stats { display:flex; gap:2rem; flex-wrap:wrap; margin-top:2rem; }
-.hero-stat { text-align:center; }
-.hero-stat .num { font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--green-bright); display:block; }
-.hero-stat .lbl { font-size:0.75rem; color:rgba(255,255,255,0.6); }
-.hero-right-card {
-  background:rgba(255,255,255,0.08); backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-lg);
-  padding:2rem;
-  background-image: url('../img/gender/gender-hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
-.hero-quote { font-size:1rem; color:rgba(255,255,255,0.9); font-style:italic; margin-bottom:1rem; background:rgba(0,0,0,0.3); padding:1rem; border-radius:var(--radius); }
-.hero-quote-author { font-size:0.8rem; color:rgba(255,255,255,0.6); }
+.hero-stat { text-align:center; background:rgba(255,255,255,0.12); padding:0.75rem 1.25rem; border-radius:var(--radius); backdrop-filter:blur(4px); border:1px solid rgba(255,255,255,0.1); }
+.hero-stat .num { font-family:var(--font-display); font-size:1.8rem; font-weight:700; color:var(--amber); display:block; }
+.hero-stat .lbl { font-size:0.7rem; color:rgba(255,255,255,0.85); }
 
 /* Problem Section */
 .problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
 .problem-stat {
-  background:var(--cream); border-radius:var(--radius); padding:1.5rem;
+  background:var(--purple-light); border-radius:var(--radius); padding:1.5rem;
   border-left:4px solid var(--purple); margin-bottom:1.5rem;
 }
-.problem-stat .stat-num { font-family:var(--font-display); font-size:2.2rem; font-weight:700; color:var(--purple); }
+.problem-stat .stat-num { font-family:var(--font-display); font-size:2.2rem; font-weight:700; color:var(--purple); display:block; margin-bottom:0.5rem; }
 .problem-img { width:100%; border-radius:var(--radius-lg); object-fit:cover; aspect-ratio:4/3; }
+
+/* Solution Cards */
+.solutions-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2rem; }
+.solution-card {
+  background:var(--white); border-radius:var(--radius-lg); overflow:hidden;
+  border:1px solid var(--border); transition:all 0.3s; text-align:center; padding:2rem;
+}
+.solution-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
+.solution-icon { font-size:2.5rem; color:var(--purple); margin-bottom:1rem; display:block; }
 
 /* Story Cards */
 .stories-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2rem; }
@@ -141,13 +145,10 @@ p { color:var(--text-mid); line-height:1.7; }
   border:1px solid var(--border); transition:all 0.3s;
 }
 .story-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
-.story-img {
-  height:220px; background:#e2e8f0; display:flex; align-items:center; justify-content:center;
-  background-size:cover; background-position:center;
-}
+.story-img { width:100%; height:220px; object-fit:cover; }
 .story-content { padding:1.75rem; }
 .story-quote { font-size:0.95rem; font-style:italic; color:var(--text-dark); margin-bottom:1rem; line-height:1.6; }
-.story-author { font-size:0.8rem; font-weight:600; color:var(--green-fresh); }
+.story-author { font-size:0.8rem; font-weight:600; color:var(--purple); }
 .story-role { font-size:0.7rem; color:var(--text-muted); }
 
 /* Impact Numbers */
@@ -160,8 +161,7 @@ p { color:var(--text-mid); line-height:1.7; }
   background:var(--purple-light); border-radius:var(--radius-lg); padding:2.5rem;
   margin:2rem 0; position:relative; overflow:hidden;
 }
-.voice-box:first-child { margin-top:0; }
-.voice-icon { font-size:3rem; color:var(--purple); opacity:0.2; position:absolute; bottom:1rem; right:1.5rem; }
+.voice-icon { font-size:3rem; color:var(--purple); opacity:0.15; position:absolute; bottom:1rem; right:1.5rem; }
 .voice-text { font-size:1.1rem; font-style:italic; color:var(--text-dark); max-width:80%; }
 .voice-author { margin-top:1rem; font-weight:700; color:var(--purple); }
 
@@ -174,11 +174,11 @@ p { color:var(--text-mid); line-height:1.7; }
 
 /* CTA Section */
 .cta-section {
-  background:linear-gradient(135deg, var(--green-deep) 0%, #0e2f24 100%);
+  background:linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
   text-align:center; padding:4rem 2rem; border-radius:var(--radius-lg);
 }
 .cta-section h2 { color:var(--white); }
-.cta-section p { color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 2rem; }
+.cta-section p { color:rgba(255,255,255,0.75); max-width:600px; margin:0 auto 2rem; }
 
 /* Footer */
 footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem 0; text-align:center; font-size:0.8rem; }
@@ -186,9 +186,13 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
 @media (max-width: 900px) {
   .nav-links, .nav-actions .btn-outline { display:none; }
   .nav-toggle { display:block; }
-  .hero-inner, .problem-grid, .stories-grid { grid-template-columns:1fr; gap:2rem; }
+  .hero-inner { padding:3rem 1.5rem; }
+  .problem-grid, .solutions-grid, .stories-grid { grid-template-columns:1fr; gap:2rem; }
   .impact-grid { grid-template-columns:repeat(2,1fr); }
   .voice-text { max-width:100%; }
+  .hero-stats { gap:1rem; }
+  .hero-stat { padding:0.5rem 1rem; }
+  .hero-stat .num { font-size:1.3rem; }
 }
 </style>
 </head>
@@ -206,7 +210,7 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
       <li><a href="environment.html">Environment</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="donate.html" class="btn btn-primary nav-donate"><i class="fas fa-heart"></i> Donate</a>
+      <a href="donate.html" class="btn btn-primary nav-donate"><i class="fas fa-venus-mars"></i> Donate</a>
       <button class="nav-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -221,11 +225,10 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
 </div>
 
 <main>
-  <!-- Hero Section -->
   <section class="page-hero">
     <div class="hero-inner">
       <div class="hero-left">
-        <div class="eyebrow eyebrow-purple"><i class="fas fa-venus-mars"></i> Ana Ndi Tsogolo — Children Are The Future</div>
+        <div class="eyebrow eyebrow-light"><i class="fas fa-venus-mars"></i> Ana Ndi Tsogolo — Children Are The Future</div>
         <h1>Ending early marriage & <em>GBV</em> through Global Citizenship.</h1>
         <p class="lead">In Malawi, girls are still forced to marry before they finish school. Boys are taught strength means silence. But we are changing that — one classroom, one community, one conversation at a time.</p>
         <div class="hero-stats">
@@ -235,16 +238,9 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           <div class="hero-stat"><span class="num">8</span><span class="lbl">Traditional leaders</span></div>
         </div>
       </div>
-      <div class="hero-right">
-        <div class="hero-right-card">
-          <div class="hero-quote">"We thought maybe it's just like other organizations that come and just play around. But this time, we have seen the difference. Please keep coming to visit us often."</div>
-          <div class="hero-quote-author">— Chief Mpumbulu, Lilongwe</div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- The Problem -->
   <section class="section-white">
     <div class="container">
       <div class="problem-grid">
@@ -262,13 +258,12 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           </div>
         </div>
         <div>
-          <img src="../img/gender/gender-workshop.jpg" alt="Gender equality workshop at Mitembo Primary School" class="problem-img" onerror="this.src='https://placehold.co/600x400/e8f5ee/1e8a5a?text=Gender+Club+Workshop'">
+          <img src="img/gender/gender-workshop.jpg" alt="Gender equality workshop" class="problem-img" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Approach -->
   <section class="section-purple-bg">
     <div class="container">
       <div class="section-header">
@@ -276,120 +271,92 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
         <h2>Not just awareness. Real protection.</h2>
         <p>We don't just talk about gender equality. We build systems that protect children and empower communities to lead.</p>
       </div>
-      <div class="stories-grid" style="grid-template-columns:repeat(3,1fr); gap:2rem;">
-        <div class="story-card">
-          <div class="story-content">
-            <i class="fas fa-chalkboard-user" style="font-size:2rem; color:var(--purple); margin-bottom:1rem; display:block;"></i>
-            <h3>Gender-Responsive Pedagogy</h3>
-            <p>We train teachers to identify and challenge their own gender biases. How to call on girls equally. How to avoid stereotyping subjects. How to create safe classrooms.</p>
-          </div>
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <i class="fas fa-chalkboard-user solution-icon"></i>
+          <h3>Gender-Responsive Pedagogy</h3>
+          <p>We train teachers to identify and challenge their own gender biases. How to call on girls equally. How to avoid stereotyping subjects.</p>
         </div>
-        <div class="story-card">
-          <div class="story-content">
-            <i class="fas fa-comment-dots" style="font-size:2rem; color:var(--purple); margin-bottom:1rem; display:block;"></i>
-            <h3>Child Complaint Boxes</h3>
-            <p>A simple locked box. A trained response team. A promise: every report is handled seriously, confidentially, and immediately. A voice for the voiceless.</p>
-          </div>
+        <div class="solution-card">
+          <i class="fas fa-comment-dots solution-icon"></i>
+          <h3>Child Complaint Boxes</h3>
+          <p>A simple locked box. A trained response team. A promise: every report is handled seriously, confidentially, and immediately.</p>
         </div>
-        <div class="story-card">
-          <div class="story-content">
-            <i class="fas fa-handshake" style="font-size:2rem; color:var(--purple); margin-bottom:1rem; display:block;"></i>
-            <h3>Community Ownership</h3>
-            <p>We engage chiefs, PTAs, parents, and religious leaders. Because protecting children is everyone's responsibility — not just teachers.</p>
-          </div>
+        <div class="solution-card">
+          <i class="fas fa-handshake solution-icon"></i>
+          <h3>Community Ownership</h3>
+          <p>We engage chiefs, PTAs, parents, and religious leaders. Protecting children is everyone's responsibility.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Stories Section -->
   <section class="section-white">
     <div class="container">
       <div class="section-header">
         <div class="eyebrow eyebrow-purple">Real Stories, Real Change</div>
         <h2>Meet the voices behind the numbers.</h2>
-        <p>These are not case studies. These are our neighbors, our partners, our teachers, our chiefs.</p>
       </div>
       <div class="stories-grid">
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/gender/gender-complaint-box.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/gender/gender-complaint-box.jpg" alt="Child Complaint Box" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
             <div class="story-quote">"This is more than a box. It is hope. It is protection. It is a voice for the voiceless."</div>
             <div class="story-author">Chitukula Primary School</div>
-            <div class="story-role">Dowa District — December 2025</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">The PTA, Chiefs, School Committee, and teachers agreed: open the box regularly, handle every report seriously, act immediately. A promise to every child: <strong>you will not suffer in silence.</strong></p>
+            <div class="story-role">Dowa District</div>
           </div>
         </div>
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/gender/gender-chief.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/gender/gender-chief.jpg" alt="Chief Mpumbulu" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
-            <div class="story-quote">"We thought maybe it's just like other organizations that come and just play around."</div>
+            <div class="story-quote">"We thought maybe it's just like other organizations that come and just play around. But this time, we have seen the difference."</div>
             <div class="story-author">Chief Mpumbulu</div>
-            <div class="story-role">Mpumbulu Village, Lilongwe</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">That honesty broke our hearts. But it also fired us up. After our workshops, the chief said: <strong>"We have seen the difference. Please keep coming to visit us often."</strong> That's not just a request. That's trust. Hard-earned. Never taken for granted.</p>
+            <div class="story-role">Lilongwe</div>
           </div>
         </div>
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/gender/gender-laughter.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/gender/gender-laughter.jpg" alt="Community laughter" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
-            <div class="story-quote">"What do you think they're laughing about? Because this photo has a story."</div>
+            <div class="story-quote">"What do you think they're laughing about? A chief laughing with young people. Students laughing with elders. This is what Global Citizenship creates."</div>
             <div class="story-author">Mitembo Primary School</div>
             <div class="story-role">Dowa District</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">A chief laughing with young people. Students laughing with elders. Teachers laughing with students. This is what Global Citizenship creates. Not just knowledge. <strong>Connection. Trust. Joy.</strong></p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- By The Numbers -->
-  <section class="section-cream">
+  <section class="section-purple-bg">
     <div class="container">
-      <div class="section-header">
-        <div class="eyebrow eyebrow-purple">Evidence of Impact</div>
-        <h2>What we achieved together in 2025.</h2>
-        <p>With support from UNESCO-APCEIU, we reached thousands across Dowa District — and we're just getting started.</p>
-      </div>
       <div class="impact-grid">
-        <div><span class="impact-number">3,320</span><span class="impact-label">Learners directly reached</span></div>
+        <div><span class="impact-number">3,320</span><span class="impact-label">Learners reached in 2025</span></div>
         <div><span class="impact-number">18</span><span class="impact-label">Teachers trained</span></div>
-        <div><span class="impact-number">8</span><span class="impact-label">Traditional leaders</span></div>
-        <div><span class="impact-number">100%</span><span class="impact-label">Teachers' confidence increased</span></div>
-      </div>
-      <div class="impact-grid">
         <div><span class="impact-number">85%</span><span class="impact-label">Awareness improvement</span></div>
-        <div><span class="impact-number">72%</span><span class="impact-label">Confidence to address discrimination</span></div>
-        <div><span class="impact-number">3</span><span class="impact-label">Schools with active Gender Clubs</span></div>
-        <div><span class="impact-number">1</span><span class="impact-label">Complaint Box installed</span></div>
+        <div><span class="impact-number">100%</span><span class="impact-label">Teachers' confidence increased</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Voice from the Community -->
   <section class="section-white">
     <div class="container">
       <div class="voice-box">
         <i class="fas fa-quote-left voice-icon"></i>
         <div class="voice-text">"No mother should bury her daughter because of water. I can't bring my sister back. But I can save someone else's sister."</div>
         <div class="voice-author">— Esnat, Hygiene Trainer</div>
-        <div style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-muted);">Esnat lost her sister to cholera. Now she has trained 47 households in her village on handwashing, safe water storage, and latrine use.</div>
       </div>
       <div class="voice-box" style="background:var(--green-light);">
         <i class="fas fa-quote-left voice-icon" style="color:var(--green-fresh);"></i>
         <div class="voice-text">"I can fix a broken pump. I collect maintenance fees. I protect the borehole like it's my own. Because it IS mine."</div>
         <div class="voice-author">— Chifundo, Water Committee Member</div>
-        <div style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-muted);">Chifundo is one of the women leading community-owned water systems. This is community ownership. This is how water lasts.</div>
       </div>
     </div>
   </section>
 
-  <!-- Partners -->
   <section class="section-cream">
     <div class="container">
       <div class="section-header">
         <div class="eyebrow eyebrow-purple">Our Partners</div>
         <h2>We don't work alone.</h2>
-        <p>Global change requires global collaboration. Thank you to everyone who makes this possible.</p>
       </div>
       <div class="partners-grid">
         <span class="partner-pill">UNESCO-APCEIU</span>
@@ -397,24 +364,21 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
         <span class="partner-pill">Ministry of Education, Malawi</span>
         <span class="partner-pill">Mereka</span>
         <span class="partner-pill">Biji-Biji Initiative</span>
-        <span class="partner-pill">Ambassadors Charity Trust</span>
-        <span class="partner-pill">UNESCO Malawi</span>
         <span class="partner-pill">Traditional Authorities of Dowa</span>
       </div>
     </div>
   </section>
 
-  <!-- How to Help -->
   <section class="section-white">
     <div class="container">
       <div class="cta-section">
         <h2>Every girl deserves to finish school.</h2>
-        <p>Your support helps us train more teachers, install more Child Complaint Boxes, and reach more communities. Together, we can end early marriage and GBV in Malawi.</p>
+        <p>Your support helps us train more teachers, install more Child Complaint Boxes, and reach more communities.</p>
         <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
           <a href="donate.html" class="btn btn-primary"><i class="fas fa-heart"></i> Donate to Gender Equality</a>
-          <a href="get-involved.html" class="btn btn-outline-purple"><i class="fas fa-hands-helping"></i> Partner With Us</a>
+          <a href="get-involved.html" class="btn btn-outline-purple"><i class="fas fa-handshake"></i> Partner With Us</a>
         </div>
-        <p style="margin-top:2rem; font-size:0.8rem;">Or sponsor a Gender Club — $250 supports one school for an entire year.</p>
+        <p style="margin-top:2rem; font-size:0.8rem;">Sponsor a Gender Club — $250 supports one school for an entire year.</p>
       </div>
     </div>
   </section>

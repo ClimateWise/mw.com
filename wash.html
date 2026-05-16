@@ -54,13 +54,16 @@ p { color:var(--text-mid); line-height:1.7; }
 .section-cream { background:var(--cream); }
 .section-blue-bg { background:linear-gradient(135deg, var(--blue-light) 0%, var(--white) 100%); }
 .section-header { text-align:center; max-width:720px; margin:0 auto 3rem; }
+
 .eyebrow {
   display:inline-flex; align-items:center; gap:8px;
   font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
   padding:6px 14px; border-radius:100px; margin-bottom:1rem;
 }
+.eyebrow-light { background:rgba(255,255,255,0.2); color:var(--white); }
+.eyebrow-light::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--green-bright); }
 .eyebrow-blue { background:var(--blue-light); color:var(--blue-deep); }
-.eyebrow-blue::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--blue-deep); }
+.eyebrow-blue::before { background:var(--blue-deep); }
 
 .btn {
   display:inline-flex; align-items:center; gap:8px;
@@ -97,33 +100,27 @@ p { color:var(--text-mid); line-height:1.7; }
 .mobile-nav { padding:2rem; display:flex; flex-direction:column; gap:0.5rem; }
 .mobile-nav a { font-size:1rem; padding:12px 16px; text-decoration:none; color:var(--text-dark); }
 
-/* Hero */
+/* Hero with Faded Background */
 .page-hero {
-  min-height:75vh; position:relative; display:flex; align-items:center;
-  background: linear-gradient(135deg, var(--blue-deep) 0%, #0a3a4a 100%);
+  min-height:70vh; position:relative; display:flex; align-items:center;
   padding-top:var(--nav-h);
+  background-image: linear-gradient(rgba(12, 78, 110, 0.8), rgba(12, 78, 110, 0.85)), url('img/wash/wash-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-inner {
   position:relative; z-index:2; max-width:1280px; margin:0 auto;
-  padding:4rem 2rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;
+  padding:4rem 2rem;
 }
+.hero-left { max-width:700px; }
 .hero-left h1 { color:var(--white); margin-bottom:1.25rem; }
 .hero-left h1 em { color:var(--green-bright); font-style:italic; }
-.hero-left .lead { font-size:1.1rem; color:rgba(255,255,255,0.75); margin-bottom:2rem; }
+.hero-left .lead { font-size:1.1rem; color:rgba(255,255,255,0.85); margin-bottom:2rem; }
 .hero-stats { display:flex; gap:2rem; flex-wrap:wrap; margin-top:2rem; }
-.hero-stat { text-align:center; }
-.hero-stat .num { font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--green-bright); display:block; }
-.hero-stat .lbl { font-size:0.75rem; color:rgba(255,255,255,0.6); }
-.hero-right-card {
-  background:rgba(255,255,255,0.08); backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-lg);
-  padding:2rem;
-  background-image: url('../img/wash/wash-hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
-.hero-quote { font-size:1rem; color:rgba(255,255,255,0.9); font-style:italic; margin-bottom:1rem; background:rgba(0,0,0,0.3); padding:1rem; border-radius:var(--radius); }
-.hero-quote-author { font-size:0.8rem; color:rgba(255,255,255,0.6); }
+.hero-stat { text-align:center; background:rgba(255,255,255,0.12); padding:0.75rem 1.25rem; border-radius:var(--radius); backdrop-filter:blur(4px); border:1px solid rgba(255,255,255,0.1); }
+.hero-stat .num { font-family:var(--font-display); font-size:1.8rem; font-weight:700; color:var(--green-bright); display:block; }
+.hero-stat .lbl { font-size:0.7rem; color:rgba(255,255,255,0.85); }
 
 /* Problem Section */
 .problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
@@ -131,7 +128,7 @@ p { color:var(--text-mid); line-height:1.7; }
   background:var(--blue-pale); border-radius:var(--radius); padding:1.5rem;
   border-left:4px solid var(--blue-deep); margin-bottom:1.5rem;
 }
-.problem-stat .stat-num { font-family:var(--font-display); font-size:2.2rem; font-weight:700; color:var(--blue-deep); }
+.problem-stat .stat-num { font-family:var(--font-display); font-size:2.2rem; font-weight:700; color:var(--blue-deep); display:block; margin-bottom:0.5rem; }
 .problem-img { width:100%; border-radius:var(--radius-lg); object-fit:cover; aspect-ratio:4/3; }
 
 /* Solution Cards */
@@ -150,10 +147,7 @@ p { color:var(--text-mid); line-height:1.7; }
   border:1px solid var(--border); transition:all 0.3s;
 }
 .story-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
-.story-img {
-  height:220px; background:#e2e8f0; display:flex; align-items:center; justify-content:center;
-  background-size:cover; background-position:center;
-}
+.story-img { width:100%; height:220px; object-fit:cover; }
 .story-content { padding:1.75rem; }
 .story-quote { font-size:0.95rem; font-style:italic; color:var(--text-dark); margin-bottom:1rem; line-height:1.6; }
 .story-author { font-size:0.8rem; font-weight:600; color:var(--blue-deep); }
@@ -164,7 +158,7 @@ p { color:var(--text-mid); line-height:1.7; }
 .impact-number { font-family:var(--font-display); font-size:2.5rem; font-weight:700; color:var(--blue-deep); display:block; }
 .impact-label { font-size:0.8rem; color:var(--text-muted); }
 
-/* Districts Map Style */
+/* Districts */
 .districts-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem; margin:2rem 0; }
 .district-pill {
   padding:8px 18px; border-radius:100px; background:var(--blue-light);
@@ -176,7 +170,6 @@ p { color:var(--text-mid); line-height:1.7; }
   background:var(--blue-light); border-radius:var(--radius-lg); padding:2.5rem;
   margin:2rem 0; position:relative; overflow:hidden;
 }
-.voice-box:first-child { margin-top:0; }
 .voice-icon { font-size:3rem; color:var(--blue-deep); opacity:0.15; position:absolute; bottom:1rem; right:1.5rem; }
 .voice-text { font-size:1.1rem; font-style:italic; color:var(--text-dark); max-width:80%; }
 .voice-author { margin-top:1rem; font-weight:700; color:var(--blue-deep); }
@@ -194,7 +187,7 @@ p { color:var(--text-mid); line-height:1.7; }
   text-align:center; padding:4rem 2rem; border-radius:var(--radius-lg);
 }
 .cta-section h2 { color:var(--white); }
-.cta-section p { color:rgba(255,255,255,0.7); max-width:600px; margin:0 auto 2rem; }
+.cta-section p { color:rgba(255,255,255,0.75); max-width:600px; margin:0 auto 2rem; }
 
 /* Footer */
 footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem 0; text-align:center; font-size:0.8rem; }
@@ -202,9 +195,13 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
 @media (max-width: 900px) {
   .nav-links, .nav-actions .btn-outline { display:none; }
   .nav-toggle { display:block; }
-  .hero-inner, .problem-grid, .solutions-grid, .stories-grid { grid-template-columns:1fr; gap:2rem; }
+  .hero-inner { padding:3rem 1.5rem; }
+  .problem-grid, .solutions-grid, .stories-grid { grid-template-columns:1fr; gap:2rem; }
   .impact-grid { grid-template-columns:repeat(2,1fr); }
   .voice-text { max-width:100%; }
+  .hero-stats { gap:1rem; }
+  .hero-stat { padding:0.5rem 1rem; }
+  .hero-stat .num { font-size:1.3rem; }
 }
 </style>
 </head>
@@ -222,7 +219,7 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
       <li><a href="environment.html">Environment</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="donate.html" class="btn btn-primary nav-donate"><i class="fas fa-heart"></i> Donate</a>
+      <a href="donate.html" class="btn btn-primary nav-donate"><i class="fas fa-tint"></i> Donate</a>
       <button class="nav-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -237,11 +234,11 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
 </div>
 
 <main>
-  <!-- Hero Section -->
+  <!-- Hero Section with Faded Background -->
   <section class="page-hero">
     <div class="hero-inner">
       <div class="hero-left">
-        <div class="eyebrow eyebrow-blue"><i class="fas fa-tint"></i> Clean Water Changes Everything</div>
+        <div class="eyebrow eyebrow-light"><i class="fas fa-tint"></i> Clean Water Changes Everything</div>
         <h1>Water isn't just <em>life</em>. It's time, safety, health, and opportunity.</h1>
         <p class="lead">In rural Malawi, women and girls spend 3-4 hours every day collecting dirty water. We're changing that — one borehole, one community, one life at a time.</p>
         <div class="hero-stats">
@@ -249,12 +246,6 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           <div class="hero-stat"><span class="num">11</span><span class="lbl">Boreholes constructed</span></div>
           <div class="hero-stat"><span class="num">90%</span><span class="lbl">Cholera reduction</span></div>
           <div class="hero-stat"><span class="num">5</span><span class="lbl">Districts reached</span></div>
-        </div>
-      </div>
-      <div class="hero-right">
-        <div class="hero-right-card">
-          <div class="hero-quote">"Before the borehole, my three daughters and I would wake at 4 AM to get in line at the muddy well. Now, water is behind our house. My daughters are top of their class."</div>
-          <div class="hero-quote-author">— Ellen, Mother & WPC Secretary, Mulanje</div>
         </div>
       </div>
     </div>
@@ -278,7 +269,7 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           </div>
         </div>
         <div>
-          <img src="../img/wash-borehole.jpg" alt="Community borehole in Mulanje, Malawi" class="problem-img" onerror="this.src='https://placehold.co/600x400/e6f0ff/0c4e6e?text=Borehole+Photo'">
+          <img src="img/wash/wash-borehole.jpg" alt="Community borehole in Malawi" class="problem-img" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
@@ -321,9 +312,8 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
         <p>These are not case studies. These are our neighbors, our partners, our heroes.</p>
       </div>
       <div class="stories-grid">
-        <!-- Story 1: Esnat -->
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/wash/wash-esnat.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/wash/wash-esnat.jpg" alt="Esnat teaching hygiene" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
             <div class="story-quote">"No mother should bury her daughter because of water. I can't bring my sister back. But I can save someone else's sister."</div>
             <div class="story-author">— Esnat</div>
@@ -331,9 +321,8 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
             <p style="margin-top:1rem; font-size:0.85rem;">Esnat lost her sister to cholera. Now she has trained 47 households in her village on handwashing, safe water storage, and latrine use.</p>
           </div>
         </div>
-        <!-- Story 2: Chifundo -->
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/wash/wash-chifundo.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/wash/wash-chifundo.jpg" alt="Chifundo at borehole" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
             <div class="story-quote">"I can fix a broken pump. I collect maintenance fees. I protect the borehole like it's my own. Because it IS mine."</div>
             <div class="story-author">— Chifundo</div>
@@ -341,14 +330,13 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
             <p style="margin-top:1rem; font-size:0.85rem;">Chifundo is one of the women leading community-owned water systems. This is community ownership. This is how water lasts.</p>
           </div>
         </div>
-        <!-- Story 3: Mponda Magiya -->
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/wash/wash-mponda-magiya.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/wash/wash-mponda-magiya.jpg" alt="Mponda Magiya handwashing device" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
-            <div class="story-quote">"A stick. A string. A bottle. A soap. Clean water. No electricity. No plumbing. No expensive parts. Just clean hands. Just saved lives."</div>
+            <div class="story-quote">"A stick. A string. A bottle. A soap. Clean water. No electricity. No plumbing. Just clean hands. Just saved lives."</div>
             <div class="story-author">— Mponda Magiya</div>
             <div class="story-role">Simple Handwashing Device</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">A simple handwashing device made from local materials. Simple technology. Big impact. That's ClimateWise.</p>
+            <p style="margin-top:1rem; font-size:0.85rem;">Simple technology made from local materials. Big impact. That's ClimateWise.</p>
           </div>
         </div>
       </div>
@@ -364,10 +352,10 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
         <p>With support from USAID Malawi through the WASH-Malawi project.</p>
       </div>
       <div class="impact-grid">
-        <div><span class="impact-number">23,651</span><span class="impact-label">People with clean water access</span></div>
+        <div><span class="impact-number">23,651</span><span class="impact-label">People with clean water</span></div>
         <div><span class="impact-number">11</span><span class="impact-label">Boreholes constructed</span></div>
-        <div><span class="impact-number">90%</span><span class="impact-label">Reduction in cholera cases</span></div>
-        <div><span class="impact-number">100%</span><span class="impact-label">Boreholes remain functional</span></div>
+        <div><span class="impact-number">90%</span><span class="impact-label">Cholera reduction</span></div>
+        <div><span class="impact-number">100%</span><span class="impact-label">Boreholes functional</span></div>
       </div>
       <div style="text-align:center; margin-top:2rem;">
         <h3 style="font-size:1.2rem;">📍 Where We Worked</h3>
@@ -382,12 +370,12 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
     </div>
   </section>
 
-  <!-- Voice Box - Ellen's full story -->
+  <!-- Voice Box -->
   <section class="section-white">
     <div class="container">
       <div class="voice-box">
         <i class="fas fa-quote-left voice-icon"></i>
-        <div class="voice-text">"Before the borehole, my three daughters and I would wake at 4 AM to get in line at the muddy well. We were always sick, and they were too tired for school. Now, water is behind our house. My daughters are top of their class, and I have started a vegetable garden using the extra water. It is not just water; it is life changing."</div>
+        <div class="voice-text">"Before the borehole, my three daughters and I would wake at 4 AM to get in line at the muddy well. We were always sick, and they were too tired for school. Now, water is behind our house. My daughters are top of their class, and I have started a vegetable garden. It is not just water; it is life changing."</div>
         <div class="voice-author">— Ellen, Mother and Water Point Committee Secretary, Mulanje</div>
       </div>
     </div>
@@ -399,7 +387,6 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
       <div class="section-header">
         <div class="eyebrow eyebrow-blue">Our Partners</div>
         <h2>We don't work alone.</h2>
-        <p>Global challenges require global collaboration. Thank you to everyone who makes clean water possible.</p>
       </div>
       <div class="partners-grid">
         <span class="partner-pill">USAID Malawi</span>
@@ -422,7 +409,7 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           <a href="donate.html" class="btn btn-primary"><i class="fas fa-tint"></i> Donate to Clean Water</a>
           <a href="get-involved.html" class="btn btn-outline-blue"><i class="fas fa-handshake"></i> Partner With Us</a>
         </div>
-        <p style="margin-top:2rem; font-size:0.8rem;">Or sponsor a borehole rehabilitation — $500 restores a broken pump and changes lives.</p>
+        <p style="margin-top:2rem; font-size:0.8rem;">Sponsor a borehole rehabilitation — $500 restores a broken pump and changes lives.</p>
       </div>
     </div>
   </section>

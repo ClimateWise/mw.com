@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sustainable Agriculture & Food Security | ClimateWise Organization — Malawi</title>
-<meta name="description" content="532 farmers trained in climate-smart agriculture. 28 youth-led agribusinesses. From 10 bags to 35 bags of maize per acre. Real food security in Malawi.">
+<meta name="description" content="532 farmers trained in climate-smart agriculture. 28 youth-led agribusinesses. From 10 bags to 35 bags of maize per acre.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,15 +53,17 @@ p { color:var(--text-mid); line-height:1.7; }
 .section-white { background:var(--white); }
 .section-cream { background:var(--cream); }
 .section-earth-bg { background:linear-gradient(135deg, var(--earth-light) 0%, var(--white) 100%); }
-.section-gold-bg { background:linear-gradient(135deg, var(--gold-light) 0%, var(--white) 100%); }
 .section-header { text-align:center; max-width:720px; margin:0 auto 3rem; }
+
 .eyebrow {
   display:inline-flex; align-items:center; gap:8px;
   font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
   padding:6px 14px; border-radius:100px; margin-bottom:1rem;
 }
+.eyebrow-light { background:rgba(255,255,255,0.2); color:var(--white); }
+.eyebrow-light::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--gold); }
 .eyebrow-earth { background:var(--earth-light); color:var(--earth); }
-.eyebrow-earth::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--earth); }
+.eyebrow-earth::before { background:var(--earth); }
 .eyebrow-gold { background:var(--gold-light); color:var(--gold-dark); }
 .eyebrow-gold::before { background:var(--gold); }
 
@@ -75,8 +77,6 @@ p { color:var(--text-mid); line-height:1.7; }
 .btn-primary:hover { background:var(--earth-dark); transform:translateY(-2px); box-shadow:var(--shadow-md); }
 .btn-outline-earth { background:transparent; color:var(--earth); border-color:var(--earth); }
 .btn-outline-earth:hover { background:var(--earth); color:var(--white); transform:translateY(-2px); }
-.btn-outline-gold { background:transparent; color:var(--gold-dark); border-color:var(--gold-dark); }
-.btn-outline-gold:hover { background:var(--gold-dark); color:var(--white); transform:translateY(-2px); }
 
 /* Navbar */
 #navbar {
@@ -102,33 +102,27 @@ p { color:var(--text-mid); line-height:1.7; }
 .mobile-nav { padding:2rem; display:flex; flex-direction:column; gap:0.5rem; }
 .mobile-nav a { font-size:1rem; padding:12px 16px; text-decoration:none; color:var(--text-dark); }
 
-/* Hero */
+/* Hero with Faded Background */
 .page-hero {
-  min-height:75vh; position:relative; display:flex; align-items:center;
-  background: linear-gradient(135deg, var(--earth-dark) 0%, #4a2e14 100%);
+  min-height:70vh; position:relative; display:flex; align-items:center;
   padding-top:var(--nav-h);
+  background-image: linear-gradient(rgba(92, 58, 30, 0.8), rgba(92, 58, 30, 0.85)), url('img/agriculture/agri-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-inner {
   position:relative; z-index:2; max-width:1280px; margin:0 auto;
-  padding:4rem 2rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;
+  padding:4rem 2rem;
 }
+.hero-left { max-width:700px; }
 .hero-left h1 { color:var(--white); margin-bottom:1.25rem; }
 .hero-left h1 em { color:var(--gold); font-style:italic; }
-.hero-left .lead { font-size:1.1rem; color:rgba(255,255,255,0.75); margin-bottom:2rem; }
+.hero-left .lead { font-size:1.1rem; color:rgba(255,255,255,0.85); margin-bottom:2rem; }
 .hero-stats { display:flex; gap:2rem; flex-wrap:wrap; margin-top:2rem; }
-.hero-stat { text-align:center; }
-.hero-stat .num { font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--gold); display:block; }
-.hero-stat .lbl { font-size:0.75rem; color:rgba(255,255,255,0.6); }
-.hero-right-card {
-  background:rgba(255,255,255,0.08); backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-lg);
-  padding:2rem;
-  background-image: url('../img/agriculture/agri-hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
-.hero-quote { font-size:1rem; color:rgba(255,255,255,0.9); font-style:italic; margin-bottom:1rem; background:rgba(0,0,0,0.35); padding:1rem; border-radius:var(--radius); }
-.hero-quote-author { font-size:0.8rem; color:rgba(255,255,255,0.6); }
+.hero-stat { text-align:center; background:rgba(255,255,255,0.12); padding:0.75rem 1.25rem; border-radius:var(--radius); backdrop-filter:blur(4px); border:1px solid rgba(255,255,255,0.1); }
+.hero-stat .num { font-family:var(--font-display); font-size:1.8rem; font-weight:700; color:var(--gold); display:block; }
+.hero-stat .lbl { font-size:0.7rem; color:rgba(255,255,255,0.85); }
 
 /* Problem Section */
 .problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
@@ -136,7 +130,7 @@ p { color:var(--text-mid); line-height:1.7; }
   background:var(--earth-light); border-radius:var(--radius); padding:1.5rem;
   border-left:4px solid var(--earth); margin-bottom:1.5rem;
 }
-.problem-stat .stat-num { font-family:var(--font-display); font-size:2.2rem; font-weight:700; color:var(--earth); }
+.problem-stat .stat-num { font-family:var(--font-display); font-size:2.2rem; font-weight:700; color:var(--earth); display:block; margin-bottom:0.5rem; }
 .problem-img { width:100%; border-radius:var(--radius-lg); object-fit:cover; aspect-ratio:4/3; }
 
 /* Solution Cards */
@@ -155,25 +149,25 @@ p { color:var(--text-mid); line-height:1.7; }
   border:1px solid var(--border); transition:all 0.3s;
 }
 .story-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
-.story-img {
-  height:220px; background:#e2e8f0; display:flex; align-items:center; justify-content:center;
-  background-size:cover; background-position:center;
-}
+.story-img { width:100%; height:220px; object-fit:cover; }
 .story-content { padding:1.75rem; }
 .story-quote { font-size:0.95rem; font-style:italic; color:var(--text-dark); margin-bottom:1rem; line-height:1.6; }
 .story-author { font-size:0.8rem; font-weight:600; color:var(--earth); }
 .story-role { font-size:0.7rem; color:var(--text-muted); }
 
-/* Agroforestry Feature */
+/* Agroforestry Box */
 .agroforestry-box {
   display:grid; grid-template-columns:1fr 1fr; gap:3rem;
-  background:var(--earth-light); border-radius:var(--radius-lg); padding:2.5rem;
+  background:linear-gradient(135deg, var(--earth) 0%, var(--earth-dark) 100%);
+  border-radius:var(--radius-lg); padding:3rem;
   margin:2rem 0; align-items:center;
 }
-.agroforestry-img { width:100%; border-radius:var(--radius); aspect-ratio:4/3; object-fit:cover; }
+.agroforestry-content h2, .agroforestry-content p { color:var(--white); }
+.agroforestry-content p { color:rgba(255,255,255,0.85); }
+.agroforestry-img { width:100%; border-radius:var(--radius); aspect-ratio:4/3; object-fit:cover; border:3px solid rgba(255,255,255,0.2); }
 .agroforestry-badge {
-  display:inline-block; background:var(--gold); color:var(--white);
-  font-size:0.7rem; font-weight:700; padding:4px 12px; border-radius:100px;
+  display:inline-block; background:var(--gold); color:var(--earth-dark);
+  font-size:0.7rem; font-weight:700; padding:5px 14px; border-radius:100px;
   margin-bottom:1rem;
 }
 
@@ -187,8 +181,7 @@ p { color:var(--text-mid); line-height:1.7; }
   background:var(--gold-light); border-radius:var(--radius-lg); padding:2.5rem;
   margin:2rem 0; position:relative; overflow:hidden;
 }
-.voice-box:first-child { margin-top:0; }
-.voice-icon { font-size:3rem; color:var(--gold-dark); opacity:0.2; position:absolute; bottom:1rem; right:1.5rem; }
+.voice-icon { font-size:3rem; color:var(--gold-dark); opacity:0.15; position:absolute; bottom:1rem; right:1.5rem; }
 .voice-text { font-size:1.1rem; font-style:italic; color:var(--text-dark); max-width:80%; }
 .voice-author { margin-top:1rem; font-weight:700; color:var(--earth); }
 
@@ -213,9 +206,13 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
 @media (max-width: 900px) {
   .nav-links, .nav-actions .btn-outline { display:none; }
   .nav-toggle { display:block; }
-  .hero-inner, .problem-grid, .solutions-grid, .stories-grid, .agroforestry-box { grid-template-columns:1fr; gap:2rem; }
+  .hero-inner { padding:3rem 1.5rem; }
+  .problem-grid, .solutions-grid, .stories-grid, .agroforestry-box { grid-template-columns:1fr; gap:2rem; }
   .impact-grid { grid-template-columns:repeat(2,1fr); }
   .voice-text { max-width:100%; }
+  .hero-stats { gap:1rem; }
+  .hero-stat { padding:0.5rem 1rem; }
+  .hero-stat .num { font-size:1.3rem; }
 }
 </style>
 </head>
@@ -248,11 +245,10 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
 </div>
 
 <main>
-  <!-- Hero Section -->
   <section class="page-hero">
     <div class="hero-inner">
       <div class="hero-left">
-        <div class="eyebrow eyebrow-gold"><i class="fas fa-seedling"></i> Farmers Leading the Way</div>
+        <div class="eyebrow eyebrow-light"><i class="fas fa-seedling"></i> Farmers Leading the Way</div>
         <h1>From <em>10 bags</em> to <em>35 bags</em> of maize per acre.</h1>
         <p class="lead">Smallholder farmers in Malawi face erratic rainfall, degraded soil, and rising costs. But with the right knowledge, they're not just surviving — they're thriving.</p>
         <div class="hero-stats">
@@ -262,23 +258,16 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           <div class="hero-stat"><span class="num">180</span><span class="lbl">Women farmers empowered</span></div>
         </div>
       </div>
-      <div class="hero-right">
-        <div class="hero-right-card">
-          <div class="hero-quote">"Same land. Same farmer. Triple the harvest. No expensive inputs. Just knowledge. This is what works."</div>
-          <div class="hero-quote-author">— James, Farmer, Dowa District</div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- The Problem -->
   <section class="section-white">
     <div class="container">
       <div class="problem-grid">
         <div>
           <div class="eyebrow eyebrow-earth">The Challenge</div>
           <h2>Climate change is rewriting the rules of farming.</h2>
-          <p>Malawi's smallholder farmers — who produce 80% of the country's food — are on the front lines of climate change. Erratic rains, prolonged dry spells, and degraded soil mean harvests are shrinking while populations grow.</p>
+          <p>Malawi's smallholder farmers — who produce 80% of the country's food — are on the front lines of climate change.</p>
           <div class="problem-stat">
             <span class="stat-num">80%</span>
             <p style="margin:0">of Malawi's food comes from smallholder farmers — yet most live below the poverty line.</p>
@@ -289,146 +278,115 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
           </div>
         </div>
         <div>
-          <img src="../img/agriculture/agri-field-school.jpg" alt="Farmer Field School in action" class="problem-img" onerror="this.src='https://placehold.co/600x400/F5EDE4/8B5E3C?text=Farmer+Field+School'">
+          <img src="img/agriculture/agri-field-school.jpg" alt="Farmer Field School" class="problem-img" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Solution -->
   <section class="section-earth-bg">
     <div class="container">
       <div class="section-header">
         <div class="eyebrow eyebrow-earth">Our Solution</div>
         <h2>Farmers teaching farmers. Field to field.</h2>
-        <p>We're not the experts. They are. We just help facilitate.</p>
       </div>
       <div class="solutions-grid">
         <div class="solution-card">
           <i class="fas fa-chalkboard-user solution-icon"></i>
           <h3>Farmer Field Schools</h3>
-          <p>12 field schools where 370 farmers received hands-on training in agroecology, crop rotation, soil conservation, and natural pest management.</p>
+          <p>12 field schools where 370 farmers received hands-on training in agroecology, crop rotation, and soil conservation.</p>
         </div>
         <div class="solution-card">
           <i class="fas fa-female solution-icon"></i>
-          <h3>Women's Empowerment Program</h3>
-          <p>180 women farmers trained with drought-tolerant seeds, small-scale irrigation tools, and organized into 8 savings-and-loan groups.</p>
+          <h3>Women's Empowerment</h3>
+          <p>180 women farmers trained with drought-tolerant seeds, small-scale irrigation tools, and savings groups.</p>
         </div>
         <div class="solution-card">
           <i class="fas fa-briefcase solution-icon"></i>
           <h3>Youth Agribusiness</h3>
-          <p>75 rural youth trained in climate-smart entrepreneurship. 15 viable business plans launched in composting, nurseries, and produce aggregation.</p>
+          <p>75 rural youth trained in climate-smart entrepreneurship. 15 viable business plans launched.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Stories Section -->
   <section class="section-white">
     <div class="container">
       <div class="section-header">
         <div class="eyebrow eyebrow-gold">Real Stories, Real Harvests</div>
         <h2>Meet the farmers transforming their land.</h2>
-        <p>These are not case studies. These are our neighbors, our partners, our heroes.</p>
       </div>
       <div class="stories-grid">
-        <!-- Story 1: James -->
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/agriculture/agri-james.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/agriculture/agri-james.jpg" alt="James the farmer" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
             <div class="story-quote">"Before the workshop, I grew 13 bags of maize per acre. After? 35 bags per acre. Same land. Same farmer. Triple the harvest."</div>
             <div class="story-author">— James</div>
             <div class="story-role">Farmer, Dowa District</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">Conservation agriculture. Mulching. Better soil management. No expensive inputs. Just knowledge. This is what works.</p>
           </div>
         </div>
-        <!-- Story 2: Mrs. Nanyoni -->
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/agriculture/agri-mrs-nanyoni.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/agriculture/agri-mrs-nanyoni.jpg" alt="Mrs Nanyoni" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
             <div class="story-quote">"I used to struggle to feed my children. Now I have surplus to sell. Strong farmers mean strong communities."</div>
             <div class="story-author">— Mrs. Nanyoni</div>
             <div class="story-role">Smallholder Farmer, Dowa</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">Mrs. Nanyoni tripled her maize yield from 10 to 30 bags per acre after applying conservation agriculture techniques learned through our training.</p>
           </div>
         </div>
-        <!-- Story 3: Youth Agribusiness -->
         <div class="story-card">
-          <div class="story-img" style="background-image: url('../img/agriculture/agri-youth.jpg'); background-size:cover; background-position:center;"></div>
+          <img src="img/agriculture/agri-youth.jpg" alt="Youth agribusiness" class="story-img" onerror="this.style.display='none'">
           <div class="story-content">
             <div class="story-quote">"I never thought farming could be a business. Now I run a mushroom farm that employs three other young people."</div>
             <div class="story-author">— Chimwemwe, 24</div>
             <div class="story-role">Youth Agribusiness Entrepreneur</div>
-            <p style="margin-top:1rem; font-size:0.85rem;">28 youth-led agribusinesses have created new income streams and jobs. The future of farming is young, green, and profitable.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Agroforestry Feature -->
-  <section class="section-gold-bg">
+  <section class="section-earth-bg">
     <div class="container">
       <div class="agroforestry-box">
-        <div>
+        <div class="agroforestry-content">
           <span class="agroforestry-badge"><i class="fas fa-tree"></i> Climate-Smart Innovation</span>
-          <h2 style="margin-bottom:1rem;">Trees inside a groundnuts farm?</h2>
-          <p><strong>It looks strange at first. But there's genius in it.</strong></p>
-          <p>The trees are nitrogen-fixers. They pull nutrients from deep underground and bring them to the surface. When their leaves fall, they become natural fertilizer for the groundnuts. The trees also provide shade, reduce water evaporation, and protect crops from wind.</p>
-          <p style="margin-top:1rem;"><strong>One field. Two harvests. Groundnuts today. Trees for years.</strong> That's agroforestry. That's climate-smart.</p>
-          <div style="margin-top:1.5rem;">
-            <span class="partner-pill" style="background:var(--earth); color:white;">🥜 Groundnuts = food in 3 months</span>
-            <span class="partner-pill" style="background:var(--gold); color:white;">🌳 Trees = food, timber, shade in 10 years</span>
-          </div>
+          <h2 style="color:white;">Trees inside a groundnuts farm?</h2>
+          <p>It looks strange at first. But there's genius in it. The trees are nitrogen-fixers. They pull nutrients from deep underground. When leaves fall, they become natural fertilizer. The trees provide shade, reduce evaporation, and protect from wind.</p>
+          <p style="margin-top:1rem;"><strong>One field. Two harvests. Groundnuts today. Trees for years.</strong></p>
         </div>
         <div>
-          <img src="../img/agriculture/agri-agroforestry.jpg" alt="Nitrogen-fixing trees planted inside groundnuts farm" class="agroforestry-img" onerror="this.src='https://placehold.co/600x400/D4A843/8B5E3C?text=Agroforestry+in+Action'">
+          <img src="img/agriculture/agri-agroforestry.jpg" alt="Agroforestry" class="agroforestry-img" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- By The Numbers -->
   <section class="section-white">
     <div class="container">
-      <div class="section-header">
-        <div class="eyebrow eyebrow-earth">Evidence of Impact</div>
-        <h2>What we achieved together</h2>
-        <p>Measurable results. Transparent reporting. Real change.</p>
-      </div>
       <div class="impact-grid">
-        <div><span class="impact-number">532</span><span class="impact-label">Farmers trained in climate-smart techniques</span></div>
-        <div><span class="impact-number">180</span><span class="impact-label">Women farmers empowered</span></div>
-        <div><span class="impact-number">75</span><span class="impact-label">Youth trained in agribusiness</span></div>
-        <div><span class="impact-number">28</span><span class="impact-label">Youth-led agribusinesses launched</span></div>
-      </div>
-      <div class="impact-grid">
-        <div><span class="impact-number">20-40%</span><span class="impact-label">Average yield increase</span></div>
-        <div><span class="impact-number">3x</span><span class="impact-label">Maize yield increase (10→30 bags)</span></div>
-        <div><span class="impact-number">12</span><span class="impact-label">Farmer Field Schools</span></div>
-        <div><span class="impact-number">8</span><span class="impact-label">Women's savings groups formed</span></div>
+        <div><span class="impact-number">532</span><span class="impact-label">Farmers trained</span></div>
+        <div><span class="impact-number">180</span><span class="impact-label">Women farmers</span></div>
+        <div><span class="impact-number">75</span><span class="impact-label">Youth trained</span></div>
+        <div><span class="impact-number">28</span><span class="impact-label">Agribusinesses launched</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Voice Box - Classroom Without Walls -->
   <section class="section-earth-bg">
     <div class="container">
       <div class="voice-box" style="background:var(--white);">
         <i class="fas fa-quote-left voice-icon"></i>
-        <div class="voice-text">"This is a classroom. The teachers are farmers. The textbook is the soil. The lesson is agroforestry. This is our Farmer Field School in Chitipa. Farmers who learned climate-smart techniques are now teaching their neighbors. We're not the experts. They are. This is how real change happens. Farmer to farmer. Field to field."</div>
+        <div class="voice-text">"This is a classroom. The teachers are farmers. The textbook is the soil. This is how real change happens. Farmer to farmer. Field to field."</div>
         <div class="voice-author">— ClimateWise Field Team</div>
       </div>
     </div>
   </section>
 
-  <!-- Partners -->
   <section class="section-cream">
     <div class="container">
       <div class="section-header">
         <div class="eyebrow eyebrow-earth">Our Partners</div>
         <h2>We don't grow alone.</h2>
-        <p>Collaboration with government, cooperatives, and local leaders makes it all possible.</p>
       </div>
       <div class="partners-grid">
         <span class="partner-pill">Ministry of Agriculture, Malawi</span>
@@ -436,22 +394,19 @@ footer { background:var(--green-deep); color:rgba(255,255,255,0.6); padding:3rem
         <span class="partner-pill">Local Farmer Cooperatives</span>
         <span class="partner-pill">Women's Associations</span>
         <span class="partner-pill">Traditional Leaders</span>
-        <span class="partner-pill">Youth Networks</span>
       </div>
     </div>
   </section>
 
-  <!-- How to Help -->
   <section class="section-white">
     <div class="container">
       <div class="cta-section">
         <h2>Every farmer deserves a fair chance.</h2>
-        <p>$180 trains one farmer in climate-smart agriculture for an entire season. That farmer then trains their neighbors. The knowledge multiplies. The harvests grow. The community thrives.</p>
+        <p>$180 trains one farmer in climate-smart agriculture for an entire season.</p>
         <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
           <a href="donate.html" class="btn btn-primary"><i class="fas fa-seedling"></i> Support a Farmer</a>
-          <a href="get-involved.html" class="btn btn-outline-gold"><i class="fas fa-handshake"></i> Partner With Us</a>
+          <a href="get-involved.html" class="btn btn-outline-earth"><i class="fas fa-handshake"></i> Partner With Us</a>
         </div>
-        <p style="margin-top:2rem; font-size:0.8rem;">Or sponsor a Farmer Field School — $1,500 supports 30 farmers for a full growing season.</p>
       </div>
     </div>
   </section>
